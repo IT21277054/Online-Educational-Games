@@ -1,0 +1,16 @@
+#Nav-bar{
+    overflow: hidden;
+    list-style: none;
+    margin-left:10%;
+
+
+}
+
+.Nav-button{
+    float: left;
+    padding-right: 15%;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+
+}
+
