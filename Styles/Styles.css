@@ -1,16 +1,64 @@
+body{
+    background-image: linear-gradient(rgb(0, 13, 126), rgb(255, 0, 119));
+}
+
 #Nav-bar{
     overflow: hidden;
     list-style: none;
-    margin-left:10%;
+    padding-right: 2%;
+}
 
+.fpage{
+    width: 100%;
+    border-radius: 10px;
 
 }
 
 .Nav-button{
-    float: left;
-    padding-right: 15%;
+    padding: 0.5%;
+    float: right;
     text-decoration: none;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(255, 255, 255);
 
+}
+
+.Nav-button:hover{
+    background-color:rgba(179, 0, 255, 0.637);
+    border-radius: 10px;
+}
+
+#logo{
+    width: 5%;
+}
+
+.title{
+    position:absolute;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1000%;
+    margin-top:-40%;
+    margin-left:5%;
+    color: white;
+}
+
+.content{
+    border-radius: 25px;
+    position: relative;
+    background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:3%;
+}
+
+.flogo{
+    width: 2%;
+}
+
+footer{
+    border-radius: 10px;
+    background-color:black;
+    margin-top:1%;
+    padding:0.5%;
 }
 
