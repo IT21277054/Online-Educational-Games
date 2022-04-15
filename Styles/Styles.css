@@ -30,6 +30,15 @@ body {
   width: 5%;
 }
 
+#slider-image {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#slider-image.trans {
+  opacity: 0;
+}
+
 .title {
   position: absolute;
   font-family: "Shadows Into Light", cursive;
