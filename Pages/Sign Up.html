@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../Styles/Signup.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIgn Up</title>
-    <!-- <link rel="stylesheet" href="../Styles/Styles.css" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>SignUp</title>
   </head>
   <body>
-    <div class="container">
+    <!-- Web site navigation bar -->
+    <header>
+      <ul id="Nav-bar">
+        <img src="../images/Logo/final.png" id="logo" />
+        <a href="#" class="Nav-button"><li>Home</li></a>
+        <a href="#" class="Nav-button"><li>Games</li></a>
+        <a href="#" class="Nav-button"><li>About</li></a>
+        <a href="#" class="Nav-button"><li>Genre</li></a>
+        <a href="#" class="Nav-button"><li>Contact</li></a>
+        <hr id="line" />
+      </ul>
+    </header>
+
+    <div class="content">
       <form action="SignUp.php" method="post">
         <label for="">First Name</label>
         <input
@@ -35,7 +77,7 @@
         <br />
         <label for="">Password</label>
         <input
-          type="text"
+          type="password"
           name="password"
           placeholder="Enter Password"
           required
@@ -50,5 +92,12 @@
         />
       </form>
     </div>
+
+    <footer>
+      <img src="../images/Logo/Facebook.png" class="flogo" />
+      <img src="../images/Logo/Instergram.png" class="flogo" />
+      <img src="../images/Logo/Twitter.png" class="flogo" />
+    </footer>
+    <script src=""></script>
   </body>
 </html>
