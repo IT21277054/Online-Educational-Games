@@ -65,7 +65,65 @@ body {
   margin: 40px auto;
   position: relative;
   box-shadow: 5px 5px 10px #a3e4f5;
-  border-radius: 5px;
+  border-radius: 30px;
+}
+
+.toggle-btn {
+  padding: 15px 50px;
+  cursor: pointer;
+  background: transparent;
+  border: 0px;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, #009ffd, #2a2a72);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.Input-feild {
+  top: 120px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+input {
+  width: 128%;
+  padding: 10px 10px;
+  margin: 15px 10px;
+  border-left: 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background: transparent;
+}
+
+.submit {
+  width: 80%;
+  padding: 15px 25px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-left: 31%;
+  color: white;
+  background: linear-gradient(45deg, #0652c5, #d4418e);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.submit:hover {
+  box-shadow: 5px 5px 10px 2px black;
 }
 
 .flogo {
