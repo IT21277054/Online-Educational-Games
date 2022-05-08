@@ -40,7 +40,7 @@ body {
   color: white;
 }
 
-.content {
+/* .content {
   border-radius: 25px;
   position: relative;
   background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
@@ -48,6 +48,20 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   padding: 15%;
+} */
+
+.Sign-up {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  margin: 5% auto;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+form {
+  opacity: 0;
 }
 
 .flogo {
