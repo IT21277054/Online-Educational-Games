@@ -45,12 +45,12 @@ body {
   position: relative;
   background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 5%;11
   margin-right: 5%;
   padding: 15%;
 } */
 
-.Sign-up {
+.Sign-up-container {
   width: 400px;
   height: 500px;
   position: relative;
@@ -60,8 +60,12 @@ body {
   border-radius: 10px;
 }
 
-form {
-  opacity: 0;
+.btn {
+  width: 300px;
+  margin: 40px auto;
+  position: relative;
+  box-shadow: 5px 5px 10px #a3e4f5;
+  border-radius: 5px;
 }
 
 .flogo {
