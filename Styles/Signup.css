@@ -50,14 +50,15 @@ body {
   padding: 15%;
 } */
 
-.Sign-up-container {
+.content {
   width: 400px;
-  height: 500px;
+  height: 550px;
   position: relative;
   margin: 5% auto;
   background: white;
   padding: 10px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .btn {
@@ -88,17 +89,24 @@ body {
   transition: 0.5s;
 }
 
-.Input-feild {
-  top: 120px;
-  position: absolute;
+.SignUp-Input-feild,
+.SignIn-Input-feild {
+  top: 110px;
+  left: 12px;
   width: 280px;
-  transition: 0.5s;
+  transition: 1s;
+  position: absolute;
+  /* z-index: 3; */
+}
+
+#chkbox {
+  position: relative;
 }
 
 input {
   width: 128%;
   padding: 10px 10px;
-  margin: 15px 10px;
+  margin: 12px 10px;
   border-left: 0;
   border-left: 0;
   border-top: 0;
@@ -126,8 +134,22 @@ input {
   box-shadow: 5px 5px 10px 2px black;
 }
 
+a {
+  text-decoration: none;
+}
+
+.Sign-in-form {
+  position: absolute;
+  top: 50px;
+  left: 512px;
+}
+
 .flogo {
   width: 2%;
+}
+
+#signUp {
+  color: white;
 }
 
 footer {
