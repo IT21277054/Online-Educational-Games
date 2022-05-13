@@ -12,8 +12,9 @@ signUp.addEventListener('click', () => {
     signIn.style.transition = "0.5s";
     signUpForm.style.transition = "1s";
     signUpForm.style.left = "12px";
-    signInForm.style.left = "-500px";
     signInForm.style.left = "12px";
+    signInForm.style.opacity = "0";
+    signUpForm.style.opacity = "1";
 });
 
 signIn.addEventListener('click', () => {
@@ -23,6 +24,7 @@ signIn.addEventListener('click', () => {
     signUp.style.transition = "0.5s"
     signUpForm.style.transition = "1s";
     signUpForm.style.left = "-500px";
-
     signInForm.style.left = "-500px";
+    signUpForm.style.opacity = "0";
+    signInForm.style.opacity = "1";
 });
