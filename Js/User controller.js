@@ -1,9 +1,9 @@
-const toggleButton = document.getElementById('btn');
-const signUp = document.getElementById('signUp');
-const signIn = document.getElementById('signIn');
+const toggleButton = document.querySelector('#btn');
+const signUp = document.querySelector('#signUp');
+const signIn = document.querySelector('#signIn');
 const signUpForm = document.querySelector('.SignUp-Input-feild');
 const signInForm = document.querySelector('.SignIn-Input-feild');
-
+const chkBox = document.querySelector('#chkbox');
 
 signUp.addEventListener('click', () => {
     toggleButton.style.left = "0px";
@@ -15,6 +15,7 @@ signUp.addEventListener('click', () => {
     signInForm.style.left = "12px";
     signInForm.style.opacity = "0";
     signUpForm.style.opacity = "1";
+    chkBox.checked = false;
 });
 
 signIn.addEventListener('click', () => {
