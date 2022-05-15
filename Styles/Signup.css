@@ -49,6 +49,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   overflow: hidden;
+  opacity: 0.95;
 }
 
 .btn {
