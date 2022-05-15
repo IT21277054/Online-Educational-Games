@@ -40,16 +40,6 @@ body {
   color: white;
 }
 
-/* .content {
-  border-radius: 25px;
-  position: relative;
-  background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
-  margin-top: 5%;
-  margin-left: 5%;11
-  margin-right: 5%;
-  padding: 15%;
-} */
-
 .content {
   width: 400px;
   height: 550px;
@@ -86,7 +76,7 @@ body {
   height: 100%;
   background: linear-gradient(to right, #009ffd, #2a2a72);
   border-radius: 30px;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .SignUp-Input-feild,
