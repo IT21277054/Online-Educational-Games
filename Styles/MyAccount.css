@@ -40,6 +40,23 @@ body {
   color: white;
 }
 
+.content {
+  background-color: white;
+  /* opacity: 0.8; */
+  border-radius: 20px;
+  width: 800px;
+  height: 800px;
+}
+
+.img img {
+  opacity: 1;
+  border: 2px solid black;
+  border-radius: 50%;
+  z-index: 2;
+  height: 250px;
+  width: 250px;
+}
+
 .flogo {
   width: 2%;
 }
