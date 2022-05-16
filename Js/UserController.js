@@ -16,6 +16,7 @@ signUp.addEventListener('click', () => {
     signInForm.style.opacity = "0";
     signUpForm.style.opacity = "1";
     chkBox.checked = false;
+    document.title = "Sign Up";
 });
 
 signIn.addEventListener('click', () => {
@@ -28,4 +29,5 @@ signIn.addEventListener('click', () => {
     signInForm.style.left = "-500px";
     signUpForm.style.opacity = "0";
     signInForm.style.opacity = "1";
+    document.title = 'Sign In';
 });
