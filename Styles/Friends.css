@@ -117,5 +117,26 @@ footer{
 .foot{
 
 }
+.Fch
+{
+    width:25%;
+    background-color:rgb(128, 128, 128);
+    padding-top:2px;
+    border-radius: 10px;
+}
+.Fbt
+{
+    width:5%;
+    background-color:darkgrey;
+    padding-top:1px;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 10px;
+}
+.fbt2
+{
+    background-color:rgb(138, 133, 169);
+    font-family: 'Comfortaa', cursive;
+    border-radius: 10px;
+}
 
 
