@@ -1,0 +1,52 @@
+body {
+  background-image: linear-gradient(rgb(0, 13, 126), rgb(255, 0, 119));
+  background-size: fixed;
+}
+
+#Nav-bar {
+  overflow: hidden;
+  list-style: none;
+  padding-right: 2%;
+}
+
+.fpage {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.Nav-button {
+  padding: 0.5%;
+  float: right;
+  text-decoration: none;
+  font-family: "Comfortaa", cursive;
+  color: rgb(255, 255, 255);
+}
+
+.Nav-button:hover {
+  background-color: rgba(179, 0, 255, 0.637);
+  border-radius: 10px;
+}
+
+#logo {
+  width: 5%;
+}
+
+.title {
+  position: absolute;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 1000%;
+  margin-top: -40%;
+  margin-left: 5%;
+  color: white;
+}
+
+.flogo {
+  width: 2%;
+}
+
+footer {
+  border-radius: 10px;
+  background-color: black;
+  margin-top: 1%;
+  padding: 0.5%;
+}
