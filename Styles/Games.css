@@ -1,0 +1,119 @@
+.gamebox{
+    margin-top:5%;
+    background-image: linear-gradient(to right,rgb(147, 149, 182), rgb(47, 0, 255));
+    border-radius: 10px;
+
+}
+
+.gamebox2{
+    background-image: linear-gradient(to right,rgb(183, 151, 151), rgb(255, 0, 0));
+    border-radius: 10px;
+
+}
+
+.gamebox3{
+    background-image: linear-gradient(to right,rgb(209, 178, 143), rgb(255, 72, 0));
+    border-radius: 10px;
+
+}
+
+.gamebox4{
+    background-image: linear-gradient(to right,rgb(232, 246, 255), rgb(83, 178, 255));
+    border-radius: 10px;
+
+}
+
+.gamebox5{
+    background-image: linear-gradient(to right,rgb(255, 183, 243), rgb(248, 51, 199));
+    border-radius: 10px;
+
+}
+
+
+.titlecard{
+    width : 22%;
+    display: block;
+    margin-left: auto;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.titlecard1{
+    position: absolute;
+    padding-left:65%;
+    margin-top: -6%;
+    display: block;
+    
+}
+
+.titlecard2{
+    width:22%;
+    position: absolute;
+    padding-left:70%;
+    margin-top: -6.5%;
+    display: block;
+    
+}
+
+
+
+.Gamecontent{
+    padding :1%;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:130%;
+
+
+}
+
+.playnow{
+    text-decoration: none;
+    padding :1%;
+    position: absolute;
+    margin-top:10%;
+    margin-left:1%;
+    border-color: rgb(255, 4, 222);
+    color: rgb(14, 2, 2);
+    border-radius: 15px;
+    color:rgb(255, 4, 222);
+}
+
+.trynow{
+    text-decoration: none;
+    padding :1%;
+    position: absolute;
+    margin-top:10%;
+    margin-left:8%;
+    border-color: rgb(22, 168, 0);
+    color: rgb(14, 2, 2);
+    border-radius: 15px;
+    color:rgb(22, 168, 0);
+}
+
+.playnow:hover{
+    background-color: rgb(214, 7, 255);
+    color:white;
+    box-shadow:  0 5px 10px rgba(255, 0, 119, 0.4);
+   transition: 0.2s;
+   border-radius: 20px;
+}
+
+.trynow:hover{
+    background-color: rgb(7, 255, 61);
+    color:white;
+    box-shadow:  0 5px 10px rgba(0, 255, 8, 0.4);
+   transition: 0.2s;
+   border-radius: 20px;
+}
+
+.cartlogo{
+    width:4%;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+ 
+}
+
+.ptitle{
+    font-size:170%;
+}
