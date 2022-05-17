@@ -109,3 +109,21 @@ body{
     color : white;
     size:10%;
 }
+
+.gamet{
+    font-size:300%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.gamed{
+    font-size:150%;
+    padding-right: 40%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.pbutton{
+    font-size:125%;
+}
