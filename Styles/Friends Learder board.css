@@ -1,0 +1,19 @@
+.Topic2
+{
+    position :absolute;
+    font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size : 200%; 
+    /* margin-top :-40%; */
+       margin-left : 5%; 
+       margin-bottom : 20%;
+    color : rgb(223, 213, 230);
+}
+
+html 
+{
+    height: 100%;
+}
+body 
+{
+    background-image: linear-gradient(to bottom right, #33475b, #501291, #331a8b, rgb(43, 55, 150));  
+}
