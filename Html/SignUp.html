@@ -14,23 +14,21 @@
     <title>Sign Up</title>
   </head>
   <body>
-
     <video autoplay muted loop class="bgmvideo">
       <source src="../Videos/BG_signup.mp4" type=video/ogg>
     </video>
 
     <!-- Web site navigation bar -->
     <header>
-      <ul  id="Nav-bar-id" class="Nav-bar">
+      <ul id="Nav-bar-id" class="Nav-bar">
         <img src="../images/Logo/final.png" id="logo" />
         <a href="#" class="Nav-button"><li>Login</li></a>
         <a href="#" class="Nav-button"><li>About</li></a>
         <a href="#" class="Nav-button"><li>Home</li></a>
         <!-- <a href="#" class="Nav-button"><li>Genre</li></a> -->
         <!-- <a href="#" class="Nav-button"><li>Contact</li></a> -->
-        <hr>
+        <hr />
       </ul>
-
     </header>
 
     <div class="fcontent">
@@ -40,45 +38,26 @@
           <button type="button" class="toggle-btn" id="signUp">Sign Up</button>
           <button type="button" class="toggle-btn" id="signIn">Sign In</button>
         </div>
-        <form action="SignUp.php" method="post" class="SignUp-Input-feild">
-          <input
-            type="text"
-            name="fName"
-            placeholder="Enter first name"
-            required
-          />
-          <input
-            type="text"
-            name="lName"
-            placeholder="Enter last name"
-            required
-          />
+        <form action="SignsUp.php" method="post" class="SignUp-Input-feild">
+          <input type="text" name="fName" placeholder="Enter first name" />
+          <input type="text" name="lName" placeholder="Enter last name" />
           <br />
-          <input
-            type="text"
-            name="email"
-            placeholder="Enter Email address"
-            required
-          />
+          <input type="email" name="email" placeholder="Enter Email address" />
           <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            required
-          />
+          <input type="password" name="password" placeholder="Enter Password" />
           <br />
           <input
             type="text"
             name="conPassword"
             placeholder="Confirm Password"
-            required
           />
-          <input type="checkbox" id="chkbox" />
+          <input type="checkbox" id="chkbox" onchange="enable()" />
           <div class="chk-txt">
             I have read and agreed to <a href=""> Terms and Conditions </a>
           </div>
-          <button type="submit" class="submit">Sign Up</button>
+          <button type="submit" id="submitBtn" class="submit" disabled>
+            Sign Up
+          </button>
         </form>
       </div>
       <div class="Sign-in-form">
