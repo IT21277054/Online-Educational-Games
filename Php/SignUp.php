@@ -28,12 +28,11 @@
         if (!$result -> num_rows > 0 ) {
             
             // query for the insert data into database 
-            $sql = "INSERT INTO user(First_Name , Last_Name , Email, Password) values('$firstName','$lastName','$email','$password') ";
+            $sql = "INSERT INTO user( ClientPassword, Email,FirstName,LastName) values('$password','$email','$firstName','$lastName',) ";
 
             // execute and store result returned result
             $result = mysqli_query($conn, $sql);
             // echo "<script>alert('done');</script>";
-            $msg = "done";
 
             // check if it execute without errors
             if($result) {
