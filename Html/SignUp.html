@@ -38,16 +38,35 @@
           <button type="button" class="toggle-btn" id="signUp">Sign Up</button>
           <button type="button" class="toggle-btn" id="signIn">Sign In</button>
         </div>
-        <form action="SignsUp.php" method="post" class="SignUp-Input-feild">
-          <input type="text" name="fName" placeholder="Enter first name" />
-          <input type="text" name="lName" placeholder="Enter last name" />
-          <br />
-          <input type="email" name="email" placeholder="Enter Email address" />
-          <br />
-          <input type="password" name="password" placeholder="Enter Password" />
-          <br />
+        <form
+          action="../Php/SignUp.php"
+          method="post"
+          class="SignUp-Input-feild"
+        >
           <input
             type="text"
+            name="fName"
+            placeholder="Enter first name"
+            required
+          />
+          <input type="text" name="lName" placeholder="Enter last name" />
+          <br />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Email address"
+            required
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br />
+          <input
+            type="password"
             name="conPassword"
             placeholder="Confirm Password"
           />
@@ -86,7 +105,7 @@
           <br />
           <br />
           <br />
-          <button type="submit" class="submit">Sign In</button>
+          <button type="submit" name="submit" class="submit">Sign In</button>
         </form>
       </div>
     </div>

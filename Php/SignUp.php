@@ -21,14 +21,14 @@
     if($password == $conPassword) { 
 
         // check email already in database
-        $sql = "SELECT * FROM user where Email='$email' ";
+        $sql = "SELECT * FROM client where Email='$email' ";
         $result = mysqli_query($conn , $sql); // execute query
 
         // check result has a value or not if not execute this
         if (!$result -> num_rows > 0 ) {
             
             // query for the insert data into database 
-            $sql = "INSERT INTO user( ClientPassword, Email,FirstName,LastName) values('$password','$email','$firstName','$lastName',) ";
+            $sql = "INSERT INTO client( ClientPassword, Email,FirstName,LastName) values('$password','$email','$firstName','$lastName') ";
 
             // execute and store result returned result
             $result = mysqli_query($conn, $sql);
@@ -64,7 +64,7 @@
         $msg = "Password not matched ";
     }
   
-    echo"<script type='text/javascript'>alert('$msg');history.go(-1);</script>";
+    echo"<script type='text/javascript'>alert('$msg');  history.go(-1);</script>";
         
 $conn -> close();
 ?>
