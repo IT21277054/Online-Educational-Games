@@ -2,50 +2,48 @@ body {
   margin: 0%;
 }
 
-.bgmvideo{
-  min-width: 100%; 
+.bgmvideo {
+  min-width: 100%;
   min-height: 100%;
   position: fixed;
   z-index: -1;
   object-fit: cover;
-
 }
 
-.Nav-bar{
+.Nav-bar {
   overflow: hidden;
   list-style: none;
   padding-right: 2%;
-  position:fixed;
-  width:97%;
-
+  position: fixed;
+  width: 97%;
 }
 
-.Nav-bar-scroll{
+.Nav-bar-scroll {
   overflow: hidden;
   list-style: none;
   padding-right: 2%;
-  position:fixed;
+  position: fixed;
   background-image: linear-gradient(rgb(18, 18, 18), rgb(0, 0, 0));
   top: 0;
-  margin-top:0;
+  margin-top: 0;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   z-index: 1;
-  width:97%;
-  animation-duration:0.5s;
-  animation-name:slidedown ;
+  width: 97%;
+  animation-duration: 0.5s;
+  animation-name: slidedown;
   opacity: 0.7;
 }
 
 @keyframes slidedown {
   from {
-      top: -10%;
+    top: -10%;
   }
 }
 
 @keyframes slideup {
   to {
-      top: -10%;
+    top: -10%;
   }
 }
 
@@ -84,15 +82,13 @@ body {
   width: 400px;
   height: 550px;
   position: absolute;
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
   overflow: hidden;
-  opacity: 0.95;
-  margin-top:10%;
+  /* opacity: 0.95; */
+  margin-top: 10%;
   margin-left: 38%;
-
-  
 }
 
 .btn {
@@ -205,7 +201,7 @@ footer {
   width: 98%;
   background-color: black;
   margin-top: 52%;
-  margin-left:0.5%;
+  margin-left: 0.5%;
   padding: 0.5%;
   position: absolute;
 }
