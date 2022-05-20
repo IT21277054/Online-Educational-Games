@@ -75,8 +75,8 @@
         <label for="">Account Type</label><br />
         <input name="cType" readonly value="<?php echo $cType; ?>" />
         <br />
-        <button class="btnChangePw">Change Password</button>
-        <button class="btnEdit" onclick="window.location.href='MyAccountEdit.php';">Edit</button>
+        <button class="btnChangePw" onclick="window.location.href='ChangePassword.php';">Change Password</button>
+        <button class="btnEdit" onclick="window.location.href='DeleteAccount.php';">Edit</button>
       </div>
       <div class="buttons">
         <label id="btnlabel"><h3>Links</h3></label>

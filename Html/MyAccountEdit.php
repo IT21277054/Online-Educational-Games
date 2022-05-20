@@ -94,7 +94,7 @@
     <div class="content">
       <br />
       <form action="" method="post" enctype='multipart/form-data'>
-        <button class="btnDelete">Delete Account</button>
+        <button class="btnDelete" onclick="window.location.href='DeleteAccount.php';" >Delete Account</button>
         <div class="img">
           <img src="../Images/User Images/<?php echo $cImage; ?>" />
           <input type="file" id="imgUpload" value="../Images/User Images/<?php echo $cImage; ?>" name="imgFile" />
