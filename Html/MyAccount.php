@@ -1,3 +1,22 @@
+<?php
+
+  include '../Php/dbConnection.php';
+  session_start();
+  $email = $_SESSION['email'];
+
+  $sql = "SELECT * FROM client where email = '$email'";
+  $result = mysqli_query($conn , $sql);
+
+  $row = mysqli_fetch_assoc($result); // take result as a associate array
+
+  $fName = $row['FirstName'];
+  $lName = $row['LastName']; 
+  $gTag = $row['GamerTag'];
+  $cType = $row['ClientType'];
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,19 +60,19 @@
       </div>
       <div class="info">
         <label for="">First Name</label><br />
-        <input name="fName" readonly />
+        <input name="fName" readonly value="<?php echo $fName; ?>"/>
         <br />
         <label for="">Last Name</label><br />
-        <input name="lName" readonly />
+        <input name="lName" readonly value="<?php echo $lName; ?>" />
         <br />
-        <label for="">Gamertag</label><br />
-        <input name="email" readonly />
+        <label for="">Gamer Tag</label><br />
+        <input name="gTag" readonly value="<?php echo $gTag; ?>" />
         <br />
         <label for="">Email</label><br />
-        <input name="password" readonly />
+        <input name="email" readonly value="<?php echo $email; ?>" />
         <br />
         <label for="">Account Type</label><br />
-        <input name="password" readonly />
+        <input name="cType" readonly value="<?php echo $cType; ?>" />
         <br />
         <button class="btnChangePw">Change Password</button>
         <button class="btnEdit" onclick="window.location.href='MyAccountEdit.php';">Edit</button>
