@@ -2,12 +2,6 @@
 
     include './dbConnection.php';
 
-    session_start();
-
-    if (isset($_SESSION['email'])) {
-    header("Location: ../Html/SignUp.html");
-}
-
     $firstName = $_POST['fName'];
     $lastName = $_POST['lName'];
     $email =$_POST['email'];
@@ -20,7 +14,7 @@
     if($password == $conPassword) { 
 
         // check email already in database
-        $sql = "SELECT * FROM client where Email='$email' ";
+        $sql = "SELECT * FROM client where Email='$email' ;";
         $result = mysqli_query($conn , $sql); // execute query
 
         // check result has a value or not if not execute this

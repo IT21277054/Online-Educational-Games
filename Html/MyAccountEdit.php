@@ -33,29 +33,32 @@
     <br /><br />
     <div class="content">
       <br />
-      <button class="btnDelete">Delete Account</button>
-      <div class="img">
-        <img src="../Images/User Images/default.png" />
-      </div>
-      <div class="info" id="info">
-        <label for="">First Name</label><br />
-        <input name="fName" />
-        <br />
-        <label for="">Last Name</label><br />
-        <input name="lName" />
-        <br />
-        <label for="">Gamertag</label><br />
-        <input name="email" />
-        <br />
-        <label for="">Email</label><br />
-        <input name="password" />
-        <br />
-        <label for="">First Name</label><br />
-        <input name="password" />
-        <br />
-        <button class="btnChangePw">Change Password</button>
-        <button class="btnEdit">Save</button>
-      </div>
+      <form action="" method="post">
+        <button class="btnDelete">Delete Account</button>
+        <div class="img">
+          <img src="../Images/User Images/default.png" />
+          <input type="file" id="imgFile" name="imgFile" />
+        </div>
+        <div class="info" id="info">
+          <label for="">First Name</label><br />
+          <input name="fName" id="input" />
+          <br />
+          <label for="">Last Name</label><br />
+          <input name="lName" id="input" />
+          <br />
+          <label for="">Gamertag</label><br />
+          <input name="gTag" id="input" />
+          <br />
+          <label for="">Email</label><br />
+          <input name="email" id="input" />
+          <br />
+          <label for="">Account Type</label><br />
+          <input name="accType" id="input" readonly />
+          <br />
+          <button class="btnChangePw">Change Password</button>
+          <button class="btnEdit">Save</button>
+        </div>
+      </form>
     </div>
     <br />
     <footer>

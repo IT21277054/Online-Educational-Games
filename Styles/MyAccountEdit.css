@@ -101,7 +101,7 @@ body {
   top: 20%;
 }
 
-input {
+#input {
   margin-bottom: 3%;
   margin-top: 1%;
   width: 40%;
@@ -113,6 +113,13 @@ input {
   border-bottom: 1px solid rgb(0, 0, 0);
   outline: none;
   /* background: transparent; */
+}
+
+#imgFile {
+  width: 5.9%;
+  position: absolute;
+  top: 65%;
+  left: 10%;
 }
 label {
   margin-left: 4%;

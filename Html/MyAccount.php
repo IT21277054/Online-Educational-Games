@@ -50,7 +50,7 @@
         <label for="">Email</label><br />
         <input name="password" readonly />
         <br />
-        <label for="">First Name</label><br />
+        <label for="">Account Type</label><br />
         <input name="password" readonly />
         <br />
         <button class="btnChangePw">Change Password</button>
