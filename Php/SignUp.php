@@ -5,8 +5,8 @@
     $firstName = $_POST['fName'];
     $lastName = $_POST['lName'];
     $email =$_POST['email'];
-    $password = $_POST['password']; // encrypt password using md5
-    $conPassword = $_POST['conPassword'];
+    $password = md5($_POST['password']); // encrypt password using md5
+    $conPassword = md5($_POST['conPassword']);
 
     $msg = "";
 
@@ -48,8 +48,10 @@
         $msg = "Password not matched ";
     }
   
-    echo"<script type='text/javascript'>alert('$msg');  history.go(-1);</script>";
+    echo"<script type='text/javascript'>alert('$msg');
+     window.history.back();
+     location.reload();
+     </script>";
 
-session_destroy();
 $conn -> close();
 ?>

@@ -14,7 +14,7 @@ if(isset($_SESSION['email'])){
 // check if the submit button clicked 
 if(isset($_POST['submit'])){
     $email = $_POST['email']; // store the user given mail
-    $password = $_POST['password']; // encrypt and store the user given password 
+    $password = md5($_POST['password']); // encrypt and store the user given password 
 
     $sql = "SELECT * FROM client where Email='$email' AND ClientPassword='$password'"; // sql query to check if email and password exist in db
 

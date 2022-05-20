@@ -1,3 +1,32 @@
+<?php
+ include '../Php/dbConnection.php';
+  session_start();
+
+  if(isset($_POST['submit'])){
+
+  $email = $_SESSION['email'];
+  $password = $_POST['Current-Password'];
+  $newPassword = md5($_POST['New-Password']);
+  $conPassword = md5($_POST['Confirm-Password']);
+
+  if($newPassword == $conPassword){
+  $sql = "SELECT * FROM client where Email='$email' AND ClientPassword='$password'"; 
+  $result = mysqli_query($conn , $sql); // execute the query 
+
+    if($result -> num_rows > 0) { // check the query result returned something
+        $sql = "UPDATE client SET ClientPassword='$newPassword' where Email='$email' ;"; 
+        $_SESSION['email'] = $row['Email']; // 
+        header("Location: ../Html/index.php"); // if mail and password are match logged the user
+    }
+    else{
+        echo"<script type='text/javascript'>alert('Invalid Credentials');  history.go(-1);</script>";
+    }
+  }}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,16 +45,20 @@
     <title>Change Password</title>
   </head>
   <body>
+    <video autoplay muted loop class="bgmvideo">
+      <source src="../Videos/BG_signup.mp4" type=video/ogg>
+    </video>
     <!-- Web site navigation bar -->
     <header>
-      <ul id="Nav-bar">
+      <ul id="Nav-bar-id" class="Nav-bar">
         <img src="../images/Logo/final.png" id="logo" />
-        <a href="#" class="Nav-button"><li>Login</li></a>
-        <a href="#" class="Nav-button"><li>About</li></a>
-        <a href="#" class="Nav-button"><li>Home</li></a>
-        <!-- <a href="#" class="Nav-button"><li>Genre</li></a> -->
-        <!-- <a href="#" class="Nav-button"><li>Contact</li></a> -->
-        <hr id="line" />
+        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
+        <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
+            <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
+            <a href="About.html" class="Nav-button"><li>About</li></a>
+            <a href="Games.php" class="Nav-button"><li>Games</li></a>
+            <a href="index.php" class="Nav-button"><li>Home</li></a>
       </ul>
     </header>
 
@@ -39,7 +72,7 @@
       </div>
       <div class="Change-password">
         <form
-          action="changePassword.php"
+          action=""
           method="post"
           class="Change-Password-form"
           id="changePassword"
@@ -80,6 +113,7 @@
       <img src="../images/Logo/Instergram.png" class="flogo" />
       <img src="../images/Logo/Twitter.png" class="flogo" />
     </footer>
+    <script src="../Js/Main.js"></script>
     <script src="../Js/UserController.js"></script>
   </body>
 </html>
