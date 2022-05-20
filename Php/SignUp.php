@@ -41,7 +41,7 @@
             }
             else{
                 // if query fail print error msg
-                $msg = "something wrong";
+                $msg = "something went wrong";
             }
     }
     else {

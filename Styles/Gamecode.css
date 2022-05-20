@@ -1,0 +1,52 @@
+.gttitle{
+    font-family: 'Comfortaa', cursive;
+    font-size:200%;
+    color: rgb(255, 255, 255);
+
+}
+
+.gttxt{
+    width: 20%;
+    padding: 0.5%;
+}
+
+.gtsub{
+    width: 21%;
+    padding: 0.5%;
+    background-color:rgb(0, 26, 255);
+    border:none;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+
+
+}
+
+.gtsub:hover{
+    width: 21%;
+    padding: 0.5%;
+    background-color:rgb(230, 0, 255);
+}
+
+.gtitle{
+    position:absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1000%;
+    margin-top:-40%;
+    margin-left:5%;
+    color: rgb(80, 80, 80);
+}
+
+.gNav-button{
+    padding: 0.5%;
+    float: right;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(172, 0, 0);
+}
+
+.gNav-button:hover{
+    background-color:rgba(255, 255, 255, 0.637);
+    border-radius: 10px;
+}
