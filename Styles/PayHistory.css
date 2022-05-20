@@ -1,0 +1,14 @@
+.phcontent{
+    border-radius: 25px;
+    position: relative;
+    background-color: #0a384bbd;
+    margin: 5% 10% 3% 10%; 
+    padding:3%;
+    box-shadow:0 0 10px 5px #2cd5db;
+    width:80%;
+}
+
+.phgif{
+    margin-top: 10%;
+    margin-left: 60%;
+} 
