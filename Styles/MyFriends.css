@@ -176,3 +176,55 @@ footer{
     background-color: #62358a;
     color:rgb(184, 174, 174);
 }
+.Button
+{
+    background-color: rgb(223, 213, 230);
+    border-radius: 10px;
+    padding: 1.2%;
+    width: 25%;
+} 
+.Vbtn
+{
+    background-color: rgb(223, 213, 230);
+    color: black;
+    border: 2px solid #702794;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    padding: 1.2%;
+    border:shadow 3px;
+    border-color: #331a8b;
+}
+.Vbtn:hover
+{
+    background-color: #62358a;
+    color:rgb(184, 174, 174);
+}
+.Rbtn
+{
+    background-color: rgb(223, 213, 230);
+    color: black;
+    border: 2px solid #702794;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    padding: 1%;
+    width: 10%;
+    border:shadow 3px;
+    border-color: #331a8b;
+    float: right;
+}
+.Rbtn:hover
+{
+    background-color: #62358a;
+    color:rgb(184, 174, 174);
+}
+.Ftopic
+{
+    position :absolute;
+    font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     /* font-size : 200%; 
+    /* margin-top :-40%; */
+       /* margin-left : 5%; 
+       margin-bottom : 20%;
+       margin-top: 6%; */
+    color : rgb(223, 213, 230);
+}
