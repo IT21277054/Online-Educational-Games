@@ -33,7 +33,7 @@
 
     move_uploaded_file($_FILES['imgFile']['tmp_name'],$target_dir.$name);
     
-    if(isset($_FILES['imgFile']['name'])==True){
+    if(!empty($name)){
       $cImage=$_FILES['imgFile']['name'];
     }else{ 
       $cImage = $row['UserImage'];

@@ -57,7 +57,7 @@
       <br />
       <button class="btnDelete">Delete Account</button>
       <div class="img">
-        <img src="../Images/User Images/<?php echo $cImage; ?>" />
+        <img id="img" src="../Images/User Images/<?php echo $cImage; ?>" />
       </div>
       <div class="info">
         <label for="">First Name</label><br />
