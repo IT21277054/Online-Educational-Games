@@ -25,14 +25,16 @@ body
     margin-left: 40%;
     align-items: center;
     color: #33475b;
-    z-index: 1;
+   
     border-radius: 10px;
     
 }
 #Eml
 {
+    
     background-color:#b4a8cf;
 }
+
 #Sub
 {
     background-color:#b4a8cf;
@@ -48,28 +50,28 @@ body
 .Fbox
 {
  
-    border-radius: 25px;
-     width: 50%;
-     height: 50%;
-     position:absolute;
-     background-color:rgb(250, 247, 247); 
-     padding: 22px;
-     margin-top: 15%;
-     margin-right: 50%;
-     margin-left: 25%;
-     align-items: center;
-     opacity: 0.5;
+    
+
+     border-radius: 25px;
+     position: absolute;
+     background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
+     margin-top: 10%;
+     margin-left: 30%;
+     margin-right: 5%;
+     padding:20%;
+     z-index: -1;
 
     
 }
-label
+#label
 {
-    color:#0b69a7
+    size: 10px;
+    color:#e3e8eb
     
 }
 input
 {
-    color:#04090e
+    color:#e2e8ed
 
 }
 .FCvideo
@@ -79,6 +81,8 @@ input
     position: absolute;
     z-index: -1;
     object-fit: cover;
-
-
-} 
+}
+.FBBox
+{
+  height: 20%;
+}
