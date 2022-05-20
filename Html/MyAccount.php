@@ -13,6 +13,7 @@
   $lName = $row['LastName']; 
   $gTag = $row['GamerTag'];
   $cType = $row['ClientType'];
+  $cImage = $row['UserImage'];
  
 ?>
 
@@ -45,7 +46,7 @@
         <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
             <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
             <a href="About.html" class="Nav-button"><li>About</li></a>
-            <a href="Games.html" class="Nav-button"><li>Games</li></a>
+            <a href="Games.php" class="Nav-button"><li>Games</li></a>
             <a href="index.php" class="Nav-button"><li>Home</li></a>
       </ul>
     </header>
@@ -56,7 +57,7 @@
       <br />
       <button class="btnDelete">Delete Account</button>
       <div class="img">
-        <img src="../Images/User Images/default.png" />
+        <img src="../Images/User Images/<?php echo $cImage; ?>" />
       </div>
       <div class="info">
         <label for="">First Name</label><br />

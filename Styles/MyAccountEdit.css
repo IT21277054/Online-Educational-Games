@@ -115,8 +115,7 @@ body {
   /* background: transparent; */
 }
 
-#imgFile {
-  width: 4%;
+#imgUpload {
   position: absolute;
   top: 65%;
   left: 10%;

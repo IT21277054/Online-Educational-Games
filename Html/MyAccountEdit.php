@@ -1,7 +1,59 @@
-<?php 
+<?php
 
-session_start();
+  include '../Php/dbConnection.php';
+  session_start();
+  $email = $_SESSION['email'];
 
+  $sql = "SELECT * FROM client where email = '$email'";
+  $result = mysqli_query($conn , $sql);
+
+  $row = mysqli_fetch_assoc($result); // take result as a associate array
+
+  $fName = $row['FirstName'];
+  $lName = $row['LastName']; 
+  $gTag = $row['GamerTag'];
+  $cType = $row['ClientType'];
+  $cId = $row['ClientID'];
+  $cImage = $row['UserImage'];
+
+  if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $fName = $_POST['fName'];
+    $lName = $_POST['lName'];
+    $gTag = $_POST['gTag'];
+    $cType = $_POST['accType'];
+
+    $name = $_FILES['imgFile']['name'];
+    $target_dir = "../Images/User Images/";
+    $target_file = $target_dir . basename($_FILES["imgFile"]["name"]);
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $extensions_arr = array("jpg","jpeg","png");
+
+    in_array($imageFileType,$extensions_arr);
+
+    move_uploaded_file($_FILES['imgFile']['tmp_name'],$target_dir.$name);
+    
+    if(isset($_FILES['imgFile']['name'])==True){
+      $cImage=$_FILES['imgFile']['name'];
+    }else{ 
+      $cImage = $row['UserImage'];
+    }
+
+    // $sql = "INSERT INTO client (ClientType,GamerTag,Email,FirstName,LastName,UserImage)values('$cType','$gTag','$email','$fName','$lName','$name')";
+
+    echo "<script>alert('$cId')</script>";
+    $sql ="UPDATE client SET ClientType='$cType',GamerTag='$gTag',Email='$email',FirstName='$fName',LastName='$lName',UserImage ='$cImage' where ClientID='$cId'";
+
+    $result = mysqli_query($conn , $sql);
+
+    if($result){
+      echo "<script>alert('Successfully updated data')</script>";
+      header("Location: ./MyAccount.php");
+    }else{ 
+      echo "<script>alert('Failed to update data. Try again')</script>";
+    }
+  }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +84,7 @@ session_start();
         <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
             <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
             <a href="About.html" class="Nav-button"><li>About</li></a>
-            <a href="Games.html" class="Nav-button"><li>Games</li></a>
+            <a href="Games.php" class="Nav-button"><li>Games</li></a>
             <a href="index.php" class="Nav-button"><li>Home</li></a>
       </ul>
     </header>
@@ -41,30 +93,30 @@ session_start();
     <br /><br />
     <div class="content">
       <br />
-      <form action="" method="post">
+      <form action="" method="post" enctype='multipart/form-data'>
         <button class="btnDelete">Delete Account</button>
         <div class="img">
-          <img src="../Images/User Images/default.png" />
-          <input type="file" id="imgFile" name="imgFile" />
+          <img src="../Images/User Images/<?php echo $cImage; ?>" />
+          <input type="file" id="imgUpload" value="../Images/User Images/<?php echo $cImage; ?>" name="imgFile" />
         </div>
         <div class="info" id="info">
           <label for="">First Name</label><br />
-          <input name="fName" id="input" />
+          <input name="fName" id="input" value="<?php echo $fName; ?>"/>
           <br />
           <label for="">Last Name</label><br />
-          <input name="lName" id="input" />
+          <input name="lName" id="input" value="<?php echo $lName; ?>" />
           <br />
-          <label for="">Gamertag</label><br />
-          <input name="gTag" id="input" />
+          <label for="">Gamer Tag</label><br />
+          <input name="gTag" id="input" value="<?php echo $gTag; ?>"/>
           <br />
           <label for="">Email</label><br />
-          <input name="email" id="input" />
+          <input name="email" id="input" value="<?php echo $email; ?>"/>
           <br />
           <label for="">Account Type</label><br />
-          <input name="accType" id="input" readonly />
+          <input name="accType" id="input" readonly value="<?php echo $cType; ?>" />
           <br />
           <button class="btnChangePw">Change Password</button>
-          <button class="btnEdit">Save</button>
+          <button class="btnEdit" name="submit"  >Save</button>
         </div>
       </form>
     </div>
