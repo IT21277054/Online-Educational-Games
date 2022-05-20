@@ -1,4 +1,4 @@
-window.addEventListener('scroll',function navigation (){
+window.addEventListener('scroll', () => {
 
     const scrolled = window.scrollY;
     
