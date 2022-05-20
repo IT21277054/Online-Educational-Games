@@ -19,15 +19,18 @@ body
 }
 
 .Vbox{ 
+   
+
     border-radius: 25px;
-    width: 50%;
-    height: 50%;
-    position:absolute;
-    background-color:rgb(250, 247, 247); 
-    padding: 22px;
-    margin-top: 15%;
-    margin-right: 50%;
-    margin-left: 25%;
+    position: absolute;
+    background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    width: 60%;
+    height: 55%;
+    opacity: 0.7;
     align-items: center;
 
 }
@@ -38,8 +41,11 @@ body
     background-color: rgb(223, 213, 230);
     color: black;
     border: 2px solid #702794;
-    margin-left: 49%;
-    margin-top: 10%;
+    margin-left: 44%;
+    margin-top: 15%;
+    width: 10%;
+   
+  
     border-radius: 10px;
     transition-duration: 0.4s;
     /* width: 10%; */
@@ -53,15 +59,16 @@ body
     background-color: #62358a;
     color:rgb(184, 174, 174);
 }
-.btn1
+.SFbtn
 {
     position: absolute;
-     width: 40%;
-     height: 5%;
-     margin-left: 31%;
-     margin-top: 7%;
+     background-color: rgb(220, 199, 241);
+     padding:1%;
+     width: 25%;
+     margin-left: 35%;
+     margin-top: 11%;
      border-radius: 10%;
-     border: 1px solid;
+     /* border: 1px solid; */
      border-color: #331a8b;
 }  
 .FCvideo
