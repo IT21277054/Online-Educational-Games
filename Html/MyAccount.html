@@ -14,6 +14,9 @@
     <title>My Account</title>
   </head>
   <body>
+    <video autoplay muted loop class="bgmvideo">
+      <source src="../Videos/BG_signup.mp4" type=video/ogg>
+    </video>
     <!-- Web site navigation bar -->
     <header>
       <ul id="Nav-bar">
@@ -29,11 +32,28 @@
 
     <div class="content">
       <br />
-      <br />
       <div class="img">
         <img src="../Images/User Images/default.png" />
       </div>
-      <div class="info"></div>
+      <div class="info">
+        <label for="">First Name</label><br />
+        <input name="fName" readonly />
+        <br />
+        <label for="">Last Name</label><br />
+        <input name="lName" readonly />
+        <br />
+        <label for="">Gamertag</label><br />
+        <input name="email" readonly />
+        <br />
+        <label for="">Email</label><br />
+        <input name="password" readonly />
+        <br />
+        <label for="">First Name</label><br />
+        <input name="password" readonly />
+        <br />
+        <button class="btnChangePw">Change Password</button>
+        <button class="btnEdit">Edit</button>
+      </div>
     </div>
     <footer>
       <img src="../images/Logo/Facebook.png" class="flogo" />
@@ -41,5 +61,6 @@
       <img src="../images/Logo/Twitter.png" class="flogo" />
     </footer>
     <script src="../Js/MyAccount.js"></script>
+    <script src="../Js/Main.js"></script>
   </body>
 </html>
