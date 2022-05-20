@@ -8,13 +8,13 @@ session_start();
 
 // check already session started
 if(isset($_SESSION['email'])){
-    header("Location: ../Html/index.html");
+    header("Location: ../Html/index.php");
 }
 
 // check if the submit button clicked 
 if(isset($_POST['submit'])){
     $email = $_POST['email']; // store the user given mail
-    $password = md5($_POST['password']); // encrypt and store the user given password 
+    $password = $_POST['password']; // encrypt and store the user given password 
 
     $sql = "SELECT * FROM client where Email='$email' AND ClientPassword='$password'"; // sql query to check if email and password exist in db
 
@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     if($result -> num_rows > 0) { // check the query result returned something
         $row = mysqli_fetch_assoc($result); // take result as a associate array
         $_SESSION['email'] = $row['Email']; // 
-        header("Location: ../Html/index.html"); // if mail and password are match logged the user
+        header("Location: ../Html/index.php"); // if mail and password are match logged the user
     }
     else{
         echo"<script type='text/javascript'>alert('Invalid Credentials');  history.go(-1);</script>";

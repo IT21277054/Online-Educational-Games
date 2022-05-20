@@ -21,11 +21,13 @@
     <header>
       <ul id="Nav-bar-id" class="Nav-bar">
         <img src="../images/Logo/final.png" id="logo" />
-        <a href="#" class="Nav-button"><li>Login</li></a>
-        <a href="#" class="Nav-button"><li>About</li></a>
-        <a href="#" class="Nav-button"><li>Home</li></a>
-        <!-- <a href="#" class="Nav-button"><li>Genre</li></a> -->
-        <!-- <a href="#" class="Nav-button"><li>Contact</li></a> -->
+        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
+        <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
+            <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
+            <a href="About.html" class="Nav-button"><li>About</li></a>
+            <a href="Games.html" class="Nav-button"><li>Games</li></a>
+            <a href="index.php" class="Nav-button"><li>Home</li></a>
       </ul>
     </header>
     <br />
@@ -54,14 +56,14 @@
         <input name="password" readonly />
         <br />
         <button class="btnChangePw">Change Password</button>
-        <button class="btnEdit">Edit</button>
+        <button class="btnEdit" onclick="window.location.href='MyAccountEdit.php';">Edit</button>
       </div>
       <div class="buttons">
         <label id="btnlabel"><h3>Links</h3></label>
         <button class="btnReview">My review</button>
         <button class="btnGame">My Game</button>
         <button class="btnFriends">MY Friends</button>
-        <button class="btnLeaderboard">Leaderboard</button>
+        <button class="btnLeaderboard" >Leaderboard</button>
       </div>
     </div>
     <br />

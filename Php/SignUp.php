@@ -5,8 +5,8 @@
     $firstName = $_POST['fName'];
     $lastName = $_POST['lName'];
     $email =$_POST['email'];
-    $password = md5($_POST['password']); // encrypt password using md5
-    $conPassword = md5($_POST['conPassword']);
+    $password = $_POST['password']; // encrypt password using md5
+    $conPassword = $_POST['conPassword'];
 
     $msg = "";
 
