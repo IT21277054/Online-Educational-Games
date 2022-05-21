@@ -20,7 +20,7 @@ if($conn-> connect_error){
     $gamertag = $_POST['gtag'];
 
     if(empty($gamertag)){
-        echo "<script>alert('Can not set an empty value');  location.replace('../Html/newfile.php')</script>";
+        echo "<script>alert('Can not set an empty value');  location.replace('ChangeGamerTagFile.php')</script>";
     }
     else{
 
@@ -31,10 +31,10 @@ if($conn-> connect_error){
     if($result -> num_rows == 0){
         $sql = "UPDATE client SET GamerTag = '$gamertag' WHERE Email ='Bruice@gmail.com'";
         $result = mysqli_query($conn, $sql);
-        echo "<script>alert('Success'); location.replace('../Html/newfile.php')</script>";
+        echo "<script>alert('Success'); location.replace('ChangeGamerTagFile.php')</script>";
     }
     else{
-        echo "<script>alert('GamerTag Already Exists');  location.replace('../Html/newfile.php')</script>";
+        echo "<script>alert('GamerTag Already Exists');  location.replace('ChangeGamerTagFile.php')</script>";
     }
 
 }

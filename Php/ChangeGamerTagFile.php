@@ -39,11 +39,11 @@
         <b>
         <ul id="Nav-bar-id" class="Nav-bar">
             <img src="../images/Logo/final.png" id="logo">
-            <a href="Contact.html" class="gNav-button"><li>Contact</li></a>
-            <a href="Friends.html" class="gNav-button"><li>Friends</li></a>
-            <a href="About.html" class="gNav-button"><li>About</li></a>
-            <a href="Games.html" class="gNav-button"><li>Games</li></a>
-            <a href="Index.html" class="gNav-button"><li>Home</li></a>
+            <a href="../Html/ContactUs.html" class="gNav-button"><li>Contact</li></a>
+            <a href="../Html/Friends.html" class="gNav-button"><li>Friends</li></a>
+            <a href="../Html/About.html" class="gNav-button"><li>About</li></a>
+            <a href="Games.php" class="gNav-button"><li>Games</li></a>
+            <a href="Index.php" class="gNav-button"><li>Home</li></a>
         </ul>
         </b>
     </header>
@@ -77,7 +77,7 @@
     </div>
     <div class="content">
         <center>
-        <form action="../Php/MyFirstPage.php" method="post">
+        <form action="ChangeGamerTag.php" method="post">
             <label for="gtag" class="gttitle">Change Gamer Tag</label><br><br>
             <input type="text" name="gtag" class="gttxt"><br><br>
             <button type="submit" class="gtsub">Change</button>

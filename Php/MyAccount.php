@@ -43,9 +43,9 @@
         <img src="../images/Logo/final.png" id="logo" />
         <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
         <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
-        <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
-            <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
-            <a href="About.html" class="Nav-button"><li>About</li></a>
+        <a href="../Html/Contact.html" class="Nav-button"><li>Contact</li></a>
+            <a href="../Html/Friends.html" class="Nav-button"><li>Friends</li></a>
+            <a href="../Html/About.html" class="Nav-button"><li>About</li></a>
             <a href="Games.php" class="Nav-button"><li>Games</li></a>
             <a href="index.php" class="Nav-button"><li>Home</li></a>
       </ul>

@@ -15,11 +15,11 @@
         <header>
             <ul id="Nav-bar-id" class="Nav-bar">
                 <img src="../images\Logo\final.png" id="logo">
-                <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
-                <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
-                <a href="About.html" class="Nav-button"><li>About</li></a>
-                <a href="Games.html" class="Nav-button"><li>Games</li></a>
-                <a href="Index.html" class="Nav-button"><li>Home</li></a>
+                <a href="../Html/Contact.html" class="Nav-button"><li>Contact</li></a>
+                <a href="../Html/Friends.html" class="Nav-button"><li>Friends</li></a>
+                <a href="../Html/About.html" class="Nav-button"><li>About</li></a>
+                <a href="Games.php" class="Nav-button"><li>Games</li></a>
+                <a href="Index.php" class="Nav-button"><li>Home</li></a>
             </ul>
         </header>
 
@@ -57,7 +57,6 @@
             while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["GamerTag"]. "</td><td>" . $row["HighScore"] . "</td><td>"
             . $row["GameID"]. "</td></tr>";
-            ;
             }
             echo "</table>";
             } else { echo "The table is empty"; }

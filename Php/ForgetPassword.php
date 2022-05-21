@@ -21,9 +21,9 @@
     <header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='SignUp.html' class='Nav-button'><li>Login</li></a>
-        <a href='Contact.html' class='Nav-button'><li>Contact</li></a>
-        <a href='About.html' class='Nav-button'><li>About</li></a>
+        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
+        <a href='../Html/Contact.html' class='Nav-button'><li>Contact</li></a>
+        <a href='../Html/About.html' class='Nav-button'><li>About</li></a>
         <a href='Games.php' class='Nav-button'><li>Games</li></a>
         <a href='index.php' class='Nav-button'><li>Home</li></a>
       </ul>
