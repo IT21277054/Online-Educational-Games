@@ -1,45 +1,128 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <html>
-    <head>
-      <title>FeedBack</title>
-      <link rel="stylesheet" href="../Styles/FeedBack.css" />
-      <link rel="stylesheet" href="../Styles/Styles.css" />
-    </head>
-  </html>
-  <body>
-    <video autoplay muted loop class="FCvideo">
-      <source src="../Videos/FC.mp4" type=video/ogg>
-    </video>
-    <!-- Web site navigation bar -->
-    <header>
-      <ul id="Nav-bar-id" class="Nav-bar">
-        <img src="../images/Logo/final.png" id="logo" />
-        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
-        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
-        <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
-        <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
-        <a href="About.html" class="Nav-button"><li>About</li></a>
-        <a href="Games.php" class="Nav-button"><li>Games</li></a>
-        <a href="index.php" class="Nav-button"><li>Home</li></a>
-      </ul>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="TopFB"><h1>FeedBack</h1></div>
+    <link rel="stylesheet" href="../Styles/FeedBack.css">
+    <link rel="stylesheet" href="../Styles/Styles.css">
 
-    <div class="Fbox">
-      <label for="">Subject</label><br />
-      <input name="subject" type="text" placeholder="" /><br />
-      <label for="">Content</label><br />
-      <text class="btntext" type="text" placeholder="" /><br />
-      <textarea name="content" class="FBBox" type="text"> </textarea>
-    </div>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <footer>
-      <img src="../images/Logo/Facebook.png" class="flogo" />
-      <img src="../images/Logo/Instergram.png" class="flogo" />
-      <img src="../images/Logo/Twitter.png" class="flogo" />
-    </footer>
-    <script src="../Js/Main.js"></script>
-  </body>
+
+    <link rel="shortcut icon" href="../images/2323134-middle.png/">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
+   
+    <title>Feedback</title>
+</head>
+
+<body>
+    <!--Navigation bar-->
+
+
+
+<!-- Background -->
+
+<video width ="320" height="240" autoplay muted loop class ="bgvideo">
+    <source src="../images/B12.mp4" type ="video/mp4"> 
+</video>
+
+
+    <!--Navigation bar-->
+
+<header>
+    <ul id="Nav-bar-id" class="Nav-bar">
+        <img src="..\images\Logo\final.png" id="logo">
+        <a href="Contact.html" class="VNav-button"><li>Contact</li></a>
+        <a href="Genre.html" class="VNav-button"><li>Genre</li></a>
+        <a href="About.html" class="VNav-button"><li>About</li></a>
+        <a href="Games.html" class="VNav-button"><li>Games</li></a>
+        <a href="Index.html" class="VNav-button"><li>Home</li></a>
+
+        </ul>
+</header>
+
+<!-- Title -->
+
+<div class="Star">
+
+
+</div>
+
+<img src="../images/backFeedback.gif" class = "Vfpage">
+
+<div class="Vtitle">Feedback</div>
+
+
+
+
+
+<!-- Content -->
+<div class="Vcontent">
+
+  <fieldset class ="Vfield">
+    <!-- <legend>My Review</legend> -->
+    
+    <!-- <nav>
+        <label for="btn-1" class="button">Drop down
+            <span class="fas fa-caret-down"></span>
+            </label>
+            <input type="checkbox" id="btn-1">
+            <ul class="menu">
+                <span class="fas fa-caret-up"></span>
+                <li>Test 1</li>
+                <label for="" class="first">Features</label>
+                <ul>
+                    <li>Page</li>
+                </ul>
+                <li>Test 2</li>
+                <li>Test 3</li>
+                <li>Test 3</li>
+            </ul>
+    </nav>  -->
+
+<form>
+    <input type="text" id = "feedbackSubject" name = "Subject" value ="Subject"><br>
+
+
+
+    <textarea type="text" id = "feedbackbox" name = "Content" value = "Add your valuable review"></textarea><br>
+
+
+
+    
+<!-- Review button -->
+
+<div class = "Button">
+
+    <button type = "submit" name="submit" class="AddFeedbackButton">Add Feedback</button>
+
+</div>
+
+</form>
+
+</fieldset>
+
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <img src="..\images/Logo/Facebook.png" class = "flogo">
+    <img src="..\images/Logo/Instergram.png" class="flogo">
+    <img src="..\images/Logo/Twitter.png" class="flogo">
+</footer>
+
+
+<script src="../Js/Feedback.js"></script>
+
+</body>
 </html>
