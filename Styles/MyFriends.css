@@ -75,15 +75,23 @@ body{
     font-size: 1000%;
     /* margin-top:-40%;
     margin-left:5%; */
-    color: white;
+    color: black;
     z-index: -1;
+    margin-top: 43px;
+    margin-left:
+}
+
+.Vfpage{
+    float: right;
+    margin-right: 10%;
+    margin-top: 4.5%;
 }
 
 .Vcontent{
     border-radius: 25px;
     position: relative;
     background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
-    margin-top: -5%;
+    margin-top: 10%;
     margin-left: 5%;
     margin-right: 5%;
     padding:3%;
@@ -99,6 +107,7 @@ footer{
     margin-top:1%;
     padding:0.5%;
     margin: 0.2%;
+
 }
 
 /* .bgvideo{
