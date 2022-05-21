@@ -1,0 +1,365 @@
+.Rtitle{
+    position:absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1000%;
+    margin-top:-25%;
+    margin-left:5%;
+    color: rgb(72, 3, 93);
+}
+
+.RNav-button
+{
+    padding: 0.5%;
+    float: right;
+    text-decoration: none;
+    font-family: 'Comforataa' , cursive;
+    color: rgb(72, 3, 93);
+}
+
+
+.RNav-button:hover{
+    background-color:rgba(179, 0, 255, 0.637);
+    border-radius: 10px;
+}
+
+
+.Rcontent{
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:3%;
+    opacity: 0.9;
+}
+
+.Rfpage{
+
+  width: 98%;
+  border-radius: 10px;
+  margin-top: -16%;
+  margin-left:1%
+  
+}
+
+
+#slider-image {
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 5;
+  }
+  
+  #slider-image.trans {
+    opacity: 0;
+  }
+
+  
+
+  .text-box{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #fff;
+}
+
+.text-box h1{
+    margin-bottom: 40px;
+}
+
+.text-box p{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+
+
+
+
+
+#reviewbox
+{
+    border:2px solid white;
+    border-radius: 4px;
+    color :white;
+    height:100px;
+    padding-top: -20px;
+    padding-bottom: 20px;
+    width:500px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    background-color: transparent;
+    font-size:16px;
+    font-family:cursive;
+    transition: width 0.5s ease-in;
+}
+
+#reviewbox:focus
+{
+    width:100%;
+    border: none;
+}
+
+
+#reviewSubject
+{
+    border:2px solid white;
+    border-radius: 4px;
+    color :white;
+    height:30px;
+    width:500px;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-bottom: 8px;
+    background-color: transparent;
+    font-size:18px;
+    font-family:cursive;
+    font-weight:bold;
+
+
+}
+
+
+.EditReviewButton
+{
+    border: 4px solid white;
+    
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 6px white;
+    background-color:rgba(49, 5, 68, 0.637);
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+
+.Button
+{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 40px auto;
+  position: relative;
+}
+
+
+.OneLine{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+/* Css for Stars */
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;
+  }
+  /* hide the inputs */
+  .star-rating input {
+    display: none;
+  }
+  /* set properties of all labels */
+  .star-rating > label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: white;
+  }
+  /* give label a hover state */
+  .star-rating label:hover {
+    color: rgba(99, 54, 119, 0.822);
+    transition: 0.2s ease;
+  }
+  .star-rating label:active::before {
+    transform:scale(1.1);
+  }
+  
+  /* set shape of unselected label */
+  .star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+  }
+  /* set full star shape for checked label and those that come after it */
+  .star-rating input:checked ~ label:before {
+    content:'\2605';
+  }
+  
+  @-moz-document url-prefix() {
+    .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+    }
+  }  
+
+
+
+
+
+
+
+
+
+
+.AddReviewButton
+{
+    border: 4px solid white;
+    
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 6px white;
+    background-color:rgba(49, 5, 68, 0.637);
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#23E3C9;
+}
+
+.slider{
+    width:80%;
+    height: 50%;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+.slides{
+    width:500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+
+}
+
+
+
+.navigation-manual{
+
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.manual-btn{
+    border:2px solid #23E3C9;
+    padding:5px;
+    border-radius:10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background:#23E3C9;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -28%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -4%0;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+
+/* css for automatic navigation */
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+}
