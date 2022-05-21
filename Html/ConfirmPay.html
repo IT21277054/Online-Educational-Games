@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../Styles/Styles.css">
-    <link rel="stylesheet" href="../Styles/CPay.css">
+    <link rel="stylesheet" href="../Styles/ConfirmPay.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     
+    <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Confirm payment</title>
 </head>
 <body>
@@ -51,11 +52,12 @@
 
     <h1>Yor are almost there! シ </h1>
     <div class="conTitle">Confirm <br>Payment</div>
+    
     <div class="conContent">
         <div class="split left">
             <h6 class="text">Enter promo code</h6>
             <form action="" method="" >
-                <input type="text" id="promocode" class="inputbox box">
+                <input type="text" id="promocode" class="inputbox1">
                 <input type="submit" value="Submit" class="submitbut btn">
             </form>
 
@@ -66,7 +68,18 @@
             <h6>Total</h6>
             <h6> Discount</h6>
             <h6> final amount</h6>
+            <h6> Transaction method</h6>
+            <form action="" method="" >
+                <select id="transType" name="transType" class="dropdown"> 
+                    <option value="select">Select</option>
+                    <option value="credit">Credit card</option>
+                    <option value="debit">Debit card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </form>
+
             <button type="button" onclick="alert('Confirm your paymet')"  class="btn">Pay</button>
+
         </div>
 
     </div>
