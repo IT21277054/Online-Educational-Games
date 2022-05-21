@@ -1,5 +1,23 @@
 <?php 
 
+session_start();
+
+include '../Php/dbConnection.php';
+
+if(isset($_POST['submit'])){
+
+  $email = $_SESSION['email'];
+  $password = md5($_POST['password']);
+  $sql = "DELETE FROM client where Email= '$email' AND ClientPassword= '$password'";
+  if(mysqli_query($conn ,$sql)){
+    echo "<script>alert('Account Deleted')</script>";
+    session_destroy();
+    header("Location: ../Html/index.php");
+  }
+  else {
+    echo "<script>alert('Error Try again')</script>";
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +67,7 @@
         <a href='index.php' class='Nav-button'><li>Home</li></a>
       </ul>
     </header>";
+    
   }
 
     ?>
@@ -68,7 +87,7 @@
           class="Forget-Password-form"
           id="ForgetPassword"
         >
-          <label for="password" id="deleteLabel" >If you want to delete your account Enter password and click confirm</label>
+          <label for="password" id="deleteLabel" ><p>If you want to delete your account Enter password and click confirm</p></label>
           <input
             type="password"
             name="password"
@@ -81,7 +100,7 @@
           <br />
           <br />
           <br />
-          <button type="submit" class="submit">Change Password</button>
+          <button type="submit" name="submit" class="submit">Confirm</button>
         </form>
       </div>
     </div>
@@ -92,5 +111,6 @@
       <img src="../images/Logo/Twitter.png" class="flogo" />
     </footer>
     <script src="../Js/UserController.js"></script>
+    <script src="../Js/Main.js"></script>
   </body>
 </html>

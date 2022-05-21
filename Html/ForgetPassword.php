@@ -14,24 +14,26 @@
     <title>Forget Password</title>
   </head>
   <body>
+     <video autoplay muted loop class="bgmvideo">
+      <source src="../Videos/BG_signup.mp4" type=video/ogg>
+    </video>
     <!-- Web site navigation bar -->
     <header>
-      <ul id="Nav-bar">
-        <img src="../images/Logo/final.png" id="logo" />
-        <a href="#" class="Nav-button"><li>Login</li></a>
-        <a href="#" class="Nav-button"><li>About</li></a>
-        <a href="#" class="Nav-button"><li>Home</li></a>
-        <!-- <a href="#" class="Nav-button"><li>Genre</li></a> -->
-        <!-- <a href="#" class="Nav-button"><li>Contact</li></a> -->
-        <hr id="line" />
+      <ul id='Nav-bar-id' class='Nav-bar'>
+        <img src='../images/Logo/final.png' id='logo' />
+        <a href='SignUp.html' class='Nav-button'><li>Login</li></a>
+        <a href='Contact.html' class='Nav-button'><li>Contact</li></a>
+        <a href='About.html' class='Nav-button'><li>About</li></a>
+        <a href='Games.php' class='Nav-button'><li>Games</li></a>
+        <a href='index.php' class='Nav-button'><li>Home</li></a>
       </ul>
-    </header>
+    </header>";
 
     <div class="content">
       <div class="overley">
         <!-- <div id="btn"></div> -->
 
-        <button type="button" class="ForgetPassword" id="ForgetPassword">
+        <button type="button" class="ForgetPassword" name="submit" id="ForgetPassword">
           Forget Password
         </button>
       </div>
@@ -79,5 +81,6 @@
       <img src="../images/Logo/Twitter.png" class="flogo" />
     </footer>
     <script src="../Js/UserController.js"></script>
+    <script src="../Js/Main.js"></script>
   </body>
 </html>

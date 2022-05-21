@@ -23,17 +23,17 @@
     $gTag = $_POST['gTag'];
     $cType = $_POST['accType'];
 
-    $name = $_FILES['imgFile']['name'];
-    $target_dir = "../Images/User Images/";
-    $target_file = $target_dir . basename($_FILES["imgFile"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $extensions_arr = array("jpg","jpeg","png");
+    $imgName = $_FILES['imgFile']['name'];
+    $uploadLocation = "../Images/User Images/";
+    $uploadFile = $uploadLocation . basename($_FILES["imgFile"]["name"]);
+    $imageFileType = strtolower(pathinfo($uploadFile,PATHINFO_EXTENSION));
+    $extension = array("jpg","jpeg","png");
 
-    in_array($imageFileType,$extensions_arr);
+    in_array($imageFileType,$extension);
 
-    move_uploaded_file($_FILES['imgFile']['tmp_name'],$target_dir.$name);
+    move_uploaded_file($_FILES['imgFile']['tmp_name'],$target_dir.$imgName);
     
-    if(!empty($name)){
+    if(!empty($imgName)){
       $cImage=$_FILES['imgFile']['name'];
     }else{ 
       $cImage = $row['UserImage'];
