@@ -5,7 +5,6 @@ include '../Php/dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['email'] = "gonsudheera@gmail.com";
 
 $email = $_SESSION['email'];
 
@@ -23,10 +22,20 @@ if(!$result->num_rows > 0)
 else{
     $Topic = $row['Topic'];
     $Content = $row['Content'];
-    echo "<script>document.getElementByID('reviewbox').value = '$Content'</script>";
 }
 
+if(isset($_POST['submit'])){
 
+    $Topic = $_POST['Topic'];
+    $Content = $_POST['Content'];
+
+    $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$email'where ReviewID='$rID'";
+    if(mysqli_query($conn, $sql)){
+        echo "<script>alert('Success')</script>";
+    }
+    header("Location: ./MyReviewHistory.php");
+
+}
 
 
 ?>
