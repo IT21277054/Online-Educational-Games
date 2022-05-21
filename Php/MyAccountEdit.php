@@ -30,9 +30,8 @@
     $extension = array("jpg","jpeg","png");
 
     in_array($imageFileType,$extension);
+    move_uploaded_file($_FILES['imgFile']['tmp_name'],$uploadLocation.$imgName);
 
-    move_uploaded_file($_FILES['imgFile']['tmp_name'],$target_dir.$imgName);
-    
     if(!empty($imgName)){
       $cImage=$_FILES['imgFile']['name'];
     }else{ 
