@@ -1,69 +1,143 @@
-#logo {
-  width: 5%;
+.Vtitle{
+
+  position:absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1000%;
+    margin-top:-25%;
+    margin-left:5%;
+    color: rgb(0, 64, 138);
+  /* float: right; */
 }
 
-.TopFB {
-  position: absolute;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 300%;
-  /* margin-top :-40%; */
-  margin-left: 3%;
-
-  color: rgb(223, 213, 230);
+.VNav-button
+{
+    padding: 0.5%;
+    float: right;
+    text-decoration: none;
+    font-family: 'Comforataa' , cursive;
+    color: rgb(0, 64, 138);
 }
-.Myform {
-  position: absolute;
 
-  margin-right: 20%;
-  margin-top: 23%;
-  margin-left: 40%;
-  align-items: center;
-  color: #33475b;
 
+.VNav-button:hover{
+  background-color:rgb(0, 166, 196);
   border-radius: 10px;
 }
-#Eml {
-  background-color: #b4a8cf;
-}
 
-#Sub {
-  background-color: #b4a8cf;
-}
-#Cont {
-  background-color: #b4a8cf;
-}
 
-.Fbox {
+
+.Vcontent{
   border-radius: 25px;
-  position: absolute;
-  background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
-  margin-top: 10%;
-  margin-left: 30%;
-  margin-right: 5%;
-  padding: 20%;
-  z-index: -1;
+  position: relative;
+  color:rgb(0, 39, 83);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: cursive;
+    background-image: linear-gradient(rgb(255, 115, 236), rgb(78, 205, 255));
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:3%;
+    opacity: 0.9;
 }
-#label {
-  size: 10px;
-  color: #e3e8eb;
+
+
+
+.Vfpage{
+
+  width: 98%;
+  border-radius: 10px;
+  margin-top: -16%;
+  margin-left:1%
+    
 }
-label {
-  color: white;
-}
-input {
-  color: #e2e8ed;
-}
-.FCvideo {
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  z-index: -1;
-  object-fit: cover;
-}
-.FBBox {
-  height: 20%;
-}
-/* .btntext
+
+.Vfield
 {
-  size: 50%;
+  border:4px solid rgb(0, 39, 83);
+  border-radius: 10px;
+}
+
+
+
+
+#feedbackbox
+{
+    border:2px solid rgb(0, 39, 83);;
+    border-radius: 4px;
+    color :rgb(0, 39, 83);
+    height:100px;
+    padding-top: -20px;
+    padding-bottom: 20px;
+    width:100%;
+    margin-top:5%;
+    margin-bottom: 8px;
+    /* margin-left: auto; */
+    margin-right: auto;
+    display:block;
+    background-color: transparent;
+    font-size:16px;
+    font-family:cursive;
+    transition: width 0.5s ease-in;
+}
+
+/* #reviewbox:focus
+{
+    width:100%;
+    border: none;
 } */
+
+
+#feedbackSubject
+{
+    border:2px solid rgb(0, 39, 83);
+    border-radius: 4px;
+    color : rgb(0, 39, 83);
+    height:30px;
+    width:500px;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-bottom: 0.1%;
+    background-color: transparent;
+    font-size:18px;
+    font-family:cursive;
+    font-weight:bold;
+    /* float: left; */
+
+}
+
+
+
+
+
+
+
+
+
+.AddFeedbackButton
+{
+    border: 4px solid rgb(0, 39, 83);
+    
+    border-radius: 30px;
+    color:rgb(0, 39, 83);
+    padding: 10px;
+    box-shadow: 5px 6px gray;
+    background-color:transparent;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+
+
