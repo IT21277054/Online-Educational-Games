@@ -70,7 +70,11 @@
         <?php
             include '../Php/dbConnection.php';
 
-            $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price FROM orderitem o , game g WHERE o.GameID=g.GameID ORDER BY o.ODate DESC;";
+            $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price 
+                    FROM orderitem o , game g 
+                    WHERE o.GameID=g.GameID 
+                    ORDER BY o.ODate DESC;";
+                    
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
             // output data of each row
