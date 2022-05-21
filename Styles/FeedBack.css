@@ -1,168 +1,65 @@
-body {
-    margin: 0%;
-  }
-  
-  .bgmvideo {
-    min-width: 100%;
-    min-height: 100%;
-    position: fixed;
-    z-index: -1;
-    object-fit: cover;
-  }
-  
-  .Nav-bar {
-    overflow: hidden;
-    list-style: none;
-    padding-right: 2%;
-    position: fixed;
-    width: 97%;
-  }
-  
-  .Nav-bar-scroll {
-    overflow: hidden;
-    list-style: none;
-    padding-right: 2%;
-    position: fixed;
-    background-image: linear-gradient(rgb(18, 18, 18), rgb(0, 0, 0));
-    top: 0;
-    margin-top: 0;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    z-index: 1;
-    width: 97%;
-    animation-duration: 0.5s;
-    animation-name: slidedown;
-    opacity: 0.7;
-  }
-  
-  @keyframes slidedown {
-    from {
-      top: -10%;
-    }
-  }
-  
-  @keyframes slideup {
-    to {
-      top: -10%;
-    }
-  }
-  
-  .fpage {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .Nav-button {
-    padding: 0.5%;
-    float: right;
-    text-decoration: none;
-    font-family: "Comfortaa", cursive;
-    color: rgb(255, 255, 255);
-  }
-  
-  .Nav-button:hover {
-    background-color: rgba(179, 0, 255, 0.637);
-    border-radius: 10px;
-  }
-  
-  #logo {
-    width: 5%;
-  }
-  
-
-
-.TopFB
-{
-    position :absolute;
-    font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size : 300%; 
-    /* margin-top :-40%; */
-       margin-left : 3%; 
-       
-
-    color : rgb(223, 213, 230);
-}
-.Myform
-{
-    position :absolute;
-   
-    margin-right: 20%; 
-    margin-top: 23%;
-    margin-left: 40%;
-    align-items: center;
-    color: #33475b;
-   
-    border-radius: 10px;
-    
-}
-#Eml
-{
-    
-    background-color:#b4a8cf;
+#logo {
+  width: 5%;
 }
 
-#Sub
-{
-    background-color:#b4a8cf;
+.TopFB {
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 300%;
+  /* margin-top :-40%; */
+  margin-left: 3%;
 
+  color: rgb(223, 213, 230);
 }
-#Cont
-{
-    background-color:#b4a8cf;
+.Myform {
+  position: absolute;
 
+  margin-right: 20%;
+  margin-top: 23%;
+  margin-left: 40%;
+  align-items: center;
+  color: #33475b;
+
+  border-radius: 10px;
+}
+#Eml {
+  background-color: #b4a8cf;
 }
 
-
-.Fbox
-{
- 
-    
-
-     border-radius: 25px;
-     position: absolute;
-     background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
-     margin-top: 10%;
-     margin-left: 30%;
-     margin-right: 5%;
-     padding:20%;
-     z-index: -1;
-
-    
+#Sub {
+  background-color: #b4a8cf;
 }
-#label
-{
-    size: 10px;
-    color:#e3e8eb
-    
+#Cont {
+  background-color: #b4a8cf;
 }
-input
-{
-    color:#e2e8ed
 
+.Fbox {
+  border-radius: 25px;
+  position: absolute;
+  background-image: linear-gradient(rgb(13, 0, 70), rgb(61, 2, 29));
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 5%;
+  padding: 20%;
+  z-index: -1;
 }
-.FCvideo
-{
-    min-width: 100%; 
-    min-height: 100%;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
+#label {
+  size: 10px;
+  color: #e3e8eb;
 }
-.FBBox
-{
+label {
+  color: white;
+}
+input {
+  color: #e2e8ed;
+}
+.FCvideo {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+.FBBox {
   height: 20%;
 }
-.flogo {
-    width: 2%;
-  }
-  
-  footer {
-    border-radius: 10px;
-    width: 98%;
-    background-color: black;
-    margin-bottom: 0.5%;
-    margin-top: 60%;
-    margin-left: 0.5%;
-    padding: 0.5%;
-    position: relative;
-  }
