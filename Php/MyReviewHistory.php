@@ -20,6 +20,7 @@ if(!$result -> num_rows > 0){
 else
 {
     $row = mysqli_fetch_array($result);
+    $name = $row['FirstName'].' '.$row['LastName'];
     $cID = $row['ClientID'];
 
     $sql = "SELECT * FROM review where clientID = '$cID'";
@@ -104,6 +105,13 @@ else
  while($row = mysqli_fetch_array($result)){
      $cn = $row['Content'];
      $rID = $row['ReviewID'];
+     $gID = $row['GameID'];
+
+    $sql = "SELECT * FROM game where GameID = '$gID'";
+    $result2 = mysqli_query($conn , $sql);
+    $row2 = mysqli_fetch_array($result2);
+
+    $gName = $row2['GameName'];
 
      if(isset($_POST['btn-edit'])){
         
@@ -129,8 +137,8 @@ else
         
                         <!-- name-andUsername -->
                         <div class='name-user'>
-                            <strong>Umayangana Wijayasiri</strong>
-                            <span>@Uma</span>
+                            <strong>".$name."</strong>
+                            <span>".$gName."</span>
                         </div>
                     </div>
         
