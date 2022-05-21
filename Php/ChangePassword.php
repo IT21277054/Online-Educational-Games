@@ -33,7 +33,7 @@
     //  echo"<script type='text/javascript'>alert('submit error '); </script>";
   }
 
-
+$conn -> close();
 ?>
 
 

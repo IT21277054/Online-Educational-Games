@@ -15,6 +15,7 @@
   $cType = $row['ClientType'];
   $cImage = $row['UserImage'];
  
+  $conn -> close();
 ?>
 
 

@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <html>
-        <head>
-            <title> FeedBack </title>
-        <link rel="stylesheet" href="../Styles/FeedBack.css">
-        
-        </head>
-    </html>
-    <body>
+  <html>
+    <head>
+      <title>FeedBack</title>
+      <link rel="stylesheet" href="../Styles/FeedBack.css" />
+      <link rel="stylesheet" href="../Styles/Styles.css" />
+    </head>
+  </html>
+  <body>
+    <video autoplay muted loop class="FCvideo">
+      <source src="../Videos/FC.mp4" type=video/ogg>
+    </video>
+    <!-- Web site navigation bar -->
+    <header>
+      <ul id="Nav-bar-id" class="Nav-bar">
+        <img src="../images/Logo/final.png" id="logo" />
+        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
+        <a href="Contact.html" class="Nav-button"><li>Contact</li></a>
+        <a href="Friends.html" class="Nav-button"><li>Friends</li></a>
+        <a href="About.html" class="Nav-button"><li>About</li></a>
+        <a href="Games.php" class="Nav-button"><li>Games</li></a>
+        <a href="index.php" class="Nav-button"><li>Home</li></a>
+      </ul>
+    </header>
 
-        <video 
-        autoplay muted loop class="FCvideo"> 
-      <source  src="../Videos/FC.mp4" type=video/ogg>
-  </video>
+    <div class="TopFB"><h1>FeedBack</h1></div>
 
-        <h1> <div class="TopFB"> Feed <br>Back </div> </h1> 
-        <!-- <div>
-            <form  class="Myform" action="method">
-                <label for="Eml">Email</label><br>
-                <input type="text" id="Eml" Email="Eml"><br><br>
-                <label for="Sub">Subject</label><br>
-                <input type="text" id="Sub" Subject="Sub"><br><br>
-                <label for="Cont">Content</label><br>
-                <input type="text" id="Cont" Content="Cont"><br>
-            </form>
-        </div> -->
+    <div class="Fbox">
+      <label for="">Subject</label><br />
+      <input name="subject" type="text" placeholder="" /><br />
+      <label for="">Content</label><br />
+      <text type="text" placeholder="" /><br />
+      <textarea name="content" class="FBBox" type="text"> </textarea>
+    </div>
 
-        
- 
-        <div class="Fbox"> 
-      
-          <lable>Email</lable> <br><hr>
-        <input class="FBBox" type="text" >
-
-                 
-            </div> 
-
-    </body>
+    <footer>
+      <img src="../images/Logo/Facebook.png" class="flogo" />
+      <img src="../images/Logo/Instergram.png" class="flogo" />
+      <img src="../images/Logo/Twitter.png" class="flogo" />
+    </footer>
+    <script src="../Js/Main.js"></script>
+  </body>
 </html>
