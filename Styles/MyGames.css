@@ -23,6 +23,11 @@ td, th {
     padding: 20px;
 }
 
+.line{
+    border-bottom: 1px dashed white;
+    font-size:25px;
+}
+
 
 .heading{
     position:absolute;

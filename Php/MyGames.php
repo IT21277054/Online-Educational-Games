@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="stylesheet" href="../Styles/MyGames.css">
     <link rel="stylesheet" href="../Styles/Styles.css">
     <meta charset="UTF-8">
@@ -52,11 +53,40 @@
     <div class="heading">My<br>Games</div>
     <img src="../Images/child.gif" class="phgif" height="375px">
     <div class="phcontent">
+
+    <center>
         <table boarder =1 >
-            <tr> <th> Item </th>    <th> Each month </th>   <th> Months </th>    <th> Total </th>  </tr>
-            <tr> <td> Ball</td>     <td> $10 </td>          <td> 1 </td>         <td> $10 </td>  </tr>
-            <tr> <td> Doll</td>     <td> $15 </td>          <td> 4 </td>         <td> $60 </td>  </tr>
+        <thead> 
+            <tr> 
+                <td class="line" > Game name</td>     
+                <td class="line" > Order date </td>                   
+                <td class="line" > Order status</td>  
+                <td class="line" > Price </td>
+            </tr>
+        <thead>
+
+        <tbody>
+        
+        <?php
+            include '../Php/dbConnection.php';
+
+            $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price FROM orderitem o , game g WHERE o.GameID=g.GameID ORDER BY o.ODate DESC;";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["ODate"] . "</td><td>"
+            . $row["OStatus"]. "</td> <td>". '$'. $row["Price"]. "</td></tr>";
+            }
+            echo "</table>";
+            } else { echo "The table is empty"; }
+            $conn->close();
+            ?>
+
+        </tbody>
         </table>
+    <center>
+
     </div>
 
     <footer>
