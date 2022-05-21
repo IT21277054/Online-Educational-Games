@@ -53,7 +53,7 @@
       echo "<script>alert('Failed to update data. Try again')</script>";
     }
   }
- 
+ $conn -> close();
 ?>
 
 <!DOCTYPE html>
@@ -129,4 +129,5 @@
     <script src="../Js/MyAccount.js"></script>
     <script src="../Js/Main.js"></script>
   </body>
+
 </html>

@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
     echo "<script>alert('Error Try again')</script>";
   }
 }
+$conn -> close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
