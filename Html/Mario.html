@@ -7,7 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="demo"></p>
-    <script src="../Js/Game.js"></script>
+    <div id="contdown">
+        <span id="seconds">1800</span>
+    </div>
+
+    <input type="text" placeholder="Type something..." id="myInput"><br>
+    <button type="button" onclick="getInputValue();" class="vbtn">Get Value</button>
+
+    <script>
+
+
+        timeLeft = 1800;
+
+        function countdown() {
+            timeLeft--;
+            document.getElementById("seconds").innerHTML = String( timeLeft );
+            if (timeLeft > 0) {
+                setTimeout(countdown, 1000);
+            }
+            else{
+                window.location.replace("TryAgain.html");
+            }
+        };
+
+        setTimeout(countdown, 1000);
+
+        const a = Math.floor(Math.random() * (100 - 1)) + 1;
+        const b = Math.floor(Math.random() * (100 - 1)) + 1;
+        const c = a + b;
+        console.log(a + " " + b + " " + c);
+
+
+        function getInputValue(){
+
+            // Selecting the input element and get its value 
+            inputVal = document.getElementById("myInput").value;
+            console.log(inputVal);
+
+            const c = a + b;
+            
+            if(myInput == c){
+                console.log("Correct");     
+            }
+            else{
+                console.log("Incorrect"); 
+            }
+
+            }
+            
+
+
+
+
+    </script>
 </body>
 </html>

@@ -59,7 +59,7 @@
     $conn = mysqli_connect($serverName, $username, $password, $dbName);
 
     if($conn-> connect_error){
-        echo "<script>('Connection error')</script>";
+        echo "<script> alert('Connection error')</script>";
         die('');
     }  
     else{

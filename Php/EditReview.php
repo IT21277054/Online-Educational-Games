@@ -5,7 +5,6 @@ include '../Php/dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['email'] = "gonsudheera@gmail.com";
 
 $email = $_SESSION['email'];
 
@@ -23,10 +22,20 @@ if(!$result->num_rows > 0)
 else{
     $Topic = $row['Topic'];
     $Content = $row['Content'];
-    echo "<script>document.getElementByID('reviewbox').value = '$Content'</script>";
 }
 
+if(isset($_POST['submit'])){
 
+    $Topic = $_POST['Topic'];
+    $Content = $_POST['Content'];
+
+    $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$email'where ReviewID='$rID'";
+    if(mysqli_query($conn, $sql)){
+        echo "<script>alert('Success')</script>";
+    }
+    header("Location: ./MyReviewHistory.php");
+
+}
 
 
 ?>
@@ -90,28 +99,11 @@ else{
     <fieldset>
         <legend>Edit My Review</legend>
         
-        <!-- <nav>
-            <label for="btn-1" class="button">Drop down
-                <span class="fas fa-caret-down"></span>
-                </label>
-                <input type="checkbox" id="btn-1">
-                <ul class="menu">
-                    <span class="fas fa-caret-up"></span>
-                    <li>Test 1</li>
-                    <label for="" class="first">Features</label>
-                    <ul>
-                        <li>Page</li>
-                    </ul>
-                    <li>Test 2</li>
-                    <li>Test 3</li>
-                    <li>Test 3</li>
-                </ul>
-        </nav>  -->
+    
 
     <form action="" method="POST">
         <input type="text" id = "reviewSubject" name = "Topic" value ="<?php echo $Topic; ?>"><br>
 
-        <!-- <input type="text" id = "reviewbox" name = "Content" value =""><br> -->
 
         <textarea type="text" id = "reviewbox" name = "Content"><?php echo $Content; ?></textarea><br>
 

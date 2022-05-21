@@ -20,6 +20,8 @@ if(!$result -> num_rows > 0){
 else
 {
     $row = mysqli_fetch_array($result);
+    $name = $row['FirstName'].' '.$row['LastName'];
+    $cImage = $row['UserImage'];
     $cID = $row['ClientID'];
 
     $sql = "SELECT * FROM review where clientID = '$cID'";
@@ -70,16 +72,17 @@ else
     <!--Navigation bar-->
 
 <header>
-    <ul id="Nav-bar-id" class="Nav-bar">
-        <img src="..\images\Logo\final.png" id="logo">
-        <a href="Contact.html" class="RNav-button"><li>Contact</li></a>
-        <a href="Genre.html" class="RNav-button"><li>Genre</li></a>
-        <a href="About.html" class="RNav-button"><li>About</li></a>
-        <a href="Games.html" class="RNav-button"><li>Games</li></a>
-        <a href="Index.html" class="RNav-button"><li>Home</li></a>
-        <hr id="line">
-        </ul>
-</header>
+      <ul id="Nav-bar-id" class="Nav-bar">
+        <img src="../images/Logo/final.png" id="logo" />
+        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
+        <a href="../Html/Contact.html" class="Nav-button"><li>Contact</li></a>
+            <a href="../Html/Friends.html" class="Nav-button"><li>Friends</li></a>
+            <a href="../Html/About.html" class="Nav-button"><li>About</li></a>
+            <a href="Games.php" class="Nav-button"><li>Games</li></a>
+            <a href="index.php" class="Nav-button"><li>Home</li></a>
+      </ul>
+    </header>
 
 <!-- Title -->
 <img src="../images/Star.gif" class = "Rfpage">
@@ -104,6 +107,15 @@ else
  while($row = mysqli_fetch_array($result)){
      $cn = $row['Content'];
      $rID = $row['ReviewID'];
+     $gID = $row['GameID'];
+
+    $sql = "SELECT * FROM game where GameID = '$gID'";
+    $result2 = mysqli_query($conn , $sql);
+    $row2 = mysqli_fetch_array($result2);
+
+    echo "<script>alert($cImage)</script>";
+
+    $gName = $row2['GameName'];
 
      if(isset($_POST['btn-edit'])){
         
@@ -124,13 +136,13 @@ else
                     <div class='profile'>
                         <!-- img---- -->
                         <div class='profile-img'>
-                            <img src='..\images\Tinkerbell.jpg'/>
+                            <img src='../Images/User Images/".$cImage."'/>
                         </div>
         
                         <!-- name-andUsername -->
                         <div class='name-user'>
-                            <strong>Umayangana Wijayasiri</strong>
-                            <span>@Uma</span>
+                            <strong>".$name."</strong>
+                            <span>".$gName."</span>
                         </div>
                     </div>
         
