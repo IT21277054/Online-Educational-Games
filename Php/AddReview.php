@@ -5,11 +5,11 @@
 
 // start session
     session_start();
-    $_SESSION['email'] = "gonsudheera@gmail.com";
-
+    $_SESSION['gameID'] = 1000;
 
     if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
+        $gid = $_SESSION['gameID'];
 
         $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
@@ -21,8 +21,10 @@
         $cID = $row['ClientID'];
         $Topic = $_POST['Topic'];
         $Content = $_POST['Content'];
+        $stars = $_POST['stars'];
+        
 
-        $sql = "INSERT INTO review(Topic , Content , ClientID) values ('$Topic' , '$Content' , '$cID')";
+        $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
 
         $result = mysqli_query($conn , $sql); // execute the query
 
@@ -106,24 +108,6 @@
 
     <fieldset>
         <legend>My Review</legend>
-        
-        <!-- <nav>
-            <label for="btn-1" class="button">Drop down
-                <span class="fas fa-caret-down"></span>
-                </label>
-                <input type="checkbox" id="btn-1">
-                <ul class="menu">
-                    <span class="fas fa-caret-up"></span>
-                    <li>Test 1</li>
-                    <label for="" class="first">Features</label>
-                    <ul>
-                        <li>Page</li>
-                    </ul>
-                    <li>Test 2</li>
-                    <li>Test 3</li>
-                    <li>Test 3</li>
-                </ul>
-        </nav>  -->
 
     <form action="" method="POST">
         <input type="text" id = "reviewSubject" name = "Topic" placeholder ="Subject"><br>
@@ -134,7 +118,7 @@
 
 
     <!-- Add stars -->
-    <div class="star-rating">
+    <div class="star-rating"  >
         <input type="radio" name="stars" id="star-a" value="5"/>
         <label for="star-a"></label>
         
