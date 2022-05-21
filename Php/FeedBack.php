@@ -1,3 +1,35 @@
+<?php 
+
+include './dbConnection.php';
+session_start();
+
+if(isset($_POST['submit'])){
+
+    $email = $_SESSION['email'];
+    $fSubject = $_POST['fSubject'];
+    $fContent = $_POST['fContent'];
+
+    $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
+
+    $result = mysqli_query($conn , $sql); // execute the query 
+    
+    if($result -> num_rows > 0){
+        $row = mysqli_fetch_array($result);
+        
+        $cID = $row['ClientID'];
+        $sql = "INSERT INTO feedback(Topic , Content , ClientID) VALUES ('$fSubject' , '$fContent' , '$cID')" ;
+        if(mysqli_query($conn , $sql)){
+            echo "<script>alert('Congrats you just add a review')</script>";
+        }
+    }
+    echo "<script>alert('error')</script>";
+
+}
+
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,32 +97,13 @@
 <div class="Vcontent">
 
   <fieldset class ="Vfield">
-    <!-- <legend>My Review</legend> -->
-    
-    <!-- <nav>
-        <label for="btn-1" class="button">Drop down
-            <span class="fas fa-caret-down"></span>
-            </label>
-            <input type="checkbox" id="btn-1">
-            <ul class="menu">
-                <span class="fas fa-caret-up"></span>
-                <li>Test 1</li>
-                <label for="" class="first">Features</label>
-                <ul>
-                    <li>Page</li>
-                </ul>
-                <li>Test 2</li>
-                <li>Test 3</li>
-                <li>Test 3</li>
-            </ul>
-    </nav>  -->
 
 <form>
-    <input type="text" id = "feedbackSubject" name = "Subject" value ="Subject"><br>
+    <input type="text" id = "feedbackSubject" name = "fSubject" value ="Subject"><br>
 
 
 
-    <textarea type="text" id = "feedbackbox" name = "Content" value = "Add your valuable review"></textarea><br>
+    <textarea type="text" id = "feedbackbox" name = "fContent" value = "Add your valuable review"></textarea><br>
 
 
 
