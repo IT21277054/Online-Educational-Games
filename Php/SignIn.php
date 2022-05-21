@@ -8,7 +8,7 @@ session_start();
 
 // check already session started
 if(isset($_SESSION['email'])){
-    header("Location: ../Html/index.php");
+    header("Location: ../Php/index.php");
 }
 
 // check if the submit button clicked 

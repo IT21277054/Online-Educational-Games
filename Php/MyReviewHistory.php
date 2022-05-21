@@ -110,14 +110,6 @@ else
         $rID = $_POST['btn-edit'];
         header("Location: ./EditReview.php?rID=".$rID);
     }
-    //  echo "<script>alert($rID)</script>";
-
-    //  $sql2 = "SELECT * FROM Client where ClientID = '$cID'";
-    //  $result2 = mysqli_query($conn , $sql2);
- 
-    //  $row2 = mysqli_fetch_array($result2);
- 
-    //  $Name = $row2['FirstName'].' '.$row2['LastName'];
     echo "
 
     <form id = 'testimonials' action='' method='post'>
@@ -188,12 +180,6 @@ else
         
 }
         ?>
-            
-        
-            <!-- <div class="likes">
-                <i onclick ="myFunction(this)" class ="fa fa-thumbs-up"></i>
-            </div> -->
-        
         
             </fieldset>
         
