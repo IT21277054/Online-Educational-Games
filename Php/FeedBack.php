@@ -9,6 +9,7 @@ if(isset($_POST['submit'])){
     $fSubject = $_POST['fSubject'];
     $fContent = $_POST['fContent'];
 
+
     $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
     $result = mysqli_query($conn , $sql); // execute the query 
@@ -21,8 +22,8 @@ if(isset($_POST['submit'])){
         if(mysqli_query($conn , $sql)){
             echo "<script>alert('Congrats you just add a review')</script>";
         }
-    }
-    echo "<script>alert('error')</script>";
+    }else {
+    echo "<script>alert('error')</script>";}
 
 }
 
@@ -98,12 +99,12 @@ if(isset($_POST['submit'])){
 
   <fieldset class ="Vfield">
 
-<form>
-    <input type="text" id = "feedbackSubject" name = "fSubject" value ="Subject"><br>
+<form action="" method="post" >
+    <input type="text" id = "feedbackSubject" name = "fSubject" value ="" placeholder ="Subject" ><br>
 
 
 
-    <textarea type="text" id = "feedbackbox" name = "fContent" value = "Add your valuable review"></textarea><br>
+    <textarea type="text" id = "feedbackbox" name = "fContent" value = "" placeholder ="content"></textarea><br>
 
 
 
