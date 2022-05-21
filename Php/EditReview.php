@@ -5,7 +5,6 @@ include '../Php/dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['email'] = "gonsudheera@gmail.com";
 
 $email = $_SESSION['email'];
 
@@ -23,10 +22,13 @@ if(!$result->num_rows > 0)
 else{
     $Topic = $row['Topic'];
     $Content = $row['Content'];
-    echo "<script>document.getElementByID('reviewbox').value = '$Content'</script>";
 }
 
+if(isset($_POST['submit'])){
 
+    $sql = "UPDATE review SET ClientType='$cType',GamerTag='$gTag',Email='$email',FirstName='$fName',LastName='$lName',UserImage ='$cImage' where ClientID='$cId'";
+
+}
 
 
 ?>
