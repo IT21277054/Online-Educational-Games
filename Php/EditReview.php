@@ -26,7 +26,14 @@ else{
 
 if(isset($_POST['submit'])){
 
-    $sql = "UPDATE review SET ClientType='$cType',GamerTag='$gTag',Email='$email',FirstName='$fName',LastName='$lName',UserImage ='$cImage' where ClientID='$cId'";
+    $Topic = $_POST['Topic'];
+    $Content = $_POST['Content'];
+
+    $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$email'where ReviewID='$rID'";
+    if(mysqli_query($conn, $sql)){
+        echo "<script>alert('Success')</script>";
+    }
+    header("Location: ./MyReviewHistory.php");
 
 }
 
