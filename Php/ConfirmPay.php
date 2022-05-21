@@ -66,34 +66,53 @@
         </div>
 
         <div class="split right text" >
-            <h6>Total</h6>
-            <h6> Discount</h6>
-            <h6> final amount</h6>
-            <h6> Transaction method</h6>
-            <form action="" method="" >
-                <select id="transType" name="transType" class="dropdown"> 
-                    <option value="select">Select</option>
-                    <option value="credit">Credit card</option>
-                    <option value="debit">Debit card</option>
-                    <option value="paypal">PayPal</option>
-                </select>
-            </form>
+            <table> 
+                <tr>
+                    <td>Total</td>
+                    <td>value</td>
+                </tr>
 
-            <button type="button" onclick="alert('Confirm your paymet')"  class="btn">Pay</button>
+                <tr>
+                    <td>Discount</td>
+                    <td>value</td>
+                </tr>
 
+                <tr>
+                    <td>final amount</td>
+                    <td>value</td>
+                </tr>
+                
+                <tr>
+                    <td> Transaction method</t6>
+                    <td>
+                    <form action="" method="" >
+                        <select id="transType" name="transType" class="dropdown"> 
+                            <option value="select">Select</option>
+                            <option value="credit">Credit card</option>
+                            <option value="debit">Debit card</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn">
+                    </td>
+                </form>
+            <table>
         </div>
 
     </div>
 
 
 
-
-
+<!-- 
     <footer>
         <img  src="../Images/Logo/Facebook.png" class="flogo">
         <img  src="../Images/Logo/Instergram.png" class="flogo">
         <img  src="../Images/Logo/Twitter.png" class="flogo">
-    </footer>
+    </footer> -->
 
     <script src="../Js/Main.js"></script>
 
