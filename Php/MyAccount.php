@@ -1,6 +1,6 @@
 <?php
 
-  include '../Php/dbConnection.php';
+  include './dbConnection.php';
   session_start();
   $email = $_SESSION['email'];
 
@@ -15,7 +15,7 @@
   $cType = $row['ClientType'];
   $cImage = $row['UserImage'];
  
-  $conn -> close();
+  // $conn -> close();
 ?>
 
 
@@ -81,9 +81,9 @@
       </div>
       <div class="buttons">
         <label id="btnlabel"><h3>Links</h3></label>
-        <button class="btnReview">My review</button>
+        <button class="btnReview" onclick="window.location.href='MyReviewHistory.php';" >My review</button>
         <button class="btnGame">My Game</button>
-        <button class="btnFriends">MY Friends</button>
+        <button class="btnFriends">My Friends</button>
         <button class="btnLeaderboard" >Leaderboard</button>
       </div>
     </div>
