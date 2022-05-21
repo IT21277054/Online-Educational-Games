@@ -52,7 +52,7 @@ body {
   border-radius: 10px;
 }
 
-.Nav-button {
+.gNav-button {
   padding: 0.5%;
   float: right;
   text-decoration: none;
@@ -60,7 +60,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.Nav-button:hover {
+.gNav-button:hover {
   background-color: rgba(179, 0, 255, 0.637);
   border-radius: 10px;
 }
