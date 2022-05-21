@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     if($result -> num_rows > 0) { // check the query result returned something
         $row = mysqli_fetch_assoc($result); // take result as a associate array
         $_SESSION['email'] = $row['Email']; // 
-        header("Location: ../Html/index.php"); // if mail and password are match logged the user
+        header("Location: ../Php/index.php"); // if mail and password are match logged the user
     }
     else{
         echo"<script type='text/javascript'>alert('Invalid Credentials');  history.go(-1);</script>";

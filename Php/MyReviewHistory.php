@@ -1,20 +1,20 @@
 <?php
 
 // include db connection
-include '../Php/dbConnection.php';
+include './dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['email'] = "gonsudheera@gmail.com";
-
 $email = $_SESSION['email'];
+
+echo "<script>alert($email)</script>";
 
 $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
 $result = mysqli_query($conn , $sql); // execute the query
 
-if(!$result){
-    echo "<script>alert('error!')</script>";
+if(!$result -> num_rows > 0){
+    // echo "<script>alert('error!')</script>";
 }
 
 else
