@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Styles/Styles.css">
+    <link rel="stylesheet" href="../Styles/Cart.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    
+    <title>My cart</title>
+</head>
+<body>
+    <!-- onscroll="camealongway()" -->
+    <!-- Web site navigation bar -->
+    <header>
+        <ul id="Nav-bar-id" class="Nav-bar">
+            <img src="../Images/Logo/final.png" id="logo">
+            <a href="#" class="Nav-button"><li>Contact</li></a>
+            <a href="#" class="Nav-button"><li>Genre</li></a>
+            <a href="#" class="Nav-button"><li>About</li></a>
+            <a href="" class="Nav-button"><li>Games</li></a>
+            <a href="" class="Nav-button"><li>Home</li></a>
+            <hr id="line" hidden>
+        </ul>
+    </header>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="../Images/GreenGradientBg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- <img src="../Images/Logo/final.png"  class = "pic"> -->
+    <div class="heading">My cart</div> <br>
+    <marquee><img src="../Images/spongebob.gif" class="gif"></marquee>
+    <div class="cartcontent">
+        <table boarder =1 >
+            <tr> <th> Item </th>    <th> Each month </th>   <th> Months </th>       <th> Total </th>  </tr>
+            <tr> <td> Ball</td>     <td> $10 </td>          <td> 1 </td>            <td> $10 </td>  </tr>
+            <tr> <td> Doll</td>     <td> $15 </td>          <td> 4 </td>            <td> $60 </td>  </tr>
+            <tr> <td> </td>         <td>  </td>             <td> </td>              <td class="line"> .... </td>  </tr>
+        </table>
+        
+
+        <button type="button" onclick="location.href = 'PayHistory.html'; "  class="btn hisbtn" > Payment history</button>
+        <button type="button" onclick="location.href = 'ConfirmPay.html'; "  class="btn conbtn"> Confirm payment</button>
+    
+    </div>
+
+
+
+
+
+
+    <footer>
+        <img  src="../Images/Logo/Facebook.png" class="flogo">
+        <img  src="../Images/Logo/Instergram.png" class="flogo">
+        <img  src="../Images/Logo/Twitter.png" class="flogo">
+    </footer>
+
+    <script src="../Js/Main.js"></script>
+
+</body>
+</html>
