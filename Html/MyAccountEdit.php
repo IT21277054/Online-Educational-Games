@@ -115,7 +115,7 @@
           <label for="">Account Type</label><br />
           <input name="accType" id="input" readonly value="<?php echo $cType; ?>" />
           <br />
-          <button class="btnChangePw">Change Password</button>
+          <button class="btnChangePw" onclick="window.location.href='ChangePassword.php';">Change Password</button>
           <button class="btnEdit" name="submit"  >Save</button>
         </div>
       </form>

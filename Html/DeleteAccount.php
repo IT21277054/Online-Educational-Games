@@ -17,53 +17,63 @@
     <title>Forget Password</title>
   </head>
   <body>
+    <video autoplay muted loop class="bgmvideo">
+      <source src="../Videos/BG_signup.mp4" type=video/ogg>
+    </video>
     <!-- Web site navigation bar -->
-    <header>
-      <ul id="Nav-bar">
-        <img src="../images/Logo/final.png" id="logo" />
-        <a href="#" class="Nav-button"><li>Login</li></a>
-        <a href="#" class="Nav-button"><li>About</li></a>
-        <a href="#" class="Nav-button"><li>Home</li></a>
-        <!-- <a href="#" class="Nav-button"><li>Genre</li></a> -->
-        <!-- <a href="#" class="Nav-button"><li>Contact</li></a> -->
-        <hr id="line" />
+    <?php
+
+    if(isset($_SESSION['email'])){
+      echo "<header>
+      <ul id='Nav-bar-id' class='Nav-bar'>
+        <img src='../images/Logo/final.png' id='logo' />
+        <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
+        <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
+        <a href='Contact.html' class='Nav-button'><li>Contact</li></a>
+            <a href='Friends.html' class='Nav-button'><li>Friends</li></a>
+            <a href='About.html' class='Nav-button'><li>About</li></a>
+            <a href='Games.php' class='Nav-button'><li>Games</li></a>
+            <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
       </ul>
-    </header>
+    </header>";
+    
+  } else { 
+    echo"<header>
+      <ul id='Nav-bar-id' class='Nav-bar'>
+        <img src='../images/Logo/final.png' id='logo' />
+        <a href='SignUp.html' class='Nav-button'><li>Login</li></a>
+        <a href='Contact.html' class='Nav-button'><li>Contact</li></a>
+        <a href='About.html' class='Nav-button'><li>About</li></a>
+        <a href='Games.php' class='Nav-button'><li>Games</li></a>
+        <a href='index.php' class='Nav-button'><li>Home</li></a>
+      </ul>
+    </header>";
+  }
+
+    ?>
 
     <div class="content">
       <div class="overley">
         <!-- <div id="btn"></div> -->
 
         <button type="button" class="ForgetPassword" id="ForgetPassword">
-          Forget Password
+          Delete My Account
         </button>
       </div>
       <div class="Forget-password">
         <form
-          action="Forget.php"
+          action=""
           method="post"
           class="Forget-Password-form"
           id="ForgetPassword"
         >
-          <input
-            type="text"
-            name="code"
-            placeholder="Verification Code"
-            required
-          />
-          <br />
+          <label for="password" id="deleteLabel" >If you want to delete your account Enter password and click confirm</label>
           <input
             type="password"
             name="password"
-            placeholder="New Password "
-            required
-          />
-          <br />
-
-          <input
-            type="password"
-            name="password"
-            placeholder="Confirm Password"
+            placeholder="Type Password"
+            id="password" 
             required
           />
           <br />

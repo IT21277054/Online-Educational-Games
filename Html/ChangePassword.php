@@ -6,22 +6,32 @@
 
   $email = $_SESSION['email'];
   $password = $_POST['Current-Password'];
-  $newPassword = md5($_POST['New-Password']);
+  $newPassword =md5($_POST['New-Password']);
   $conPassword = md5($_POST['Confirm-Password']);
 
   if($newPassword == $conPassword){
   $sql = "SELECT * FROM client where Email='$email' AND ClientPassword='$password'"; 
   $result = mysqli_query($conn , $sql); // execute the query 
-
     if($result -> num_rows > 0) { // check the query result returned something
         $sql = "UPDATE client SET ClientPassword='$newPassword' where Email='$email' ;"; 
-        $_SESSION['email'] = $row['Email']; // 
-        header("Location: ../Html/index.php"); // if mail and password are match logged the user
+        $result = mysqli_query($conn , $sql);
+
+        if(!$result){
+          echo"<script type='text/javascript'>alert('something wrong');  history.go(-1);</script>";
+        }else{
+          echo"<script>alert('You have successfully changed the password '); </script>";
+          header("Location: ./MyAccount.php");
+        }
+         
     }
     else{
         echo"<script type='text/javascript'>alert('Invalid Credentials');  history.go(-1);</script>";
     }
-  }}
+  }else{
+     echo"<script type='text/javascript'>alert('password not match '); </script>";
+  }}else{
+    //  echo"<script type='text/javascript'>alert('submit error '); </script>";
+  }
 
 
 ?>
@@ -78,7 +88,7 @@
           id="changePassword"
         >
           <input
-            type="text"
+            type="password"
             name="Current-Password"
             placeholder="Current Password"
             required
@@ -86,15 +96,15 @@
           <br />
           <input
             type="password"
-            name="password"
-            placeholder="New Password "
+            name="New-Password"
+            placeholder="New-Password"
             required
           />
           <br />
 
           <input
             type="password"
-            name="password"
+            name="Confirm-Password"
             placeholder="Confirm Password"
             required
           />
@@ -103,7 +113,7 @@
           <br />
           <br />
           <br />
-          <button type="submit" class="submit">Change Password</button>
+          <button type="submit" name="submit" class="submit">Change Password</button>
         </form>
       </div>
     </div>

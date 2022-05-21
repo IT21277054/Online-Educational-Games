@@ -55,7 +55,7 @@
     <br /><br />
     <div class="content">
       <br />
-      <button class="btnDelete">Delete Account</button>
+      <button class="btnDelete" onclick="window.location.href='DeleteAccount.php';">Delete Account</button>
       <div class="img">
         <img id="img" src="../Images/User Images/<?php echo $cImage; ?>" />
       </div>
@@ -76,7 +76,7 @@
         <input name="cType" readonly value="<?php echo $cType; ?>" />
         <br />
         <button class="btnChangePw" onclick="window.location.href='ChangePassword.php';">Change Password</button>
-        <button class="btnEdit" onclick="window.location.href='DeleteAccount.php';">Edit</button>
+        <button class="btnEdit" onclick="window.location.href='MyAccountEdit.php';">Edit</button>
       </div>
       <div class="buttons">
         <label id="btnlabel"><h3>Links</h3></label>
