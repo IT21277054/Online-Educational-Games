@@ -48,7 +48,6 @@ if(isset($_POST['submit'])){
     <link rel="shortcut icon" href="../images/2323134-middle.png/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
    
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
    
     <title>Feedback</title>
 </head>
@@ -104,7 +103,7 @@ if(isset($_POST['submit'])){
 
 
 
-    <textarea type="text" id = "feedbackbox" name = "fContent" value = "" placeholder ="content"></textarea><br>
+    <textarea type="text" id = "feedbackbox" name = "fContent" value = "" placeholder ="Content"></textarea><br>
 
 
 
