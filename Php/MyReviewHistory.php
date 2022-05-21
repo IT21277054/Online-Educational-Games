@@ -1,20 +1,20 @@
 <?php
 
 // include db connection
-include '../Php/dbConnection.php';
+include './dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['email'] = "gonsudheera@gmail.com";
-
 $email = $_SESSION['email'];
+
+echo "<script>alert($email)</script>";
 
 $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
 $result = mysqli_query($conn , $sql); // execute the query
 
-if(!$result){
-    echo "<script>alert('error!')</script>";
+if(!$result -> num_rows > 0){
+    // echo "<script>alert('error!')</script>";
 }
 
 else
@@ -110,14 +110,6 @@ else
         $rID = $_POST['btn-edit'];
         header("Location: ./EditReview.php?rID=".$rID);
     }
-    //  echo "<script>alert($rID)</script>";
-
-    //  $sql2 = "SELECT * FROM Client where ClientID = '$cID'";
-    //  $result2 = mysqli_query($conn , $sql2);
- 
-    //  $row2 = mysqli_fetch_array($result2);
- 
-    //  $Name = $row2['FirstName'].' '.$row2['LastName'];
     echo "
 
     <form id = 'testimonials' action='' method='post'>
@@ -188,12 +180,6 @@ else
         
 }
         ?>
-            
-        
-            <!-- <div class="likes">
-                <i onclick ="myFunction(this)" class ="fa fa-thumbs-up"></i>
-            </div> -->
-        
         
             </fieldset>
         
