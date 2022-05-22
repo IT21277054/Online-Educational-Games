@@ -22,18 +22,38 @@ if(!$result->num_rows > 0)
 else{
     $Topic = $row['Topic'];
     $Content = $row['Content'];
+    $star = $row['stars'];
+    $s1 = "";
+    $s2 = "";
+    $s3 = "";
+    $s4 = "";
+    $s5 = "";
+    if($star == '1' ){
+        $s1 = "checked";
+        }else if($star == '2' ){
+        $s2 = "checked";
+        }else if($star == '3' ){
+        $s3 = "checked";
+        }else if($star == '4' ){
+        $s4 = "checked";
+        }else if($star == '5'){
+        $s5 = "checked";
+        }
 }
 
 if(isset($_POST['submit'])){
 
     $Topic = $_POST['Topic'];
     $Content = $_POST['Content'];
+    $stars = $_POST['stars'];
 
-    $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$email'where ReviewID='$rID'";
+    $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$stars'where ReviewID='$rID'";
     if(mysqli_query($conn, $sql)){
         echo "<script>alert('Success')</script>";
     }
     header("Location: ./MyReviewHistory.php");
+
+    
 
 }
 
@@ -99,42 +119,47 @@ if(isset($_POST['submit'])){
     <fieldset>
         <legend>Edit My Review</legend>
         
-    
+    <?php
 
-    <form action="" method="POST">
-        <input type="text" id = "reviewSubject" name = "Topic" value ="<?php echo $Topic; ?>"><br>
+    echo "
+
+    <form action='' method='POST'>
+        <input type='text' id ='reviewSubject' name = 'Topic' value ='". $Topic ."'><br>
 
 
-        <textarea type="text" id = "reviewbox" name = "Content"><?php echo $Content; ?></textarea><br>
+        <textarea type='text' id = 'reviewbox' name = 'Content'>". $Content."</textarea><br>
 
 
     <!-- Add stars -->
-    <div class="star-rating">
-        <input type="radio" name="stars" id="star-a" value="5"/>
-        <label for="star-a"></label>
+    <div class='star-rating'>
+        <input type='radio' name='stars' id='star-a' value='5'".$s5."/>
+        <label for='star-a'></label>
         
-        <input type="radio" name="stars" id="star-b" value="4"/>
-        <label for="star-b"></label>
+        <input type='radio' name='stars' id='star-b' value='4'".$s4."/>
+        <label for='star-b'></label>
         
-        <input type="radio" name="stars" id="star-c" value="3"/>
-        <label for="star-c"></label>
+        <input type='radio' name='stars' id='star-c' value='3'".$s3."/>
+        <label for='star-c'></label>
         
-        <input type="radio" name="stars" id="star-d" value="2"/>
-        <label for="star-d"></label>
+        <input type='radio' name='stars' id='star-d' value='2'".$s2."/>
+        <label for='star-d'></label>
         
-        <input type="radio" name="stars" id="star-e" value="1"/>
-        <label for="star-e"></label>
+        <input type='radio' name='stars' id='star-e' value='1'".$s1."/>
+        <label for='star-e'></label>
         </div>
         
+    
     <!-- Review button -->
 
-    <div class = "Button">
+    <div class = 'Button'>
 
-        <button type = "submit" name="submit" class="AddReviewButton">Edit Review</button>
+        <button type = 'submit' name='submit' class='AddReviewButton'>Edit Review</button>
 
     </div>
 
-    </form>
+    </form>";
+
+    ?>
 
     </fieldset>
 

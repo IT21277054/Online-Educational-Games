@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+$email = $_SESSION['email'];
+
+if(isset($_POST['submit'])){
+
+    $friendGamerTag = $_POST['FriendName'];
+}
+
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +34,6 @@
 
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
-   
     <title>MyFriends</title>
 </head>
 
@@ -50,47 +65,40 @@
 
 <!-- Title -->
 
-<div class="Star">
-
-
-</div>
-
 <img src="../images/friends.gif" class = "Vfpage">
 
 <div class="Vtitle">My Friends</div>
 
-<form class="example" action="" method="post">
+<?php
+
+echo "
+<form class='example' action='./MyFriends.php' method='post'>
 <!-- Content -->
 
-<div class="Vcontent">
+<div class='Vcontent'>
 
-  <fieldset class ="Vfield">
+  <fieldset class ='Vfield'>
  <div class ='OneLine'>
-    
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit" name="search" ><i class="fa fa-search"></i></button>
+ 
+    <button type='submit' name='toLeaderboard' class='toLeaderboard' readonly >Search Friends in Leaderboard</button>
 
-
-
-        <div class = "Button">
-
-            
-        </div>
+    <div class = 'Button'>
+         
+    </div>
     </div>
    
     <div class ='OneLine2'>
-    <input type="text" id = "FriendName" name = "FriendName" Value ="Moda Sudheera">
-   <button type="submit" name="Remove" class="Remove">Remove</button>
+    <input type='text' id = 'FriendName' name = 'FriendName' Value =''>
+   <button type='submit' name='Remove' class='Remove'>Remove</button>
     
     </div><br><br>
-
-    <button type = "button" name="toLeaderboard" class="toLeaderboard">Search Friends in Leaderboard</button>
     
     </fieldset>
       
       </div>
       
-      </form>
+      </form>";
+      ?>
 
 </div>
 
