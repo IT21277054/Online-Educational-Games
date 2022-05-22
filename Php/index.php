@@ -144,7 +144,7 @@ else
           <img src="../images/S2.jpg" alt="" />
           <div id="txt" class="txt-container2">
             <h2 id="topic">Mario Spell Cature</h2>
-            <p id="content">Math is'nt Mario's Strong Suit, Are you ready to help him?</p>
+            <p id="content">Math is'nt Mario's Strong Suit,<br> Are you ready to help him?</p>
           </div>
         </div>
         <div class="slide">
@@ -152,7 +152,7 @@ else
           <img src="../images/S3.jpg" alt="" />
           <div id="txt" class="txt-container3">
             <h2 id="topic">Kirby's World Map</h2>
-            <p id="content">Hena 3k gahanda one</p>
+            <p id="content">Find Kirby from world Map.<br>Try it!It will not be easy to find him</p>
           </div>
         </div>
         <div class="slide">
@@ -160,7 +160,7 @@ else
           <img src="../images/S4.jpg" alt="" />
           <div id="txt" class="txt-container4">
             <h2 id="topic">Pikachu's Missing Friends</h2>
-            <p id="content">Hena 4k gahanda one</p>
+            <p id="content">Please help to Pikachu to find his missing friends.<br>Please Hurry up!He 's crying.</p>
           </div>
         </div>
 
