@@ -62,7 +62,7 @@ session_start();
     echo"<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='SignUp.php' class='Nav-button'><li>Login</li></a>
+        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
         <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
         <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
         <a href='Games.php' class='Nav-button'><li>Games</li></a>
