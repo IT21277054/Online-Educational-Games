@@ -21,7 +21,7 @@ if($result -> num_rows > 0){
     echo "<script>location.replace('../Html/StartGameSonic.html')</script>";
 }
 else{
-    echo "<script>alert('Buy The game You Idiot');</script>";
+    echo "<script>location.replace('../Php/MyCart.php')</script>";
 }
 
 ?>
