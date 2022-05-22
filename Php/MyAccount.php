@@ -103,7 +103,7 @@
         <button class="btnReview" onclick="window.location.href='MyReviewHistory.php';" >My review</button>
         <button class="btnGame" onclick="window.location.href='MyGames.php';">My Game</button>
         <button class="btnFriends" onclick="window.location.href='MyFriends.php';">My Friends</button>
-        <button class="btnLeaderboard" onclick="window.location.href='MyFriends.php';" >Order History</button>
+        <button class="btnLeaderboard" onclick="window.location.href='PayHistory.php';" >Order History</button>
       </div>
     </div>
     <br />
