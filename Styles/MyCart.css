@@ -9,6 +9,7 @@
 
 .gif{
     margin-top:5%;
+    z-index: -1;
 }
 table {
     margin-top: 10%;

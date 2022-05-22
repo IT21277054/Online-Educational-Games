@@ -1,7 +1,11 @@
 <?php
-
+include "./dbConnection.php";
 session_start();
 $email = $_SESSION['email'];
+$clientID = $_SESSION['clientID'];
+
+$sql = "SELECT GamerTag from client left join friend on friend.FriendID = client.ClientID where friend.clientID = '$clientID';";
+$result = mysqli_query($conn , $sql);
 
 if(isset($_POST['submit'])){
 
@@ -54,11 +58,13 @@ if(isset($_POST['submit'])){
 <header>
     <ul id="Nav-bar-id" class="Nav-bar">
         <img src="..\images\Logo\final.png" id="logo">
-        <a href="Contact.html" class="VNav-button"><li>Contact</li></a>
-        <a href="Genre.html" class="VNav-button"><li>Genre</li></a>
-        <a href="About.html" class="VNav-button"><li>About</li></a>
-        <a href="Games.html" class="VNav-button"><li>Games</li></a>
-        <a href="Index.html" class="VNav-button"><li>Home</li></a>
+        <a href="Logout.php" class="Nav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
+        <a href="../Html/Contact.html" class="Nav-button"><li>Contact</li></a>
+        <a href="../Html/Friends.html" class="Nav-button"><li>Friends</li></a>
+        <a href="../Html/About.html" class="Nav-button"><li>About</li></a>
+        <a href="Games.php" class="Nav-button"><li>Games</li></a>
+        <a href="index.php" class="Nav-button"><li>Home</li></a>
 
         </ul>
 </header>
@@ -69,13 +75,11 @@ if(isset($_POST['submit'])){
 
 <div class="Vtitle">My Friends</div>
 
-<?php
+ 
+ <form class='example' action='./MyFriends.php' method='post'>
+ <!-- Content -->
 
-echo "
-<form class='example' action='./MyFriends.php' method='post'>
-<!-- Content -->
-
-<div class='Vcontent'>
+ <div class='Vcontent'>
 
   <fieldset class ='Vfield'>
  <div class ='OneLine'>
@@ -86,20 +90,20 @@ echo "
          
     </div>
     </div>
-   
+   <?php
+ while($row = mysqli_fetch_array($result)){
+    $friendGamerTag = $row['GamerTag'];
+ echo "
     <div class ='OneLine2'>
-    <input type='text' id = 'FriendName' name = 'FriendName' Value =''>
+    <input type='text' id = 'FriendName' name = 'FriendName' Value ='".$friendGamerTag."' readonly>
    <button type='submit' name='Remove' class='Remove'>Remove</button>
     
-    </div><br><br>
-    
-    </fieldset>
+
+      </form>";}
+      ?></div><br><br>
+</fieldset>
       
       </div>
-      
-      </form>";
-      ?>
-
 </div>
 
 

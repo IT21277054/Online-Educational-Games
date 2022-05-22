@@ -30,6 +30,7 @@
 
       <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
       <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
+      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
       
 
     <div class="gamecontent">

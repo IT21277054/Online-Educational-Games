@@ -21,33 +21,5 @@
 
     <script src="../Js/Sonic.js"></script>
 
-<?php
-    $serverName = "localhost";
-    $username ="root";
-    $password ="";
-    $dbName = "pixxel";
-                        
-    $conn = mysqli_connect($serverName, $username, $password, $dbName);
-    $score ='<script>document.writeln(score);</script>';
-                        
-        if($conn-> connect_error){
-                echo "<script>('Connection error')</script>";
-                die('');
-            }
-
-        $sql = "SELECT HighScore FROM score WHERE ClientID = 10000";
-        $result = mysqli_query($conn,$sql);
-        if($result -> num_rows == 0){
-            $sql = "INSERT INTO (HighScore,ClientID,GameID) score VALUES ($score,10000,1000)";
-            $conn->query($sql);
-            alert("Yay");
-            }
-        else{
-            $sql = "UPDATE score SET HighScore = $score WHERE ClientID = 10000";
-            }                
-?>
-            
-
-
 </body>
 </html>

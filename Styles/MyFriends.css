@@ -98,7 +98,7 @@ form.searchbar button {
   margin: 50px;
 }
 
-form.example input[type="text"] {
+.example input[type="text"] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -107,7 +107,7 @@ form.example input[type="text"] {
   background: #f1f1f1;
 }
 
-form.example button {
+.example button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -119,7 +119,7 @@ form.example button {
   cursor: pointer;
 }
 
-form.example button:hover {
+.example button:hover {
   background: #0b7dda;
 }
 
