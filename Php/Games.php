@@ -80,7 +80,7 @@ session_start();
         <div class="gamebox">
             <div class="Gamecontent"><div class="ptitle">Game One</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
             <img src="../images/sonic-png-14.png" class = "titlecard2">
-            <a href="Game1.html"><button type="button" class="playnow">Play Now</button></a>
+            <a href="../Html/SonicLockScreen.html"><button type="button" class="playnow">Play Now</button></a>
             <button type="button1" class="trynow">Try Now</button>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
