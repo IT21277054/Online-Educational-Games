@@ -5,9 +5,8 @@ include '../Php/dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['GameID'] = 1000;
 
-$gID = $_SESSION['GameID'];
+$gID = $_GET['gID'];
 
 $sql = "SELECT * FROM Review where GameID = '$gID'"; // sql query to check if email exist in db
 
@@ -19,7 +18,7 @@ if($result -> num_rows > 0){
 
 else
 {
-    echo "<script>alert('Failed!')</script>";
+    // echo "<script>alert('Failed!')</script>";
     // $sql = "SELECT * FROM review where GameID = '$gID'";
 }
 ?>
@@ -95,7 +94,7 @@ else
         <a href="Logout.php" class="RNav-button"><li>Logout</li></a>
         <a href="MyAccount.php" class="RNav-button"><li>My Account</li></a>
         <a href="../Html/Contact.html" class="RNav-button"><li>Contact</li></a>
-        <a href="../Html/Friends.html" class="RNav-button"><li>Friends</li></a>
+        <a href="../Php/AddFriend.php" class="RNav-button"><li>Add Friends</li></a>
         <a href="../Html/About.html" class="RNav-button"><li>About</li></a>
         <a href="Games.php" class="RNav-button"><li>Games</li></a>
         <a href="index.php" class="RNav-button"><li>Home</li></a>

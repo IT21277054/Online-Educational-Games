@@ -4,7 +4,7 @@
   font-size: 1000%;
   margin-top: -25%;
   margin-left: 5%;
-  color: rgb(72, 3, 93);
+  color: rgb(80, 0, 36);
 }
 
 .RNav-button {
@@ -12,11 +12,11 @@
   float: right;
   text-decoration: none;
   font-family: "Comforataa", cursive;
-  color: rgb(72, 3, 93);
+  color: rgb(80, 0, 36);
 }
 
 .RNav-button:hover {
-  background-color: rgba(179, 0, 255, 0.637);
+  background-color: rgba(134, 0, 60, 0.473);
   border-radius: 10px;
 }
 
