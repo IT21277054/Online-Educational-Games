@@ -22,10 +22,9 @@
       <img src="../Images/Logo/WX logo.png" class="logo2">
       <img src="../Images/Logo/Nintendo-Logo.png" class="logo4">
 
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
+      <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
       <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Leaderboard.php"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
+    
 
       <div class="gamecontent">
         <p class ="gamet">Mario's Advanture</p>

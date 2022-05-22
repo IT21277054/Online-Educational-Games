@@ -12,18 +12,16 @@ $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_assoc($result);
 $clientID = $row['ClientID'];
 
-$_SESSION['GameID'] = 1001; // 
+$_SESSION['GameID'] = 1000; // 
 
-$sql = "SELECT * FROM own WHERE ClientID = '$clientID' AND GameID = 1001";
+$sql = "SELECT * FROM own WHERE ClientID = '$clientID' AND GameID = 1000";
 $result = mysqli_query($conn,$sql);
 
 if($result -> num_rows > 0){
-    echo "<script>location.replace('Mario Spell Catcher.php')</script>";
+    echo "<script>location.replace('Sonice Fast Math.php')</script>";
 }
 else{
     echo "<script>alert('Buy The game You Idiot');</script>";
 }
-
-
 
 ?>

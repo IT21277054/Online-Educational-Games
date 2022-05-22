@@ -44,8 +44,9 @@
         // start session
             session_start();
             $email = $_SESSION['email'];
+            $GameID = $_SESSION['GameID'];
 
-            $sql = "SELECT  GamerTag, HighScore, GameID FROM score s,client c WHERE c.ClientID = s.ClientID ORDER BY HighScore DESC";
+            $sql = "SELECT  GamerTag, HighScore, GameID FROM score s,client c WHERE c.ClientID = s.ClientID AND  GameID ='$GameID' ORDER BY HighScore DESC";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
             // output data of each row

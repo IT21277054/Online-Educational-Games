@@ -28,17 +28,18 @@
       <img src="../Images/Logo/SEGA_logo.png" class="logo3">
 
 
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
+      <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
       <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Leaderboard.php"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
+      
 
     <div class="gamecontent">
     <p class ="gamet">Sonic Runner</p>
         <p class ="gamed">After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.</p>
         <div class="pbutton1">
-        <button type="button1" class="playnow">Play Now</button>
-        <button type="button11" class="trynow">Try Now</button>
+        <form action="SonicLS.php">
+            <input type="submit" value="Play Now">
+        </form> 
+        <input type="submit" value="Try Now">
         $29.99
         </div>
     </div>
