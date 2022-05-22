@@ -59,6 +59,14 @@ function getInputValue(){
         tries --;
 
         if(tries == 0){
+            let lscore = score;
+            console.log(lscore);
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", '/Online-Educational-Games/Php/Sonicscore.php?score=' + lscore , true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                finalscore: lscore
+            }));
             window.location.replace("TryAgain.html");
 
         }
