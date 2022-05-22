@@ -91,13 +91,12 @@
 
                     
                 }
+
                 else{
-                //    $sql = "INSERT INTO own "
+                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $today1 );";
                 }
                 
-
-                
-                // mysqli_query($conn, $updatesql)
+                mysqli_query($conn , $sql);
             }
         }
  ?>
