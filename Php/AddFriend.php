@@ -1,3 +1,25 @@
+<?php
+include "./dbConnection.php";
+session_start();
+$email = $_SESSION['email'];
+$clientID = $_SESSION['clientID'];
+
+$gTag = "";
+
+if(isset($_POST['search'])){
+
+    $gTag = $_POST['gTag'];
+    
+    $sql = "SELECT * from client  where GamerTag = '$gTag';";
+    $result = mysqli_query($conn , $sql);
+    $row = mysqli_fetch_array($result);
+    $Name = $row['FirstName'].' '.$row['LastName'];
+    // $gTag = $row['GamerTag'];
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,18 +66,28 @@
 <fieldset class="field">
         <legend>Add Friend</legend>
 
-    <form action="" method="POST">
+    <form action="./AddFriend.php" method="POST">
         
-        <input type="text" id = "reviewSubject" name = "Topic" placeholder ="Friend's Gamer Tag"><br>
+        <input type="text" id = "reviewSubject" name = "gTag" placeholder ="Friend's Gamer Tag" value="<?php echo $gTag ;?>" >
+        <button type="submit" name="search" class="AddFriendButton" id="sFriends" >Search Friend</button>
 
+        <?php
 
+        echo "
+        <div class='friendDetails'>
+        <div class='topic'><h5>".$Name."</h5> 
+        <h5>".$gTag."</h5></div>
+           
+
+    </div>"; ?>
+        </div>
 
  
     <!-- Review button -->
 
     <div class = "Button">
 
-        <button type = "submit" name="submit" class="AddFriendButton">Add Friend</button>
+        <button type = "submit" name="submit" class="AddFriendButton">Search Friend</button>
 
     </div>
 
