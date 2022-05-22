@@ -63,7 +63,15 @@ else
     <title>Pixxel</title>
   </head>
   <body>
-    <!-- onscroll="camealongway()" -->
+
+
+  <video width ="320" height="240" autoplay muted loop class ="bgvideo">
+    <source src="../images/MainBack.mp4" type ="video/mp4"> 
+</video>
+
+
+
+
     <!-- Web site navigation bar -->
     <?php
 
@@ -71,14 +79,14 @@ else
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
-        <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
-        <a href='../Html/Contact.html' class='Nav-button'><li>Contact</li></a>
-            <a href='../Html/Friends.html' class='Nav-button'><li>Friends</li></a>
-            <a href='../Html/About.html' class='Nav-button'><li>About</li></a>
-            <a href='Games.php' class='Nav-button'><li>Games</li></a>
-            <a href='index.php' class='Nav-button'><li>Home</li></a>
-        <!-- <a href='../Html/ContactUs.Html' class='Nav-button'><li>Contact</li></a> -->
+        <a href='Logout.php' class='RNav-button'><li>Logout</li></a>
+        <a href='MyAccount.php' class='RNav-button'><li>My Account</li></a>
+        <a href='../Html/Contact.html' class='RNav-button'><li>Contact</li></a>
+            <a href='../Html/Friends.html' class='RNav-button'><li>Friends</li></a>
+            <a href='../Html/About.html' class='RNav-button'><li>About</li></a>
+            <a href='Games.php' class='RNav-button'><li>Games</li></a>
+            <a href='index.php' class='RNav-button'><li>Home</li></a>
+        <!-- <a href='../Html/ContactUs.Html' class='RNav-button'><li>Contact</li></a> -->
       </ul>
     </header>";
     
@@ -86,11 +94,11 @@ else
     echo"<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
-        <a href='../Html/Contact.html' class='Nav-button'><li>Contact</li></a>
-        <a href='../Html/About.html' class='Nav-button'><li>About</li></a>
-        <a href='Games.php' class='Nav-button'><li>Games</li></a>
-        <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <a href='../Html/SignUp.html' class='RNav-button'><li>Login</li></a>
+        <a href='../Html/Contact.html' class='RNav-button'><li>Contact</li></a>
+        <a href='../Html/About.html' class='RNav-button'><li>About</li></a>
+        <a href='Games.php' class='RNav-button'><li>Games</li></a>
+        <a href='index.php' class='RNav-button'><li>Home</li></a>
       </ul>
     </header>";
   }
@@ -104,11 +112,15 @@ else
 
 
     <video width ="100%" height="100%" autoplay muted loop class ="bgffvideo">
-    <source src="../images/Hi.mp4" type ="video/mp4"> 
+    <source src="../images/MainBackground.mp4" type ="video/mp4"> 
 </video>
     
-    <div class="title">Welcome<br /> <?php echo $name; ?>  </div>
+    <div class="Rtitle">Hello<br /> <?php echo $name; ?>  </div>
     <div class="content">
+
+    <fieldset class="field">
+        <legend>New Arivals</legend> 
+
 
     <center>
 
@@ -123,7 +135,7 @@ else
         <div class="slide first">
           <img src="../images/S1.jpg" alt="" />
           <div id="txt" class="txt-container1">
-            <h2 id="topic">Slide 1</h2>
+            <h2 id="topic">Sonic Fast Math</h2>
             <p id="content">Hena 1k gahanda one</p>
           </div>
         </div>
@@ -131,7 +143,7 @@ else
           <div id="txt-container"></div>
           <img src="../images/S2.jpg" alt="" />
           <div id="txt" class="txt-container2">
-            <h2 id="topic">Slide 2</h2>
+            <h2 id="topic">Mario Spell Cature</h2>
             <p id="content">Hena 2k gahanda one</p>
           </div>
         </div>
@@ -139,7 +151,7 @@ else
           <div id="txt-container"></div>
           <img src="../images/S3.jpg" alt="" />
           <div id="txt" class="txt-container3">
-            <h2 id="topic">Slide 3</h2>
+            <h2 id="topic">Kirby's World Map</h2>
             <p id="content">Hena 3k gahanda one</p>
           </div>
         </div>
@@ -147,7 +159,7 @@ else
           <div id="txt-container"></div>
           <img src="../images/S4.jpg" alt="" />
           <div id="txt" class="txt-container4">
-            <h2 id="topic">Slide 4</h2>
+            <h2 id="topic">Pikachu's Missing Friends</h2>
             <p id="content">Hena 4k gahanda one</p>
           </div>
         </div>
@@ -170,6 +182,15 @@ else
 
 </center>
 
+
+
+</fieldset>
+
+
+          <fieldset class="field">
+                  <legend>Who are with</legend>
+          </fieldset>        
+
 </div>
 
 <!-- Footer -->
@@ -181,6 +202,6 @@ else
 
 
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="../Js/index.js"></script>
   </body>
 </html>
