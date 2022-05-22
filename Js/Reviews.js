@@ -12,6 +12,3 @@ window.addEventListener('scroll' , function navigation()
     }
 })
 
-function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-  }

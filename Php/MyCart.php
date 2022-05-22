@@ -17,7 +17,6 @@
 
        $result = mysqli_query($conn , $sql);
 
-
 //submit form
         $_SESSION['email']= 'vihangi@gmail.com';
 
@@ -30,34 +29,47 @@
 
             $result2 = mysqli_query($conn , $sql2);
 
+// insert data in to order item table
+
             if($result2){
-                // $row = mysqli_fetch_array($result2);
+                $row = mysqli_fetch_array($result2);
                 
-                $cID = $result2;  
-                $gID = $result;
-                // $price = $_POST['total'];
+                $cID = $row['cID']; 
+                $gID = $gameID ;
+                $price = $_POST['total1'];
                 $transType = $_POST['transType'];
                 
+                $insertsql = "INSERT INTO orderitem (ClientID,GameID,Price,TransectionMethod) VALUES ( $cID , $gID , $price , '$transType')";
 
-                $sql3 = "INSERT INTO orderitem (ClientID,GameID,Price,TransectionMethod)
-                            VALUES ('$cID','$gID',0, '$transType)";
+                $result3 = mysqli_query($conn , $insertsql);
+
                 
-                $result3 = mysqli_query($conn , $sql3);
 
                 if ($result3) {
                         echo "<script>alert('Success!')</script>";
+
                         header("Location: ./MyGames.php ?gID=".$gid);
                     }
                     else
                     {
                         echo "<script>alert('Failed!')</script>";
                     }
+                
 
+    //Update subsription table
+                
+                $sql3 = "SELECT GameID FROM own WHERE ClientID = '$cID';"
+
+                $result = mysql_query($sql3);
+
+                if ($gameID == $result['gameID']){
+
+                }
+
+                $updatesql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$stars'where ReviewID='$rID'";
+                mysqli_query($conn, $updatesql)
             }
         }
-        // else{
-        //     echo "<script>alert('error!')</script>";
-        // }
  ?>
 
 
@@ -142,11 +154,11 @@
             <tr> 
                 <td> Total </td>
                 <td id="total" name="total"> $ </td> 
+                <input name="total1" id="total1" value="" style="display:none;">
             </tr>
 
 
             <tr><td> Transaction method</td>
-                <td></td>
                     <td>
                     
                         <select id="transType" name="transType" class="dropdown" required> 

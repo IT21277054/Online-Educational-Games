@@ -29,10 +29,11 @@
               <a href="index.php" class="Nav-button"><li>Home</li></a>
         </ul>
       </header>
-
+        
+      <div class="content"></div>
         <h1> <div class="Topic2"> Friends <br> Leader board </div> </h1> 
 
-
+ 
         <div>
             <button class="btn2">Check Public Leaderboard</button>
             </div>

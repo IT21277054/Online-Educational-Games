@@ -4,4 +4,5 @@ function discount() {
     var total = numVal1 * 5;
 
     document.getElementById("total").innerHTML=total;
+    document.getElementById("total1").value=total;
 }
