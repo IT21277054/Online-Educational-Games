@@ -1,10 +1,10 @@
 body{
-    background-color:#a28dc9;
+    background-color:#162d6d;
 }
 .pcontent{
     border-radius: 25px;
     position: relative;
-    background-image: linear-gradient(to bottom right, #a28dc9,#cd8cd3 , #CCABD8, #6EC6CA, #055B5C);
+    background-image: linear-gradient(to bottom right, #162d6d,#588dca , #abd1d8, #6EC6CA, #055B5C);
     margin: -5% 10% 3% 10%; 
     padding:3%;
     box-shadow:0 0 10px 5px;
