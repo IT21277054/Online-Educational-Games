@@ -99,16 +99,16 @@ session_start();
             
 
             // $_SESSION['gameID']=1000;
-            // $gameID = $_SESSION['gameID'];
+            $gameID = $_SESSION['gameID'];
 
             // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
-            // $sql2 = " SELECT ClientID as cID 
-            //         FROM client WHERE Email='$email';";
+            $sql2 = " SELECT ClientID as cID 
+                     FROM client WHERE Email='$email';";
 
-            // $result2 = mysqli_query($conn , $sql2);
-            // $row = mysqli_fetch_array($result2);
+            $result2 = mysqli_query($conn , $sql2);
+             $row = mysqli_fetch_array($result2);
 
             $cID = $_SESSION['clientID'];
 
