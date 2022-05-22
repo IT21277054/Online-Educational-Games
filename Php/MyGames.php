@@ -104,13 +104,13 @@ session_start();
             // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
-            $sql2 = " SELECT ClientID as cID 
-                    FROM client WHERE Email='$email';";
+            // $sql2 = " SELECT ClientID as cID 
+            //         FROM client WHERE Email='$email';";
 
-            $result2 = mysqli_query($conn , $sql2);
-            $row = mysqli_fetch_array($result2);
+            // $result2 = mysqli_query($conn , $sql2);
+            // $row = mysqli_fetch_array($result2);
 
-            $cID = $row['cID']; 
+            $cID = $_SESSION['clientID'];
 
             if(isset($_POST['gID']))
             {
