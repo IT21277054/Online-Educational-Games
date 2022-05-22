@@ -96,72 +96,91 @@ else
   }
 
     ?>
-    <img src="../images/Cover Photo 2.png" class="fpage" />
+
+
+
+
+    <!-- <img src="../images/Cover Photo 2.png" class="fpage" /> -->
+
+
+    <video width ="100%" height="100%" autoplay muted loop class ="playVideo">
+    <source src="../images/Hi.mp4" type ="video/mp4"> 
+</video>
+    
     <div class="title">Welcome<br /> <?php echo $name; ?>  </div>
     <div class="content">
 
- <!--image slider start-->
- <div class="slider">
+    <center>
+
+    <div class="slider">
+      <div class="info"></div>
       <div class="slides">
-        <!--radio buttons start-->
         <input type="radio" name="radio-btn" id="radio1" />
         <input type="radio" name="radio-btn" id="radio2" />
         <input type="radio" name="radio-btn" id="radio3" />
         <input type="radio" name="radio-btn" id="radio4" />
-        <!--radio buttons end-->
-        <!--slide images start-->
+
         <div class="slide first">
           <img src="../images/S1.jpg" alt="" />
+          <div id="txt" class="txt-container1">
+            <h2 id="topic">Slide 1</h2>
+            <p id="content">Hena 1k gahanda one</p>
+          </div>
         </div>
         <div class="slide">
+          <div id="txt-container"></div>
           <img src="../images/S2.jpg" alt="" />
+          <div id="txt" class="txt-container2">
+            <h2 id="topic">Slide 2</h2>
+            <p id="content">Hena 2k gahanda one</p>
+          </div>
         </div>
         <div class="slide">
+          <div id="txt-container"></div>
           <img src="../images/S3.jpg" alt="" />
+          <div id="txt" class="txt-container3">
+            <h2 id="topic">Slide 3</h2>
+            <p id="content">Hena 3k gahanda one</p>
+          </div>
         </div>
         <div class="slide">
+          <div id="txt-container"></div>
           <img src="../images/S4.jpg" alt="" />
+          <div id="txt" class="txt-container4">
+            <h2 id="topic">Slide 4</h2>
+            <p id="content">Hena 4k gahanda one</p>
+          </div>
         </div>
-        <!--slide images end-->
-        <!--automatic navigation start-->
+
         <div class="navigation-auto">
           <div class="auto-btn1"></div>
           <div class="auto-btn2"></div>
           <div class="auto-btn3"></div>
           <div class="auto-btn4"></div>
         </div>
-        <!--automatic navigation end-->
       </div>
-      <!--manual navigation start-->
+
       <div class="navigation-manual">
         <label for="radio1" class="manual-btn"></label>
         <label for="radio2" class="manual-btn"></label>
         <label for="radio3" class="manual-btn"></label>
         <label for="radio4" class="manual-btn"></label>
       </div>
-      <!--manual navigation end-->
-    </div>
-    <!--image slider end-->
-
-    <script type="text/javascript">
-      var counter = 1;
-      setInterval(function () {
-        document.getElementById("radio" + counter).checked = true;
-        counter++;
-        if (counter > 4) {
-          counter = 1;
-        }
-      }, 5000);
-    </script>
-
     </div>
 
-    <footer>
-      <img src="../images/Logo/Facebook.png" class="flogo" />
-      <img src="../images/Logo/Instergram.png" class="flogo" />
-      <img src="../images/Logo/Twitter.png" class="flogo" />
-    </footer>
+</center>
 
-    <script src="../Js/Main.js"></script>
+</div>
+
+<!-- Footer -->
+<footer>
+    <img src="..\images/Logo/Facebook.png" class = "flogo">
+    <img src="..\images/Logo/Instergram.png" class="flogo">
+    <img src="..\images/Logo/Twitter.png" class="flogo">
+</footer>
+
+
+
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
