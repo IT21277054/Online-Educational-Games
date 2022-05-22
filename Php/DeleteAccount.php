@@ -33,7 +33,7 @@ $conn -> close();
       rel="stylesheet"
     />
     <link rel="icon" type="favicon" href="../Images/favicon.png" />
-    <title>Forget Password</title>
+    <title>Delete Account</title>
   </head>
   <body>
     <video autoplay muted loop class="bgmvideo">
