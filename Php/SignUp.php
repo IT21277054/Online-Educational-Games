@@ -18,7 +18,7 @@
         $result = mysqli_query($conn , $sql); // execute query
 
         // check result has a value or not if not execute this
-        if ($result -> num_rows == 0 ) {
+        if (!$result -> num_rows > 0 ) {
             
             // query for the insert data into database 
             $sql = "INSERT INTO client( ClientPassword, Email,FirstName,LastName) values('$password','$email','$firstName','$lastName') ";

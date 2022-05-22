@@ -1,113 +1,120 @@
 .Rtitle {
-    position: absolute;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 1000%;
-    margin-top: -50%;
-    margin-left: 5%;
-    color: Navy;
-  }
-  
-  .VNav-button {
-    padding: 0.5%;
-    float: right;
-    text-decoration: none;
-    font-family: "Comforataa", cursive;
-    color: Navy;
-  }
-  
-  .RNav-button:hover {
-    background-color: rgb(87, 87, 255);
-    border-radius: 10px;
-  }
-  
-  .Rcontent {
-    border-radius: 25px;
-    position: relative;
-    color:Navy;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: cursive;
-    background-image: linear-gradient(rgb(21, 116, 204), rgb(255, 240, 30));
-    margin-top: -5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 3%;
-    opacity: 0.9;
-  }
-  
-  .Rfpage {
-    width: 100%;
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1000%;
+  margin-top: -50%;
+  margin-left: 5%;
+  color: Navy;
+}
+
+.VNav-button {
+  padding: 0.5%;
+  float: right;
+  text-decoration: none;
+  font-family: "Comforataa", cursive;
+  color: Navy;
+  z-index: 5;
+}
+
+.RNav-button:hover {
+  background-color: rgb(87, 87, 255);
+  border-radius: 10px;
+}
+
+.Rcontent {
+  border-radius: 25px;
+  position: relative;
+  color: Navy;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: cursive;
+  background-image: linear-gradient(rgb(21, 116, 204), rgb(255, 240, 30));
+  margin-top: -5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 3%;
+  opacity: 0.9;
+}
+
+.Rfpage {
+  width: 100%;
   border-radius: 10px;
   margin-top: -16%;
   margin-left: 50px;
   margin-right: 50px;
-  }
-  
+}
 
-  .field
-  {
-    border:2px solid Navy;
-    border-radius: 10px;
-  }
-  
- 
-  
-  #reviewSubject {
-    border: 2px solid Navy;
-    border-radius: 4px;
-    color: black;
-    height: 30px;
-    width: 500px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 8px;
-    background-color: transparent;
-    font-size: 18px;
-    font-family: cursive;
-    font-weight: bold;
-  }
-  
-  .OneLine2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .Button {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin: 40px auto;
-    position: relative;
-  }
-  
-  .OneLine {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .AddFriendButton {
-    border: 4px solid navy;
-  
-    border-radius: 10px;
-    color: navy;
-    padding: 10px;
-    box-shadow: 5px 6px rgb(56, 54, 190);
-    background-color: transparent;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: cursive;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    margin-bottom: 5%;
-  }
-  
+.field {
+  border: 2px solid Navy;
+  border-radius: 10px;
+}
+
+#reviewSubject {
+  border: 2px solid Navy;
+  border-radius: 4px;
+  color: black;
+  height: 30px;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 8px;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.OneLine2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 40px auto;
+  /* position: relative; */
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 73%;
+}
+.Nav-bar {
+  z-index: 10;
+}
+#sFriends {
+  margin-left: 70%;
+  position: absolute;
+  margin-top: -4%;
+}
+
+.OneLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AddFriendButton {
+  border: 4px solid navy;
+
+  border-radius: 10px;
+  color: navy;
+  padding: 10px;
+  box-shadow: 5px 6px rgb(56, 54, 190);
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: cursive;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  margin-bottom: 5%;
+}

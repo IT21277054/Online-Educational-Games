@@ -1,3 +1,58 @@
+<?php
+include "./dbConnection.php";
+session_start();
+$email = $_SESSION['email'];
+$clientID = $_SESSION['clientID'];
+
+$gTag = "";
+$Name = "";
+$friendID = "";
+$bool ="";
+$value = "Add Friend";
+
+if(isset($_POST['search'])){
+
+    $gTag = $_POST['gTag'];
+    if(!empty($gTag)){
+
+        
+        $sql = "SELECT * from client  where GamerTag = '$gTag';";
+        $result = mysqli_query($conn , $sql);
+        $row = mysqli_fetch_array($result);
+        $Name = $row['FirstName'].' '.$row['LastName'];
+        $friendID = $row['ClientID'];
+
+        
+
+        $sql3 = "SELECT * FROM friend where clientID = '$clientID' AND friendID = '$friendID'";
+        $result3 = mysqli_query($conn , $sql3);
+        if($result3 -> num_rows > 0){
+            $value = "Already added";
+            $bool = "disabled";
+            echo"<script>alert('already added')</script>";
+        }else{ 
+            $value = "Add Friend";
+            $bool ="";
+        }
+          
+        // $gTag = $row['GamerTag'];
+    }
+}
+
+if(isset($_POST['addSubmit'])){
+
+    $friendID = $_POST['fID'];
+
+    $sql2 = "INSERT INTO friend(friendID,ClientID) VALUES ($friendID,$clientID)";
+    if( mysqli_query($conn , $sql2)){
+        echo "<script>alert('You have successfully added ".$gTag."')</script>";
+        header("Location: ./MyFriends.php");
+    }
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,20 +99,34 @@
 <fieldset class="field">
         <legend>Add Friend</legend>
 
-    <form action="" method="POST">
+    <form action="./AddFriend.php" method="POST">
         
-        <input type="text" id = "reviewSubject" name = "Topic" placeholder ="Friend's Gamer Tag"><br>
+        <input type="text" id = "reviewSubject" name = "gTag" placeholder ="Friend's Gamer Tag" value="<?php echo $gTag ;?>" >
+        <button type="submit" name="search" class="AddFriendButton" id="sFriends" >Search Friend</button>
 
+        <?php
 
+        echo "
+        <div class='friendDetails'>
+        <div class='topic'><h5>".$Name."</h5> 
+        <h5>".$gTag."</h5></div>
+         <input type='hidden' name='fID' value='".$friendID."' style='display:none'>  
+
+    </div>"; ?>
+        </div>
 
  
     <!-- Review button -->
+    <?php 
+    if(!empty($Name)){
+        echo"
 
-    <div class = "Button">
-
-        <button type = "submit" name="submit" class="AddFriendButton">Add Friend</button>
-
-    </div>
+        <div class = 'Button'>
+            
+            <button type = 'submit' name='addSubmit' class='AddFriendButton' ".$bool."  >".$value."</button>
+            
+        </div>
+    ";}?>
 
     </form>
 
