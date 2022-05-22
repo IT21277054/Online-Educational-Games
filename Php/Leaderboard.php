@@ -38,17 +38,12 @@
         </thead>
         <tbody>
         <?php
-            $serverName = "localhost";
-            $username ="root";
-            $password ="";
-            $dbName = "pixxel";
-        
-            $conn = mysqli_connect($serverName, $username, $password, $dbName);
-        
-            if($conn-> connect_error){
-                echo "<script>('Connection error')</script>";
-                die('');
-            }
+        // include db connection
+        include './dbConnection.php';
+
+        // start session
+            session_start();
+            $email = $_SESSION['email'];
 
             $sql = "SELECT  GamerTag, HighScore, GameID FROM score s,client c WHERE c.ClientID = s.ClientID ORDER BY HighScore DESC";
             $result = $conn->query($sql);

@@ -1,16 +1,3 @@
-<?php
-
-// include db connection
-include '../Php/dbConnection.php';
-
-// start session
-session_start();
-
-$email = $_SESSION['email'];
-$gameId = $_SESSION['GameID']
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,24 +56,61 @@ $gameId = $_SESSION['GameID']
     <center>
     <button type="button" onclick="location.href = 'PayHistory.php'; "  class="btn hisbtn" > Payment history</button> </center>
 
+    <?php
+
+        // include db connection
+        include '../Php/dbConnection.php';
+
+        // start session
+        // session_start();
+
+        // $email = $_SESSION['email'];
+        // $gameId = $_SESSION['GameID'];
+
+        $sql = " SELECT GameName as gName
+                 FROM game WHERE GameID=1000 ";
+        // " SELECT GameName FROM game WHERE GameID='$gameID'"
+
+        $result = $conn->query($sql);
+
+    ?>
 
     <center>
     <table boarder =1 >
-        <tr> <th> Item </th>    <th> Each month </th>   <th> Months </th>       <th> Total </th>  </tr>
-        <tr> <td> Ball</td>     <td> $10 </td>          <td> 1 </td>            <td> $10 </td>  </tr>
-        <tr> <td> Doll</td>     <td> $15 </td>          <td> 4 </td>            <td> $60 </td>  </tr>
-        <tr> <td> </td>         <td>  </td>             <td> </td>              <td class="line"> .... </td>  </tr>
-        <tr><td> Transaction method</td>
-            <td>
-            <form action="" method="" >
-                <select id="transType" name="transType" class="dropdown"> 
-                    <option value="select">Select</option>
-                    <option value="credit">Credit card</option>
-                    <option value="debit">Debit card</option>
-                    <option value="paypal">PayPal</option>
-                </select>
-            </td>
+        <tr>    <td> Game name </td>           
+                <td> 
+                    <?php if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                            echo $row["gName"];}} ?> 
+                <td> </td>
         </tr>
+
+        <tr> <td> Subscription months</td> 
+            <form>  
+                <td> <input type="text" id="submonths" class="inputbox"> </td>
+                    
+                <td> <button type="button" onclick=" print()"  class="calbtn" > calculate </button> </td> 
+        </tr>
+
+        <tr> 
+            <td> Total </td> 
+            <td> <p id="total" name="total">  </p> </td> 
+        </tr>
+
+
+        <tr><td> Transaction method</td>
+            <td></td>
+                <td>
+                <form action="" method="" >
+                    <select id="transType" name="transType" class="dropdown"> 
+                        <option value="select">Select</option>
+                        <option value="credit">Credit card</option>
+                        <option value="debit">Debit card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </td>
+            </tr>
         <tr>
             <td></td>
             <td>
@@ -109,6 +133,8 @@ $gameId = $_SESSION['GameID']
     </footer> -->
 
     <script src="../Js/Main.js"></script>
+    <script src="../Js/MyCart.js"></script>
 
 </body>
 </html>
+
