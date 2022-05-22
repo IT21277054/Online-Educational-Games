@@ -43,7 +43,10 @@
         }
         
     }
-
+ if(isset($_POST['allReview'])){
+     $gid = $_GET['gID'];
+     header("Location: ./Reviews.php?gID=".$gid);
+ }
 
 ?>
 
@@ -172,7 +175,7 @@
     </div>
 
     <div class = "Button">
-        <button type = "submit" name="submit" class="AddReviewButton">All Reviews</button>
+        <button type = "submit" name="allReview" class="AddReviewButton">All Reviews</button>
     </div>
 
     </div>
