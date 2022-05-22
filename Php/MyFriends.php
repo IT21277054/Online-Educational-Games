@@ -19,7 +19,7 @@
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
    
-    <title>Contact Us</title>
+    <title>MyFriends</title>
 </head>
 
 <body>
