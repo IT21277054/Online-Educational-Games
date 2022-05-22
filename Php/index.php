@@ -193,10 +193,8 @@ else
 
                 <fieldset class="field2">
                 <h1>SEGA</h1>
-                <p>fsjgyyyyyyyyyyyyyyyyyyhddddhjdsghdghdhhdd
-                  fsdddddddffffffffffffffffffffffffffffffffffff
-                  ghhhhhhhhhhhhhhhhhhhhhkkkkkkkkkkkkkkkkkkkkkkk
-                  hffffffffffffffffffffffffffffffffffffffffffhf
+                <p>fsjgyyyyyyyyyyyyyyyyyyhddfsdddddddffffffffffffffffffffffffffffffffffff
+                hhhhhhhhhkkkkkkkkkkkkkkkkkkkhffffffffffffffffffffffffffffffffffffffffffhf
                 </p>
 </fieldset>
           </fieldset>        
