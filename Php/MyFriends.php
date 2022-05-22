@@ -59,9 +59,9 @@
 
 <div class="Vtitle">My Friends</div>
 
-<div class="example">
-    <form class="example" action="" method="post">
+<form>
 <!-- Content -->
+<form class="example" action="" method="post">
 <div class="Vcontent">
 
   <fieldset class ="Vfield">
@@ -76,7 +76,7 @@
 
             
         </div>
-</div>
+    </div>
    
     <div class ='OneLine2'>
     <input type="text" id = "FriendName" name = "FriendName" Value ="Moda Sudheera">
@@ -90,6 +90,7 @@
       
       </div>
       
+      </form>
 
 </div>
 
