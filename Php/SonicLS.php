@@ -7,6 +7,7 @@ session_start();
 $email = $_SESSION['email'];
 
 
+
 $sql = "SELECT * FROM client WHERE Email = '$email'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_assoc($result);
