@@ -81,7 +81,7 @@ session_start();
             <div class="Gamecontent"><div class="ptitle">Game One</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
             <img src="../images/sonic-png-14.png" class = "titlecard2">
             <a href="SonicLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
-            <button type="button1" class="trynow">Try Now</button>
+            <a href="AddReview.php"><button type="button1" class="trynow">Add Review</button></a>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br>
@@ -89,7 +89,7 @@ session_start();
             <div class="Gamecontent"><div class="ptitle">Game Two</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
             <img src="../images/Mario.png" class = "titlecard2">
             <a href="MarioLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
-            <button type="button1" class="trynow">Try Now</button>
+            <a href="AddReview.php"><button type="button1" class="trynow">Add Review</button></a>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br><br>

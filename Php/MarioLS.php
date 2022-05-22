@@ -21,7 +21,7 @@ if($result -> num_rows > 0){
     echo "<script>location.replace('../Html/StartGameMario.html')</script>";
 }
 else{
-    echo "<script>alert('But The Game');</script>";
+    echo "<script>location.replace('../Php/MyCart.php')</script>";
 }
 
 
