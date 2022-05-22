@@ -18,7 +18,7 @@ $sql = "SELECT * FROM own WHERE ClientID = '$clientID' AND GameID = 1000";
 $result = mysqli_query($conn,$sql);
 
 if($result -> num_rows > 0){
-    echo "<script>location.replace('Sonice Fast Math.php')</script>";
+    echo "<script>location.replace('../Html/StartGameSonic.html')</script>";
 }
 else{
     echo "<script>alert('Buy The game You Idiot');</script>";
