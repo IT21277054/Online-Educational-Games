@@ -122,7 +122,7 @@ session_start();
             }
 
 
-            $sql = "    SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
+            $sql = "SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
 
             $result = $conn->query($sql);
 
