@@ -165,9 +165,15 @@
         
     <!-- Review button -->
 
-    <div class = "Button">
+    <div class ='OneLine'>
 
+    <div class = "Button">
         <button type = "submit" name="submit" class="AddReviewButton">Add Review</button>
+    </div>
+
+    <div class = "Button">
+        <button type = "submit" name="submit" class="AddReviewButton">All Reviews</button>
+    </div>
 
     </div>
 
