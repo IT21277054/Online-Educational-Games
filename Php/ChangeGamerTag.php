@@ -1,10 +1,11 @@
 <?php
-$serverName = "localhost";
-$username ="root";
-$password ="";
-$dbName = "pixxel";
+// include db connection
+include './dbConnection.php';
 
-$conn = mysqli_connect($serverName, $username, $password, $dbName);
+// start session
+session_start();
+$email = $_SESSION['email'];
+
 
 if($conn-> connect_error){
     echo "<script>('Connection error')</script>";
@@ -29,7 +30,7 @@ if($conn-> connect_error){
     $result = mysqli_query($conn,$sql);
 
     if($result -> num_rows == 0){
-        $sql = "UPDATE client SET GamerTag = '$gamertag' WHERE Email ='Bruice@gmail.com'";
+        $sql = "UPDATE client SET GamerTag = '$gamertag' WHERE Email ='$email'";
         $result = mysqli_query($conn, $sql);
         echo "<script>alert('Success'); location.replace('ChangeGamerTagFile.php')</script>";
     }

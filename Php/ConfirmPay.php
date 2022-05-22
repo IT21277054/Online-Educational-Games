@@ -55,31 +55,35 @@
     <div class="conTitle">Confirm <br>Payment</div>
     
     <div class="conContent">
-        <div class="split left">
-            <h6 class="text">Enter promo code</h6>
-            <form action="" method="" >
+        <div>
+            <h6 class="text"> Do you have a promo code? <br><br> Enter it here !!! </h6>
+            <form>
+
                 <input type="text" id="promocode" class="inputbox1">
-                <input type="submit" value="Submit" class="submitbut btn">
+                <input type="submit" value="Submit" class="submitbut btn"  onclick="validateCode() displayDiscount() displayTotal()">
+                <p style="color:white" id="demo"> </p>
             </form>
 
-            <!-- <div class="vl"></div> -->
+            <br><br>
         </div>
 
-        <div class="split right text" >
+        <hr>
+
+        <div class="text"><center>
             <table> 
                 <tr>
                     <td>Total</td>
-                    <td>value</td>
+                    <td id="total">10</td>
                 </tr>
 
                 <tr>
                     <td>Discount</td>
-                    <td>value</td>
+                    <td id="discount">2</td>
                 </tr>
 
-                <tr>
+                <tr class="line"s>
                     <td>final amount</td>
-                    <td>value</td>
+                    <td id="finalVal">value</td>
                 </tr>
                 
                 <tr>
@@ -97,23 +101,25 @@
                 <tr>
                     <td></td>
                     <td>
-                        <input type="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn">
+                    <input type="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn paynow">
                     </td>
+                    
                 </form>
-            <table>
+            <table></center>
         </div>
 
     </div>
 
 
 
-<!-- 
+
     <footer>
         <img  src="../Images/Logo/Facebook.png" class="flogo">
         <img  src="../Images/Logo/Instergram.png" class="flogo">
         <img  src="../Images/Logo/Twitter.png" class="flogo">
-    </footer> -->
+    </footer>
 
+    <script src="../Js/ConfirmPay.js"></script>
     <script src="../Js/Main.js"></script>
 
 </body>

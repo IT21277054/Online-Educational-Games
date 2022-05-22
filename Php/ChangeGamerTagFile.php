@@ -51,27 +51,21 @@
     <img src="../images/Change.gif" class = "fpage">
     <div class="gtitle">Welcome<br>
     <?php
-    $serverName = "localhost";
-    $username ="root";
-    $password ="";
-    $dbName = "pixxel";
+        // include db connection
+        include './dbConnection.php';
 
-    $conn = mysqli_connect($serverName, $username, $password, $dbName);
+        // start session
+        session_start();
+        $email = $_SESSION['email'];
 
-    if($conn-> connect_error){
-        echo "<script> alert('Connection error')</script>";
-        die('');
-    }  
-    else{
-        $sql = "SELECT GamerTag FROM client WHERE Email ='Bruice@gmail.com'";
+
+        $sql = "SELECT GamerTag FROM client WHERE Email ='$email'";
         $result = mysqli_query($conn,$sql);
         // echo "$result";
 
         while($rowData = mysqli_fetch_array($result)){
             echo $rowData["GamerTag"].'<br>';
         }
-
-    }
 
     ?>
     </div>
