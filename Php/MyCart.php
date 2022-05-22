@@ -6,7 +6,7 @@
         // start session
         session_start();
 
-        $_SESSION['gameID']=1000;
+        $_SESSION['gameID']=1004;
         $gameID = $_SESSION['gameID'];
         
 
@@ -39,6 +39,7 @@
                 $price = $_POST['total1'];
                 $transType = $_POST['transType'];
                 
+                
                 $insertsql = "INSERT INTO orderitem (ClientID,GameID,Price,TransectionMethod) VALUES ( $cID , $gID , $price , '$transType')";
 
                 $result3 = mysqli_query($conn , $insertsql);
@@ -48,7 +49,7 @@
                 if ($result3) {
                         echo "<script>alert('Success!')</script>";
 
-                        header("Location: ./MyGames.php ?gID=".$gid);
+                        // header("Location: ./MyGames.php ?gID=".$gid);
                     }
                     else
                     {
@@ -58,16 +59,45 @@
 
     //Update subsription table
                 
-                $sql3 = "SELECT GameID FROM own WHERE ClientID = '$cID';"
+                $sql3 = "SELECT GameID , Subscription FROM own WHERE ClientID = $cID AND GameID = $gameID;";
 
-                $result = mysql_query($sql3);
+                $result = mysqli_query($conn ,$sql3);
+                $row = mysqli_fetch_array($result);
 
-                if ($gameID == $result['gameID']){
+                $enddate = $row['Subscription'];
+                $enddate1= strtotime($enddate);
 
+                $today = date('Y-m-d');
+                $today1 = strtotime($today);
+
+                $month = $_POST['submonths'];
+
+                
+                if($result -> num_rows > 0){
+
+                    if($enddate1>$today1){
+                        $newenddate =strtotime("+" .$month. " months" , $enddate1);  
+                        $newenddate1 = date('Y-m-d',$newenddate);
+
+                        $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                    }
+                    
+                    else{ 
+                        $newenddate =strtotime("+" .$month. " months" , $today1);  
+                        $newenddate1 = date('Y-m-d',$newenddate);
+
+                        $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                    }
+
+                    
                 }
+                else{
+                //    $sql = "INSERT INTO own "
+                }
+                
 
-                $updatesql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$stars'where ReviewID='$rID'";
-                mysqli_query($conn, $updatesql)
+                
+                // mysqli_query($conn, $updatesql)
             }
         }
  ?>
@@ -146,7 +176,7 @@
 
             <tr> <td> Subscription months</td> 
                 <form>  
-                    <td> <input type="text" id="submonths" class="inputbox" required> </td>
+                    <td> <input type="text" id="submonths" class="inputbox" name="submonths" required> </td>
                         
                     <td> <button type="button" onclick="discount()"  class="calbtn" > calculate </button> </td> 
             </tr>
