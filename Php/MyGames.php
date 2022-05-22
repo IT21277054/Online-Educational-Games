@@ -88,16 +88,21 @@
             echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td><td>" . $row2["expdate"]. "</td></tr>";
             }
 
-            
-
-            // while($row = $result2->fetch_assoc()) {
-            //     echo "<td>" . $row["expdate"]. "</td></tr>";
-            //     }
-
             echo "</table>";
             } else { echo "The table is empty"; }
             $conn->close();
             ?>
+            
+            <hr>
+            <tr> 
+                <form method="post">
+                    <td> Select a game to unsubscribe </td>
+                    <td> 
+                        <input type="radio" name="usgame" ><label>HTML</label><br>
+                    </td>
+                    <td> <input type="button" class="usbtn" > Unsubscribe </button> </td>
+                </form>
+            </tr>
 
         </tbody>
         </table>
