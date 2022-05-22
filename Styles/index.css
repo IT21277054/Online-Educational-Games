@@ -8,6 +8,44 @@
     background: #23e3c9;
   } */
 
+
+  .RNav-button{
+    padding: 0.5%;
+    float: right;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(83, 5, 94);
+}
+
+
+
+.RNav-button:hover{
+    background-color:rgba(179, 0, 255, 0.637);
+    border-radius: 10px;
+}
+
+
+.Rtitle{
+  position:absolute;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1000%;
+  margin-top:-40%;
+  margin-left:5%;
+  color: rgb(94, 5, 5);
+}
+
+
+.field
+{
+  border:2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  margin-bottom: 8%;
+}
+
+
+
 .slider {
   width: 800px;
   height: 500px;
@@ -43,13 +81,14 @@
   color: black;
   /* width: 200%; */
   top: -40%;
-  left: 5%;
+  left: 0.1%;
   transition: 2s;
-  width: 200px;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.747);
   padding-left: 10px;
-  border-radius: 10px;
-  float: right;
+  border-radius: 5px;
+  float: left;
+  font-size:20px;
 }
 
 .Nav-bar {
@@ -60,7 +99,7 @@
   position: relative;
   display: flex;
   display: inline-block;
-  margin-left: 11%;
+  margin-left: 3%;
 }
 
 .txt-container1 {
@@ -84,7 +123,7 @@
 }
 
 .manual-btn {
-  border: 2px solid #40d3dc;
+  border: 2px solid #04326d;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -96,7 +135,7 @@
 }
 
 .manual-btn:hover {
-  background: #40d3dc;
+  background: #04326d;
 }
 /* 
   #radio1:checked ~ .txt-container1 {
@@ -142,7 +181,7 @@
 }
 
 .navigation-auto div {
-  border: 2px solid #40d3dc;
+  border: 2px solid #04326d;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
@@ -153,17 +192,28 @@
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-  background: #40d3dc;
+  background: #04326d;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
-  background: #40d3dc;
+  background: #04326d;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-  background: #40d3dc;
+  background: #04326d;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
-  background: #40d3dc;
+  background: #04326d;
+}
+
+
+
+
+
+.OneLine{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+
 }

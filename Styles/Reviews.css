@@ -4,7 +4,7 @@
   font-size: 1000%;
   margin-top:-25%;
   margin-left:5%;
-  color: rgb(9, 8, 75);
+  color: rgb(75, 8, 45);
 }
 
 .RNav-button
@@ -232,12 +232,6 @@ align-items:center;
 
 
 
-.OneLine{
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
-
-}
 
 
 
