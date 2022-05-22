@@ -11,24 +11,21 @@
     margin-top:5%;
 }
 table {
+    margin-top: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-collapse: collapse;
-    width: 70%;
     color:white;
+    padding-top: 10px;
     margin-left: auto;
     margin-right: auto;
     font-size:50px;
+    position:absolute;
   }
   
 td, th {
     /* border: 1px solid #5bd4ddb0; */
     text-align: left;
     padding: 20px;
-}
-
-.line{
-    border-top: 1px solid white;
-    border-bottom: 1px double white;
 }
 
 .cartcontent{
@@ -41,6 +38,7 @@ td, th {
     box-shadow:0 0 10px 5px #71a2b1;
     z-index: -1;
     width:80%;
+    height: 90%;
 }
 
 .pic{
@@ -94,9 +92,65 @@ td, th {
 }
 
 .hisbtn{
-    margin-left: 3%;
+   margin-left: 20%;
 }
 
-.conbtn{
-    margin-left:65%
+.calbtn{
+    position :absolute;
+    background-color: rgba(74, 124, 190, 0.452);
+    color: white;
+    border: 3px solid #0b4e49;
+    border-radius:20px;
+    transition-duration: 0.4s;
+    padding: 5px 5% 5px 5%;
+    top:31%;
+    left:65%;
+    box-shadow:0 0 3px 3px white;
+    border-color: #0b4e49; 
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 2;
+}
+
+.calbtn:hover
+{
+    background-color:#67b6ff;
+    color:black;
+}
+
+.dropdown{
+    width:100%;
+
+    Position:relative;
+    padding-bottom: 10px;
+    opacity:100%;
+    border-radius:20px;
+    box-shadow:0 0 3px 3px white;
+    background-color: rgba(74, 167, 190, 0.137);
+
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    padding: 5px;
+}
+
+.inputbox{
+    width:20%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    opacity:100%;
+    border-radius:20px;
+    box-shadow:0 0 3px 3px white;
+    background-color: rgba(74, 167, 190, 0.137);
+
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.line{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin-top: 5%;
 }

@@ -59,9 +59,9 @@
 
 <div class="Vtitle">My Friends</div>
 
-<form>
-<!-- Content -->
 <form class="example" action="" method="post">
+<!-- Content -->
+
 <div class="Vcontent">
 
   <fieldset class ="Vfield">
@@ -69,7 +69,7 @@
     
         <input type="text" placeholder="Search.." name="search">
         <button type="submit" name="search" ><i class="fa fa-search"></i></button>
-      </form>
+
 
 
         <div class = "Button">
