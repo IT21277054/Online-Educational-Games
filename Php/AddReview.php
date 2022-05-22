@@ -25,12 +25,11 @@
 
         $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
 
-        $result = mysqli_query($conn , $sql); // execute the query
 
-
-        if($result){
+        if(mysqli_query($conn , $sql)){
             echo "<script>alert('Success!')</script>";
-            header("Location: ./Review.php?gID=".$gid);
+            header("Location: ./Reviews.php?gID=".$gid);
+            
         }
         else
         {
