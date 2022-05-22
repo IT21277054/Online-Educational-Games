@@ -54,7 +54,7 @@ else
 <!-- Background -->
 
 <video width ="320" height="240" autoplay muted loop class ="bgvideo">
-    <source src="../images/backVideo5.mp4" type ="video/mp4"> 
+    <source src="../images/Falling Stars.mp4" type ="video/mp4"> 
 </video>
 
 
@@ -70,19 +70,15 @@ else
         <a href="../Html/About.html" class="RNav-button"><li>About</li></a>
         <a href="Games.php" class="RNav-button"><li>Games</li></a>
         <a href="index.php" class="RNav-button"><li>Home</li></a>
-        <hr id="line">
+
         </ul>
 </header>
 
 <!-- Title -->
 
-<div class="Star">
 
+<img src="../images/Star5.gif" class = "Rfpage">
 
-</div>
-
-
-<img src="../images/Star.gif" class = "Rfpage">
 <div class="Rtitle">Reviews</div>
 
 

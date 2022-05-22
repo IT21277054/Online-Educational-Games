@@ -53,7 +53,7 @@
 
 </div>
 
-<img src="../images/ContactUs.gif" class = "Vfpage">
+<img src="../images/ContactUs2.gif" class = "Vfpage">
 
 <div class="Vtitle">Contact Us</div>
 
