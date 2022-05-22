@@ -25,17 +25,12 @@
     </ul>
   </header>
         
-   <h1> <div class="Topic">  <h1>Search<br> Friend </h1> </div> 
+   <h1> <div class="Topic">  <h1>Add Friend </h1> </div> 
         
-    <input class="SFbtn" type="text">  
-             
-
-        <div>
-            <button class="button">Search</button>
-            </div>
+   
 
        <div class="Vbox"> 
-        <input class="Button" type="text"> <button class="Vbtn">Search</button>
+        <input class="Button" type="text"> <button class="Vbtn">Add</button>
         
             </div>
 

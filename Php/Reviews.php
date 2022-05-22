@@ -11,35 +11,18 @@ $gID = $_SESSION['GameID'];
 
 $sql = "SELECT * FROM Review where GameID = '$gID'"; // sql query to check if email exist in db
 
-
-
 $result = mysqli_query($conn , $sql); // execute the query
 
-
-
 if($result -> num_rows > 0){
-
     // $sql2 = "SELECT FirstName + LastName as 'fName' FROM Client where GameID = '$gID'"; 
-
-
 }
 
 else
 {
     echo "<script>alert('Failed!')</script>";
-
-
-
     // $sql = "SELECT * FROM review where GameID = '$gID'";
-
 }
-
 ?>
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -121,16 +104,24 @@ else
 <?php      
 
 while($row = mysqli_fetch_array($result) ){
-    $cn = $row['Content'];
+    $topic = $row['Topic'];
+    $content = $row['Content'];
     $cID = $row['ClientID'];
+    $star = $row['stars'];
+
     $sql2 = "SELECT * FROM Client where ClientID = '$cID'";
     $result2 = mysqli_query($conn , $sql2);
-
     $row2 = mysqli_fetch_array($result2);
-
     $Name = $row2['FirstName'].' '.$row2['LastName'];
+    $cImage = $row2['UserImage'];
 
-    echo "<script>alert($cn)</script>";
+    $sql3 = "SELECT * FROM game where GameID = $gID";
+    $result3 = mysqli_query($conn , $sql3);
+    $row3 = mysqli_fetch_assoc($result3);
+
+    $gName = $row3['GameName'];
+
+    // echo "<script>alert($cn)</script>";
    echo "
 
 <form id = 'testimonials'>
@@ -145,13 +136,13 @@ while($row = mysqli_fetch_array($result) ){
             <div class='profile'>
                 <!-- img---- -->
                 <div class='profile-img'>
-                    <img src='..\images\Tinkerbell.jpg'/>
+                    <img src='../Images/User Images/".$cImage."'/>
                 </div>
 
                 <!-- name-andUsername -->
                 <div class='name-user'>
                     <strong>".$Name."</strong>
-                    <span>@Uma</span>
+                    <span>".$gName."</span>
                 </div>
             </div>
 
@@ -175,8 +166,9 @@ while($row = mysqli_fetch_array($result) ){
         </div>
 
 <!-- Comments------------------ -->
+    <div class='topic'><h5>".$topic."</h5></div>
         <div class='client-comment'>
-                <p>".$cn."</p>
+                <p>".$content."</p>
             </div>
 
     </div>

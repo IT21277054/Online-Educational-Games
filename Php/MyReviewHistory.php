@@ -108,20 +108,29 @@ else
      $cn = $row['Content'];
      $rID = $row['ReviewID'];
      $gID = $row['GameID'];
+     $star = $row['stars'];
 
     $sql = "SELECT * FROM game where GameID = '$gID'";
     $result2 = mysqli_query($conn , $sql);
     $row2 = mysqli_fetch_array($result2);
 
-    echo "<script>alert($cImage)</script>";
+    // echo "<script>alert($star)</script>";
+
+    
 
     $gName = $row2['GameName'];
 
-     if(isset($_POST['btn-edit'])){
+    if(isset($_POST['btn-edit'])){
         
         $rID = $_POST['btn-edit'];
         header("Location: ./EditReview.php?rID=".$rID);
     }
+    else if(isset($_POST['btn-delete'])) {
+        
+        $rID = $_POST['btn-delete'];
+        header("Location: ./DeleteReview.php?rID=".$rID);
+    }
+
     echo "
 
     <form id = 'testimonials' action='' method='post'>
@@ -148,7 +157,7 @@ else
         
                     <!-- reviews -->
                     <div class='star-rating'>
-                        <input type='radio' name='stars' id='star-a' value='5'/>
+                        <input type='radio' name='stars' id='star-a' value='5'  />
                         <label for='star-a'></label>
                         
                         <input type='radio' name='stars' id='star-b' value='4'/>
@@ -175,9 +184,9 @@ else
         <div class ='OneLine'>
           
 
-            <button type = 'submit' class='EditReviewButton' name='btn-edit' value='".$rID."'>Edit Review<a></button>
+            <button type = 'submit' class='EditReviewButton' name='btn-edit' value='".$rID."'>Edit Review</button>
     
-            <button type = 'button' class='DeleteReviewButton'>Delete Review</button>
+            <button type = 'submit' class='DeleteReviewButton' name='btn-delete' value='".$rID."'>Delete Review</button>
     
         </div>
             </div>
@@ -189,6 +198,17 @@ else
         
         
         </form> ";  
+        if($star == '1' ){
+        echo "<script>document.getElementById('star-e').checked= true;</script>";
+        }else if($star == '2' ){
+        echo "<script>document.getElementById('star-d').checked= true;</script>";
+        }else if($star == '3' ){
+        echo "<script>document.getElementById('star-c').checked= true;</script>";
+        }else if($star == '4' ){
+        echo "<script>document.getElementById('star-b').checked= true;</script>";
+        }else if($star == '5'){
+        echo "<script>document.getElementById('star-a').checked= true;</script>";
+        }
         
 }
         ?>
