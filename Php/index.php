@@ -103,7 +103,7 @@ else
     <!-- <img src="../images/Cover Photo 2.png" class="fpage" /> -->
 
 
-    <video width ="100%" height="100%" autoplay muted loop class ="playVideo">
+    <video width ="100%" height="100%" autoplay muted loop class ="bgffvideo">
     <source src="../images/Hi.mp4" type ="video/mp4"> 
 </video>
     
