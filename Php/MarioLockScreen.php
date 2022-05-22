@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/SonicLockScreen.css">
     <link rel="stylesheet" href="../Styles/Game.css">
     
     <link rel="icon" type="favicon" href="../Images/favicon.png" />
@@ -30,11 +32,9 @@
         <p class ="gamet">Mario's Advanture</p>
             <p class ="gamed">Super Mario is a 2D and 3D platform game series created by Nintendo based on and starring the fictional plumber Mario. Alternatively called the Super Mario Bros. series or simply the Mario series, it is the central series of the greater Mario franchise.</p>
             <div class="pbutton1">
-            <form action="MarioLS.php">
-                <input type="submit" value="Play Now">
+            <form action="SonicLS.php">
+                <input class="cbtn" type="submit" value="Play Now">
             </form> 
-            <input type="submit" value="Try Now">
-            $29.99
             </div>
         </div>
 
