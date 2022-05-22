@@ -55,11 +55,11 @@
     <div class="phcontent">
 
     <center>
+    
         <table boarder =1 >
         <thead> 
             <tr> 
-                <td class="line" > Game name</td>     
-                <td class="line" > Subscription </td>                   
+                <td class="line" > Game name</td>   
                 <td class="line" > Expire date</td> 
             </tr>
         <thead>
@@ -71,8 +71,8 @@
 
             session_start();
 
-            // $_SESSION['gameID']=1000;
-            // $gameID = $_SESSION['gameID'];
+            $_SESSION['gameID']=1000;
+            $gameID = $_SESSION['gameID'];
 
             $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
@@ -85,26 +85,29 @@
 
             $cID = $row['cID']; 
 
-            $sql = "    SELECT g.GameName , w.Subscription 
-                        FROM orderitem o , game g , own w 
-                        WHERE o.GameID=g.GameID AND o.GameID=w.GameID 
-                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
-                            AND o.ClientID = $cID;";
+            if(isset($_POST['gID']))
+            {
+                $gID1 = $_POST['gID'];
 
-            $expdate = " SELECT DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) AS expdate 
-                        FROM orderitem o , own w WHERE o.GameID=w.GameID 
-                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
-                            AND o.ClientID = $cID; ";
+                $sql = "DELETE FROM own WHERE GameID= $gID1 AND ClientID=$cID";
+
+                $result = $conn->query($sql);
+            }
+
+
+            $sql = "    SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
 
             $result = $conn->query($sql);
 
-            $result2 = $conn->query($expdate);
-
             if ($result->num_rows > 0) {
             // output data of each row
-            while($row = $result->fetch_assoc() AND $row2 = $result2->fetch_assoc()) {
-            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td><td>" . $row2["expdate"]. "</td></tr>";
+            while($row = $result->fetch_assoc()) {
+            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td>
+            <td> <form method='post'><input name='gID' value=' ". $row[ "gameID" ] . "' style='display:none' > 
+            <input type='submit' value= 'Unsubscribe' name='deletebtn' > </form> </td></tr>";
             }
+
+
 
             echo "</table>";
             } else { echo "The table is empty"; }
@@ -112,34 +115,19 @@
             ?>
             </tbody>
         </table>
+
+        
         <center>
             <hr>
         
-        <table>
+        <!-- <table>
             <tr class="text"> 
                 <h6 .line> Want to Unsubscribe a game? </h6>
                 <form method="post">
                     <td> Select a game</td>
                     <td> 
 
-                        <?php
-                            $sql = "    SELECT g.GameName 
-                                        FROM orderitem o , game g , own w 
-                                        WHERE o.GameID=g.GameID AND o.GameID=w.GameID 
-                                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
-                                            AND o.ClientID = $cID;";
-                            
-                            $result = $conn->query($sql);
-
-                            if ($result->num_rows > 0) {
-                                // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                // echo " <input type="radio" name="usgame" ><label>" . $row["GameName"]. "</label><br>";
-                                }
-                            }
-
-                        ?>
-
+                        
                         <input type="radio" name="usgame" ><label>HTML</label><br> 
                     </td>
                 </tr>
@@ -149,7 +137,7 @@
 
                 </form>
             
-        </table>
+        </table> -->
             
 
     </div>

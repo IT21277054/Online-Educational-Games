@@ -1,3 +1,39 @@
+<?php 
+include "./dbConnection.php";
+
+if(isset($_POST['submit'])){
+  
+  $email = $_POST['email'];
+  $vCode = $_POST['code'];
+  $pw = md5($_POST['password']);
+  $conPw = md5($_POST['cPassword']);
+
+  if($vCode == 12345 ){
+    if($pw == $conPw){
+      $sql = "SELECT * FROM client where Email='$email' ;";
+        $result = mysqli_query($conn , $sql); // execute query
+
+        // check result has a value or not if not execute this
+        if (!$result -> num_rows > 0 ){
+          echo "<script>alert('email not registered')</script>";
+          
+        }else {
+          $sql = "UPDATE client SET ClientPassword='$pw' where Email='$email' ;";
+          $result = mysqli_query($conn , $sql);
+          header("Location: ../Html/SignUp.html");
+        }
+    }else{ 
+      echo "<script>alert('password not match')</script>";
+    }
+  }else {
+    echo "<script>alert('Invalid verification code')</script>";
+  }
+
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +63,7 @@
         <a href='Games.php' class='Nav-button'><li>Games</li></a>
         <a href='index.php' class='Nav-button'><li>Home</li></a>
       </ul>
-    </header>";
+    </header>
 
     <div class="content">
       <div class="overley">
@@ -39,14 +75,14 @@
       </div>
       <div class="Forget-password">
         <form
-          action="Forget.php"
+          action=""
           method="post"
           class="Forget-Password-form"
           id="ForgetPassword"
         >
         <input
             type="email"
-            name="code"
+            name="email"
             placeholder="Email"
             required
           />
@@ -67,7 +103,7 @@
 
           <input
             type="password"
-            name="password"
+            name="cPassword"
             placeholder="Confirm Password"
             required
           />
@@ -76,7 +112,7 @@
           <br />
           <br />
           <br />
-          <button type="submit" class="submit">Change Password</button>
+          <button type="submit" name="submit" class="submit">Change Password</button>
         </form>
       </div>
     </div>

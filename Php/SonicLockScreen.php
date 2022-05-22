@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../Styles/SonicLockScreen.css">
     <link rel="stylesheet" href="../Styles/Game.css">
 
     <title>Pixxel</title>
@@ -37,11 +38,10 @@
     <p class ="gamet">Sonic Runner</p>
         <p class ="gamed">After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.</p>
         <div class="pbutton1">
-        <form action="SonicLS.php">
-            <input type="submit" value="Play Now">
+        <form action="SonicLS.php" >
+            <input class="cbtn" type="submit" value="Play Now" >
         </form> 
-        <input type="submit" value="Try Now">
-        $29.99
+        <!-- <input class="tcbtn" type="submit" value="Try Now"> -->
         </div>
     </div>
 
