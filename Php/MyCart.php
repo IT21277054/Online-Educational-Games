@@ -212,7 +212,7 @@
     </div>
 
 
-    <!-- <footer>
+    <!-- <footer class="fs">
         <img  src="../Images/Logo/Facebook.png" class="flogo">
         <img  src="../Images/Logo/Instergram.png" class="flogo">
         <img  src="../Images/Logo/Twitter.png" class="flogo">
