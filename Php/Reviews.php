@@ -5,9 +5,8 @@ include '../Php/dbConnection.php';
 
 // start session
 session_start();
-$_SESSION['GameID'] = 1000;
 
-$gID = $_SESSION['GameID'];
+$gID = $_GET['gID'];
 
 $sql = "SELECT * FROM Review where GameID = '$gID'"; // sql query to check if email exist in db
 
@@ -19,7 +18,7 @@ if($result -> num_rows > 0){
 
 else
 {
-    echo "<script>alert('Failed!')</script>";
+    // echo "<script>alert('Failed!')</script>";
     // $sql = "SELECT * FROM review where GameID = '$gID'";
 }
 ?>
