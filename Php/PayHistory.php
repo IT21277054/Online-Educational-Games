@@ -92,6 +92,7 @@
             include '../Php/dbConnection.php';
 
             session_start();
+            $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
             $sql2 = " SELECT ClientID as cID 
