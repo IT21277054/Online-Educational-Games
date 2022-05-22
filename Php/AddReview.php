@@ -5,11 +5,11 @@
 
 // start session
     session_start();
-    $_SESSION['gameID'] = 1000;
+    $_SESSION['GameID'] = 1000;
 
     if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
-        $gid = $_SESSION['gameID'];
+        $gid = $_SESSION['GameID'];
 
         $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
@@ -31,6 +31,7 @@
 
         if($result){
             echo "<script>alert('Success!')</script>";
+            header("Location: ./Review.php?gID=".$gid);
         }
         else
         {
