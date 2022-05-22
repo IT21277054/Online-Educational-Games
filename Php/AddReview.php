@@ -100,7 +100,7 @@
 </header>
 
 <!-- Title -->
-<img src="../images/Star.gif" class = "Rfpage">
+<img src="../images/Star6.gif" class = "Rfpage">
 <div class="Rtitle">Add Review</div>
 
 

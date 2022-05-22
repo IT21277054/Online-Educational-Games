@@ -69,14 +69,32 @@
         <?php
             include '../Php/dbConnection.php';
 
+            session_start();
+
+            // $_SESSION['gameID']=1000;
+            // $gameID = $_SESSION['gameID'];
+
+            $_SESSION['email']= 'vihangi@gmail.com';
+            $email = $_SESSION['email'];
+            
+            $sql2 = " SELECT ClientID as cID 
+                    FROM client WHERE Email='$email';";
+
+            $result2 = mysqli_query($conn , $sql2);
+            $row = mysqli_fetch_array($result2);
+
+            $cID = $row['cID']; 
+
             $sql = "    SELECT g.GameName , w.Subscription 
                         FROM orderitem o , game g , own w 
                         WHERE o.GameID=g.GameID AND o.GameID=w.GameID 
-                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE());";
+                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
+                            AND o.ClientID = $cID;";
 
             $expdate = " SELECT DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) AS expdate 
                         FROM orderitem o , own w WHERE o.GameID=w.GameID 
-                        AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE()); ";
+                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
+                            AND o.ClientID = $cID; ";
 
             $result = $conn->query($sql);
 
@@ -92,21 +110,47 @@
             } else { echo "The table is empty"; }
             $conn->close();
             ?>
-            
-            <hr>
-            <tr> 
-                <form method="post">
-                    <td> Select a game to unsubscribe </td>
-                    <td> 
-                        <input type="radio" name="usgame" ><label>HTML</label><br>
-                    </td>
-                    <td> <input type="button" class="usbtn" > Unsubscribe </button> </td>
-                </form>
-            </tr>
-
-        </tbody>
+            </tbody>
         </table>
-    <center>
+        <center>
+            <hr>
+        
+        <table>
+            <tr class="text"> 
+                <h6 .line> Want to Unsubscribe a game? </h6>
+                <form method="post">
+                    <td> Select a game</td>
+                    <td> 
+
+                        <?php
+                            $sql = "    SELECT g.GameName 
+                                        FROM orderitem o , game g , own w 
+                                        WHERE o.GameID=g.GameID AND o.GameID=w.GameID 
+                                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE())
+                                            AND o.ClientID = $cID;";
+                            
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                // echo " <input type="radio" name="usgame" ><label>" . $row["GameName"]. "</label><br>";
+                                }
+                            }
+
+                        ?>
+
+                        <input type="radio" name="usgame" ><label>HTML</label><br> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" class="usbtn" value="Unsubscribe" > </button> </td>
+                </tr>
+
+                </form>
+            
+        </table>
+            
 
     </div>
 
