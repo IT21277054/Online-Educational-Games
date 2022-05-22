@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +46,7 @@
     <?php
 
     if(isset($_SESSION['email'])){
+      
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
@@ -87,21 +96,21 @@
         <?php
             include '../Php/dbConnection.php';
 
-            session_start();
+            
 
-            $_SESSION['gameID']=1000;
-            $gameID = $_SESSION['gameID'];
+            // $_SESSION['gameID']=1000;
+            // $gameID = $_SESSION['gameID'];
 
-            $_SESSION['email']= 'vihangi@gmail.com';
+            // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
-            $sql2 = " SELECT ClientID as cID 
-                    FROM client WHERE Email='$email';";
+            // $sql2 = " SELECT ClientID as cID 
+            //         FROM client WHERE Email='$email';";
 
-            $result2 = mysqli_query($conn , $sql2);
-            $row = mysqli_fetch_array($result2);
+            // $result2 = mysqli_query($conn , $sql2);
+            // $row = mysqli_fetch_array($result2);
 
-            $cID = $row['cID']; 
+            $cID = $_SESSION['clientID'];
 
             if(isset($_POST['gID']))
             {
@@ -113,7 +122,7 @@
             }
 
 
-            $sql = "    SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
+            $sql = "SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
 
             $result = $conn->query($sql);
 

@@ -29,7 +29,7 @@ if(isset($_POST['search'])){
         if($result3 -> num_rows > 0){
             $value = "Already added";
             $bool = "disabled";
-            echo"<script>alert('already added')</script>";
+            // echo"<script>alert('already added')</script>";
         }else{ 
             $value = "Add Friend";
             $bool ="";
