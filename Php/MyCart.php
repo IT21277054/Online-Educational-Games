@@ -1,3 +1,62 @@
+<?php
+
+        // include db connection
+        include '../Php/dbConnection.php';
+
+        // start session
+        session_start();
+
+        $_SESSION['gameID']=1000;
+        $gameID = $_SESSION['gameID'];
+        
+
+//calc discount
+        $sql = " SELECT GameName as gName
+                    FROM game WHERE GameID='$gameID'" ;
+        
+
+       $result = mysqli_query($conn , $sql);
+
+
+//submit form
+        $_SESSION['email']= 'vihangi@gmail.com';
+
+        if(isset($_POST['submit']))
+        {    
+            $email = $_SESSION['email'];
+            
+            $sql2 = " SELECT ClientID as cID 
+                    FROM client WHERE Email='$email';";
+
+            $result2 = mysqli_query($conn , $sql2);
+
+            if($result){
+                $row = mysqli_fetch_array($result2);
+                
+                $cID = $row['ClientID'];
+                $gID = $_SESSION['gameID'];
+
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $mobile = $_POST['mobile'];
+                $sql3 = "INSERT INTO users (name,email,mobile)
+                VALUES ('$name','$email','$mobile')";
+
+                if (mysqli_query($conn, $sql3)) {
+                    echo "New record has been added successfully !";
+                } else {
+                    echo "Error: " . $sql . ":-" . mysqli_error($conn);
+                }
+
+                mysqli_close($conn);
+            }
+    }
+
+    else{
+        echo "<script>alert('error!')</script>";
+    }
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,25 +115,7 @@
     <center>
     <button type="button" onclick="location.href = 'PayHistory.php'; "  class="btn hisbtn" > Payment history</button> </center>
 
-    <?php
-
-        // include db connection
-        include '../Php/dbConnection.php';
-
-        // start session
-        // session_start();
-
-        // $email = $_SESSION['email'];
-        // $gameId = $_SESSION['GameID'];
-
-        $sql = " SELECT GameName as gName
-                 FROM game WHERE GameID=1000 ";
-        // " SELECT GameName FROM game WHERE GameID='$gameID'"
-
-        $result = $conn->query($sql);
-
-    ?>
-
+    
     <center>
     <table boarder =1 >
         <tr>    <td> Game name </td>           
@@ -90,19 +131,21 @@
             <form>  
                 <td> <input type="text" id="submonths" class="inputbox"> </td>
                     
-                <td> <button type="button" onclick=" print()"  class="calbtn" > calculate </button> </td> 
+                <td> <button type="button" onclick="discount()"  class="calbtn" > calculate </button> </td> 
         </tr>
 
         <tr> 
             <td> Total </td> 
-            <td> <p id="total" name="total">  </p> </td> 
+
+            <form action="" method="POST" >
+            <td id="total" name="total"> $ </td> 
         </tr>
 
 
         <tr><td> Transaction method</td>
             <td></td>
                 <td>
-                <form action="" method="" >
+                
                     <select id="transType" name="transType" class="dropdown"> 
                         <option value="select">Select</option>
                         <option value="credit">Credit card</option>

@@ -26,6 +26,7 @@ else
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <link rel="stylesheet" href="../Styles/index.css" />
     <link rel="stylesheet" href="../Styles/Styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,44 +99,61 @@ else
     <img src="../images/Cover Photo 2.png" class="fpage" />
     <div class="title">Welcome<br /> <?php echo $name; ?>  </div>
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-      enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-      felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-      elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
-      ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-      ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-      nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-      rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-      libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-      vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-      tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
-      quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-      fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
-      consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum
-      dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-      dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-      montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-      pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-      justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-      felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-      elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
-      ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-      ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-      nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-      rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-      libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-      vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-      tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
-      quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-      fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
-      consequat, leo eget bibendum sodales, augue velit cursus nunc,
+
+ <!--image slider start-->
+ <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="../images/S1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../images/S2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../images/S3.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../images/S4.jpg" alt="" />
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+
     </div>
 
     <footer>
