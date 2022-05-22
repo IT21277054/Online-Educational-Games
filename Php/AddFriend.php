@@ -75,14 +75,14 @@ if(isset($_SESSION['email'])){
   echo "<header>
   <ul id='Nav-bar-id' class='Nav-bar'>
     <img src='../images/Logo/final.png' id='logo' />
-    <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
-    <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
-    <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-    <a href='AddFriend.php' class='Nav-button'><li>Add Friends</li></a>
-    <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-    <a href='Games.php' class='Nav-button'><li>Games</li></a>
-    <a href='index.php' class='Nav-button'><li>Home</li></a>
-    <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
+    <a href='Logout.php' class='VNav-button'><li>Logout</li></a>
+    <a href='MyAccount.php' class='VNav-button'><li>My Account</li></a>
+    <a href='ContactUs.php' class='VNav-button'><li>Contact</li></a>
+    <a href='AddFriend.php' class='VNav-button'><li>Add Friends</li></a>
+    <a href='AboutUs.php' class='VNav-button'><li>About</li></a>
+    <a href='Games.php' class='VNav-button'><li>Games</li></a>
+    <a href='index.php' class='VNav-button'><li>Home</li></a>
+    <!-- <a href='' class='VNav-button'><li>Contact</li></a> -->
   </ul>
 </header>";
 
@@ -90,11 +90,11 @@ if(isset($_SESSION['email'])){
 echo"<header>
   <ul id='Nav-bar-id' class='Nav-bar'>
     <img src='../images/Logo/final.png' id='logo' />
-    <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
-    <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-    <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-    <a href='Games.php' class='Nav-button'><li>Games</li></a>
-    <a href='index.php' class='Nav-button'><li>Home</li></a>
+    <a href='../Html/SignUp.html' class='VNav-button'><li>Login</li></a>
+    <a href='ContactUs.php' class='VNav-button'><li>Contact</li></a>
+    <a href='AboutUs.php' class='VNav-button'><li>About</li></a>
+    <a href='Games.php' class='VNav-button'><li>Games</li></a>
+    <a href='index.php' class='VNav-button'><li>Home</li></a>
   </ul>
 </header>";
 }
@@ -109,11 +109,11 @@ echo"<header>
     <source src="../images/minion2.mp4" type ="video/mp4"> 
 </video>
 
-<div class="Rtitle">Add Friend</div>
+<div class="Vtitle">Add Friend</div>
 
 
 <!-- Content -->
-<div class="Rcontent">
+<div class="Vcontent">
 
 <fieldset class="field">
         <legend>Add Friend</legend>

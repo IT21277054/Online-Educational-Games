@@ -40,14 +40,14 @@
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
-        <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
-        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-        <a href='AddFriend.php' class='Nav-button'><li>Add Friends</li></a>
-        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-        <a href='Games.php' class='Nav-button'><li>Games</li></a>
-        <a href='index.php' class='Nav-button'><li>Home</li></a>
-        <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
+        <a href='Logout.php' class='VNav-button'><li>Logout</li></a>
+        <a href='MyAccount.php' class='VNav-button'><li>My Account</li></a>
+        <a href='ContactUs.php' class='VNav-button'><li>Contact</li></a>
+        <a href='AddFriend.php' class='VNav-button'><li>Add Friends</li></a>
+        <a href='AboutUs.php' class='VNav-button'><li>About</li></a>
+        <a href='Games.php' class='VNav-button'><li>Games</li></a>
+        <a href='index.php' class='VNav-button'><li>Home</li></a>
+        <!-- <a href='' class='VNav-button'><li>Contact</li></a> -->
       </ul>
     </header>";
 
@@ -55,11 +55,11 @@
     echo"<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
-        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-        <a href='Games.php' class='Nav-button'><li>Games</li></a>
-        <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <a href='../Html/SignUp.html' class='VNav-button'><li>Login</li></a>
+        <a href='ContactUs.php' class='VNav-button'><li>Contact</li></a>
+        <a href='AboutUs.php' class='VNav-button'><li>About</li></a>
+        <a href='Games.php' class='VNav-button'><li>Games</li></a>
+        <a href='index.php' class='VNav-button'><li>Home</li></a>
       </ul>
     </header>";
   }
@@ -97,7 +97,7 @@
                     <strong>Talk with us</strong>
 
                     <div class='client-comment'>
-                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
+                      <p>Call us any time if you want to know how we work and if you want to give us your feedback</p>
 
                       <span>+94 76 5643133</span>
                   </div>
@@ -134,10 +134,10 @@
 
                 <!-- name-andUsername -->
                 <div class='name-user'>
-                    <strong>Talk with us</strong>
+                    <strong>Drop a Message</strong>
 
                     <div class='client-comment'>
-                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
+                      <p>Drop a message any time and we will get back to you as soon as possible.</p>
 
                       <span>+94 76 5643133</span>
                   </div>

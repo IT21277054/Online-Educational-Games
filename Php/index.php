@@ -79,14 +79,14 @@ else
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
-        <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
-        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-        <a href='AddFriend.php' class='Nav-button'><li>Add Friends</li></a>
-        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-        <a href='Games.php' class='Nav-button'><li>Games</li></a>
-        <a href='index.php' class='Nav-button'><li>Home</li></a>
-        <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
+        <a href='Logout.php' class='RNav-button'><li>Logout</li></a>
+        <a href='MyAccount.php' class='RNav-button'><li>My Account</li></a>
+        <a href='ContactUs.php' class='RNav-button'><li>Contact</li></a>
+        <a href='AddFriend.php' class='RNav-button'><li>Add Friends</li></a>
+        <a href='AboutUs.php' class='RNav-button'><li>About</li></a>
+        <a href='Games.php' class='RNav-button'><li>Games</li></a>
+        <a href='index.php' class='RNav-button'><li>Home</li></a>
+        <!-- <a href='' class='RNav-button'><li>Contact</li></a> -->
       </ul>
     </header>";
 
@@ -94,11 +94,11 @@ else
     echo"<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
-        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
-        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
-        <a href='Games.php' class='Nav-button'><li>Games</li></a>
-        <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <a href='../Html/SignUp.html' class='RNav-button'><li>Login</li></a>
+        <a href='ContactUs.php' class='RNav-button'><li>Contact</li></a>
+        <a href='AboutUs.php' class='RNav-button'><li>About</li></a>
+        <a href='Games.php' class='RNav-button'><li>Games</li></a>
+        <a href='index.php' class='RNav-button'><li>Home</li></a>
       </ul>
     </header>";
   }
@@ -188,14 +188,12 @@ else
 
           <fieldset class="field">
                   <legend>Who are with</legend>
-                  <img src="../images/Sega.png" class = "Sega">
+
                 
 
                 <fieldset class="field2">
-                <h1>SEGA</h1>
-                <p>fsjgyyyyyyyyyyyyyyyyyyhddfsdddddddffffffffffffffffffffffffffffffffffff
-                hhhhhhhhhkkkkkkkkkkkkkkkkkkkhffffffffffffffffffffffffffffffffffffffffffhf
-                </p>
+                <h1>PIXXEL</h1>
+                <p>We The PIXXEL Team Collaborate with Major Companies and Make Games That Kids and Adults alike Can Have Fun and Learn While THeir at it.</p>
 </fieldset>
           </fieldset>        
 
