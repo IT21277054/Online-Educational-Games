@@ -4,11 +4,12 @@ body{
 .pcontent{
     border-radius: 25px;
     position: relative;
-    background-image: linear-gradient(to bottom right,#cd8cd3 , #CCABD8, #6EC6CA, #055B5C);
+    background-image: linear-gradient(to bottom right, #a28dc9,#cd8cd3 , #CCABD8, #6EC6CA, #055B5C);
     margin: -5% 10% 3% 10%; 
     padding:3%;
     box-shadow:0 0 10px 5px;
     width:80%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .heading{
@@ -20,3 +21,13 @@ body{
     color: white;
     z-index: 1;
 }
+
+h6{
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+

@@ -70,9 +70,20 @@
         <?php
             include '../Php/dbConnection.php';
 
+            session_start();
+            $email = $_SESSION['email'];
+            
+            $sql2 = " SELECT ClientID as cID 
+                    FROM client WHERE Email='$email';";
+
+            $result2 = mysqli_query($conn , $sql2);
+            $row = mysqli_fetch_array($result2);
+
+            $cID = $row['cID']; 
+
             $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price 
                     FROM orderitem o , game g 
-                    WHERE o.GameID=g.GameID 
+                    WHERE o.GameID=g.GameID AND Where ClientID=$cID
                     ORDER BY o.ODate DESC;";
                     
             $result = $conn->query($sql);

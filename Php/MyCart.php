@@ -16,7 +16,7 @@
        $result = mysqli_query($conn , $sql);
 
 //submit form
-        $_SESSION['email']= 'vihangi@gmail.com';
+        // $_SESSION['email']= 'vihangi@gmail.com';
 
         if(isset($_POST['submit']))
         {    

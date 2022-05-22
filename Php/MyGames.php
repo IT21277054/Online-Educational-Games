@@ -71,10 +71,10 @@
 
             session_start();
 
-            $_SESSION['gameID']=1000;
+            // $_SESSION['gameID']=1000;
             $gameID = $_SESSION['gameID'];
 
-            $_SESSION['email']= 'vihangi@gmail.com';
+            // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
             $sql2 = " SELECT ClientID as cID 
