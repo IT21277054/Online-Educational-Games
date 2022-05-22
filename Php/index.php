@@ -1,9 +1,27 @@
 <?php
-
 session_start();
+$name = "Y'all";
 
+include "./dbConnection.php";
+if(isset($_SESSION['email'])){
+$email = $_SESSION['email'];
 
+$sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
+$result = mysqli_query($conn , $sql); // execute the query
+
+if(!$result -> num_rows > 0){
+    
+}
+
+else
+{
+    $row = mysqli_fetch_array($result);
+    $name = $row['FirstName'];
+    
+   
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +96,7 @@ session_start();
 
     ?>
     <img src="../images/Cover Photo 2.png" class="fpage" />
-    <div class="title">Welcome<br />Y'all</div>
+    <div class="title">Welcome<br /> <?php echo $name; ?>  </div>
     <div class="content">
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
       ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
