@@ -117,11 +117,17 @@ else
 
     $gName = $row2['GameName'];
 
-     if(isset($_POST['btn-edit'])){
+    if(isset($_POST['btn-edit'])){
         
         $rID = $_POST['btn-edit'];
         header("Location: ./EditReview.php?rID=".$rID);
     }
+    else if(isset($_POST['btn-delete'])) {
+        
+        $rID = $_POST['btn-delete'];
+        header("Location: ./DeleteReview.php?rID=".$rID);
+    }
+
     echo "
 
     <form id = 'testimonials' action='' method='post'>
@@ -175,9 +181,9 @@ else
         <div class ='OneLine'>
           
 
-            <button type = 'submit' class='EditReviewButton' name='btn-edit' value='".$rID."'>Edit Review<a></button>
+            <button type = 'submit' class='EditReviewButton' name='btn-edit' value='".$rID."'>Edit Review</button>
     
-            <button type = 'button' class='DeleteReviewButton'>Delete Review</button>
+            <button type = 'submit' class='DeleteReviewButton' name='btn-delete' value='".$rID."'>Delete Review</button>
     
         </div>
             </div>

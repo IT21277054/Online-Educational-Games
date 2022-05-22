@@ -69,7 +69,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title>My review</title>
+    <title>Add review</title>
 </head>
 
 <body>
@@ -100,14 +100,14 @@
 
 <!-- Title -->
 <img src="../images/Star.gif" class = "Rfpage">
-<div class="Rtitle">My Review</div>
+<div class="Rtitle">Add Review</div>
 
 
 <!-- Content -->
 <div class="Rcontent">
 
     <fieldset>
-        <legend>My Review</legend>
+        <legend>Add Review</legend>
 
     <form action="" method="POST">
         <input type="text" id = "reviewSubject" name = "Topic" placeholder ="Subject"><br>
