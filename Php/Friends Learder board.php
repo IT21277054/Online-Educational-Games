@@ -58,15 +58,29 @@
             // start session
                 session_start();
                 $email = $_SESSION['email'];
-                $GameID = $_SESSION['GameID'];
     
-                $sql = "SELECT  F.FriendID, S.HighScore FROM friend F,score S WHERE S.ClientID = F.ClientID AND  GameID ='$GameID' ORDER BY HighScore DESC";
+                $sql = "SELECT friend.FriendID FROM friend LEFT JOIN score on score.ClientID = friend.FriendID";
                 $result = $conn->query($sql);
+
                 if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["GamerTag"]. "</td><td>" . $row["HighScore"] . "</td><td>"
-                . $row["GameID"]. "</td></tr>";
+
+                $friendID = $row['FriendID'];
+                $HighScore = "SELECT * FROM score WHERE ClientID = $friendID";
+                $result2 = $conn->query($HighScore);
+                $row2 = $result2->fetch_assoc();
+
+                $GameName = "SELECT GameName FROM game WHERE GameID = " . $row2['GameID'];
+                $result3 = $conn->query($GameName);
+                $row3 = $result3->fetch_assoc();
+
+                $GameTag = "SELECT * FROM client WHERE ClientID = $friendID";
+                $result4 = $conn->query($GameTag);
+                $row4 = $result4->fetch_assoc();
+
+
+               echo "<tr><td>" . $row4['GamerTag']. "</td><td>" . $row2['HighScore'] . "</td><td>" . $row3['GameName'] . "</td>";
                 }
                 echo "</table>";
                 } else { echo "The table is empty"; }

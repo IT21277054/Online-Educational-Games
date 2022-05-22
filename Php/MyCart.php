@@ -5,14 +5,12 @@
 
         // start session
         session_start();
-
-        $_SESSION['gameID']=1004;
-        $gameID = $_SESSION['gameID'];
+        $email = $_SESSION['email'];
+        $gameID = $_SESSION['GameID'];
         
 
 //calc discount
-        $sql = " SELECT GameName as gName
-                    FROM game WHERE GameID='$gameID'" ;
+        $sql = "SELECT GameName as gName FROM game WHERE GameID= $gameID" ;
         
 
        $result = mysqli_query($conn , $sql);
@@ -24,8 +22,7 @@
         {    
             $email = $_SESSION['email'];
             
-            $sql2 = " SELECT ClientID as cID 
-                    FROM client WHERE Email='$email';";
+            $sql2 = " SELECT ClientID as cID FROM client WHERE Email='$email';";
 
             $result2 = mysqli_query($conn , $sql2);
 
@@ -215,7 +212,7 @@
     </div>
 
 
-    <!-- <footer>
+    <!-- <footer class="fs">
         <img  src="../Images/Logo/Facebook.png" class="flogo">
         <img  src="../Images/Logo/Instergram.png" class="flogo">
         <img  src="../Images/Logo/Twitter.png" class="flogo">
