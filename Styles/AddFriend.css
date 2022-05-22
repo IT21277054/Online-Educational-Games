@@ -78,9 +78,14 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 40px auto;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 73%;
 }
-
+.Nav-bar {
+  z-index: 10;
+}
 #sFriends {
   margin-left: 70%;
   position: absolute;

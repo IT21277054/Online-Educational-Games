@@ -5,16 +5,20 @@ $email = $_SESSION['email'];
 $clientID = $_SESSION['clientID'];
 
 $gTag = "";
+$Name = "";
 
 if(isset($_POST['search'])){
 
     $gTag = $_POST['gTag'];
-    
-    $sql = "SELECT * from client  where GamerTag = '$gTag';";
-    $result = mysqli_query($conn , $sql);
-    $row = mysqli_fetch_array($result);
-    $Name = $row['FirstName'].' '.$row['LastName'];
-    // $gTag = $row['GamerTag'];
+    if(!empty($gTag)){
+
+        
+        $sql = "SELECT * from client  where GamerTag = '$gTag';";
+        $result = mysqli_query($conn , $sql);
+        $row = mysqli_fetch_array($result);
+        $Name = $row['FirstName'].' '.$row['LastName'];
+        // $gTag = $row['GamerTag'];
+    }
 }
 
 
@@ -84,12 +88,16 @@ if(isset($_POST['search'])){
 
  
     <!-- Review button -->
+    <?php 
+    if(!empty($Name)){
+        echo"
 
-    <div class = "Button">
-
-        <button type = "submit" name="submit" class="AddFriendButton">Search Friend</button>
-
-    </div>
+        <div class = 'Button'>
+            
+            <button type = 'submit' name='addSubmit' class='AddFriendButton'>Add Friend</button>
+            
+        </div>
+    ";}?>
 
     </form>
 
