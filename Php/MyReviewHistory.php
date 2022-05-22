@@ -105,6 +105,7 @@ else
 <?php      
 
  while($row = mysqli_fetch_array($result)){
+     $topic = $row['Topic'];
      $cn = $row['Content'];
      $rID = $row['ReviewID'];
      $gID = $row['GameID'];
@@ -196,6 +197,7 @@ else
         
         <!-- Comments------------------ -->
         <div class='client-comment'>
+        <div class='topic'><h5>".$topic."</h5></div>
             <p>".$cn."</p>
         </div>
         
