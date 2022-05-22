@@ -7,9 +7,22 @@ $clientID = $_SESSION['clientID'];
 $sql = "SELECT GamerTag from client left join friend on friend.FriendID = client.ClientID where friend.clientID = '$clientID';";
 $result = mysqli_query($conn , $sql);
 
-if(isset($_POST['submit'])){
+if(isset($_POST['Remove'])){
 
-    $friendGamerTag = $_POST['FriendName'];
+    $friendGamerTag = $_POST['gTag'];
+
+    $sql2 = "delete Friend from Friend inner join client on friend.FriendID = client.ClientID where friend.clientID = $clientID and Client.GamerTag = '$friendGamerTag';";
+
+    // echo $sql2;
+
+    if(mysqli_query($conn , $sql2)){
+        echo "<script>alert('Friend Deleted')</script>";
+        
+        
+    }
+    $sql = "SELECT GamerTag from client left join friend on friend.FriendID = client.ClientID where friend.clientID='$clientID'";
+    $result = mysqli_query($conn , $sql);
+
 }
 
 
@@ -90,16 +103,16 @@ if(isset($_POST['submit'])){
          
     </div>
     </div>
+    <div class ='OneLine2'>
    <?php
  while($row = mysqli_fetch_array($result)){
     $friendGamerTag = $row['GamerTag'];
  echo "
-    <div class ='OneLine2'>
-    <input type='text' id = 'FriendName' name = 'FriendName' Value ='".$friendGamerTag."' readonly>
+    <input type='text' id = 'FriendName' name = 'gTag' Value ='".$friendGamerTag."' readonly>
    <button type='submit' name='Remove' class='Remove'>Remove</button>
     
 
-      </form>";}
+      </form> <br/><br>";}
       ?></div><br><br>
 </fieldset>
       
