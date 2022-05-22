@@ -125,7 +125,7 @@
   font-family: Arial;
   font-size: 30px;
   transition: 0.2s ease;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 /* give label a hover state */
 .star-rating label:hover {
