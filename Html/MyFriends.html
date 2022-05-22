@@ -1,93 +1,116 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="stylesheet" href="../Styles/MyFriends.css">
-    <link rel="stylesheet" href="../Styles/Styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/MyFriends.css">
+    <link rel="stylesheet" href="../Styles/Styles.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    
-    <title>My Friends</title>
+    <link rel="shortcut icon" href="../images/2323134-middle.png/">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   
+
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
+   
+    <title>Contact Us</title>
 </head>
+
 <body>
-<!-- + <h1><div class="FTopic"> My<br>Friends </div></h1>  -->
-    <video 
-    autoplay muted loop class="FCvideo"> 
-  <source  src="../Videos/FC.mp4" type=video/ogg>
+    <!--Navigation bar-->
+
+
+
+<!-- Background -->
+
+<video width ="320" height="240" autoplay muted loop class ="bgvideo">
+    <source src="../images/ContactVideo.mp4" type ="video/mp4"> 
 </video>
 
-    <!-- Web site navigation bar -->
-    <header>
-        <ul id="Nav-bar-id" class="VNav-bar">
-            <img src="../images\Logo\final.png" id="Vlogo">
-            <a href="ContactUs.html" class="gNav-button"><li>Contact</li></a>
-            <a href="Friends.html" class="gNav-button"><li>Friends</li></a>
-            <a href="About.html" class="gNav-button"><li>About</li></a>
-            <a href="../Php/Games.php" class="gNav-button"><li>Games</li></a>
-            <a href="../Php/Index.php" class="gNav-button"><li>Home</li></a>
+
+    <!--Navigation bar-->
+
+<header>
+    <ul id="Nav-bar-id" class="Nav-bar">
+        <img src="..\images\Logo\final.png" id="logo">
+        <a href="Contact.html" class="VNav-button"><li>Contact</li></a>
+        <a href="Genre.html" class="VNav-button"><li>Genre</li></a>
+        <a href="About.html" class="VNav-button"><li>About</li></a>
+        <a href="Games.html" class="VNav-button"><li>Games</li></a>
+        <a href="Index.html" class="VNav-button"><li>Home</li></a>
+
         </ul>
-    </header>
-    <!-- <img src="../images/Cover Photo 2.png" class = "Vfpage">  -->
-  
-    <img src="../images/friends.gif" class = "Vfpage">
+</header>
 
-    <div class="Vtitle">My<br>Friends</div> 
+<!-- Title -->
 
-    <div class="Vcontent">     
+<div class="Star">
 
 
+</div>
+
+<img src="../images/friends.gif" class = "Vfpage">
+
+<div class="Vtitle">My Friends</div>
+
+<form>
+<!-- Content -->
+<div class="Vcontent">
 
 
-        <div class="Vcont">
-            <br>
-            <input class="Button" type="text"> <button class="Vbtn">Search</button> <button class="CFL">Check Friend in leaderboard</button>
-          <hr>
-          <button class="Rbtn">Remove</button>
-          <br><br><br><hr>
-          <button class="Rbtn">Remove</button>
-          <br><br><br><hr>
-          <button class="Rbtn">Remove</button>
-          <br><br><br><hr>
-          <button class="Rbtn">Remove</button>
-          <br><br><br><hr>
-          <button class="Rbtn">Remove</button>
-          <br><br><br><hr>
-         
-   
+
+
+
+
+
+
+  <fieldset class ="Vfield">
+ <div class ='OneLine'>
+    <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+
+        <div class = "Button">
+
+            
         </div>
-
-     
-
-        
-         <!-- <h1> <div class="TopFB"> Feed <br>Back </div> </h1>  -->
-        
-  
     </div>
-
-    <footer>
-        <img src="..\images/Logo/Facebook.png" class = "flogo">
-        <img src="..\images/Logo/Instergram.png" class="flogo">
-        <img src="..\images/Logo/Twitter.png" class="flogo">
-    </footer>
    
+    <div class ='OneLine2'>
+    <input type="text" id = "FriendName" name = "FriendName" Value ="Moda Sudheera">
+   <button type="button" name="Remove" class="Remove">Remove</button>
+    
+    </div><br><br>
 
+
+    <button type = "button" name="toLeaderboard" class="toLeaderboard">Search Friends in Leaderboard</button>
+    
+    </fieldset>
+      
+      </div>
+      
+      </form>
+
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <img src="..\images/Logo/Facebook.png" class = "flogo">
+    <img src="..\images/Logo/Instergram.png" class="flogo">
+    <img src="..\images/Logo/Twitter.png" class="flogo">
+</footer>
+
+
+<script src="../Js/Feedback.js"></script>
 
 </body>
 </html>
