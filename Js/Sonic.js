@@ -7,7 +7,12 @@ function countdown() {
         setTimeout(countdown, 1000);
     }
     else{
-        finalscore = score;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", 'http://localhost/Online-Educational-Games/Php/Sonice%20Fast%20Math.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            finalscore: score
+}));
         // window.location.replace("TryAgain.html");
     }
 };
