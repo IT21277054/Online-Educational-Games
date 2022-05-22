@@ -59,8 +59,13 @@
             <h6 class="text"> Do you have a promo code? <br><br> Enter it here !!! </h6>
             <form>
 
-                <input type="text" id="promocode" class="inputbox1">
-                <input type="submit" value="Submit" class="submitbut btn"  onclick="validateCode() displayDiscount() displayTotal()">
+                <input type="text" name="promocode" class="inputbox1">
+                    <?php
+                        
+                    ?>
+                <button type="submit" id="submitbtn" class="submitbut btn"  onclick="validateCode() displayDiscount() displayTotal()">
+                    submit 
+                </button>
                 <p style="color:white" id="demo"> </p>
             </form>
 
