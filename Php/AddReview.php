@@ -5,11 +5,10 @@
 
 // start session
     session_start();
-    $_SESSION['GameID'] = 1000;
 
     if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
-        $gid = $_SESSION['GameID'];
+        $gid = $_GET['gID'];
 
         $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
