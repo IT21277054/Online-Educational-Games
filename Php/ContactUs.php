@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
    
     <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
-   
+   <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Contact Us</title>
 </head>
 

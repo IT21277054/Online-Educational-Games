@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
     <link rel="shortcut icon" href="../images/2323134-middle.png/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
    
-   
+   <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Feedback</title>
 </head>
 

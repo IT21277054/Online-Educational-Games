@@ -59,7 +59,7 @@ else
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
       rel="stylesheet"
     />
-
+<link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Pixxel</title>
   </head>
   <body>
