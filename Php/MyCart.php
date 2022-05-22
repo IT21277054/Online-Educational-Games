@@ -30,32 +30,35 @@
 
             $result2 = mysqli_query($conn , $sql2);
 
-            if($result){
-                $row = mysqli_fetch_array($result2);
+            if($result2){
+                // $row = mysqli_fetch_array($result2);
                 
-                $cID = $row['ClientID'];
-                $gID = $_SESSION['gameID'];
+                $cID = $result2;  
+                $gID = $result;
+                // $price = $_POST['total'];
+                $transType = $_POST['transType'];
+                
 
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $mobile = $_POST['mobile'];
-                $sql3 = "INSERT INTO users (name,email,mobile)
-                VALUES ('$name','$email','$mobile')";
+                $sql3 = "INSERT INTO orderitem (ClientID,GameID,Price,TransectionMethod)
+                            VALUES ('$cID','$gID',0, '$transType)";
+                
+                $result3 = mysqli_query($conn , $sql3);
 
-                if (mysqli_query($conn, $sql3)) {
-                    echo "New record has been added successfully !";
-                } else {
-                    echo "Error: " . $sql . ":-" . mysqli_error($conn);
-                }
+                if ($result3) {
+                        echo "<script>alert('Success!')</script>";
+                        header("Location: ./MyGames.php ?gID=".$gid);
+                    }
+                    else
+                    {
+                        echo "<script>alert('Failed!')</script>";
+                    }
 
-                mysqli_close($conn);
             }
-    }
-
-    else{
-        echo "<script>alert('error!')</script>";
-    }
-?>
+        }
+        // else{
+        //     echo "<script>alert('error!')</script>";
+        // }
+ ?>
 
 
 <!DOCTYPE html>
@@ -127,39 +130,41 @@
                 <td> </td>
         </tr>
 
-        <tr> <td> Subscription months</td> 
-            <form>  
-                <td> <input type="text" id="submonths" class="inputbox"> </td>
+        <form method="POST" >
+
+            <tr> <td> Subscription months</td> 
+                <form>  
+                    <td> <input type="text" id="submonths" class="inputbox" required> </td>
+                        
+                    <td> <button type="button" onclick="discount()"  class="calbtn" > calculate </button> </td> 
+            </tr>
+
+            <tr> 
+                <td> Total </td>
+                <td id="total" name="total"> $ </td> 
+            </tr>
+
+
+            <tr><td> Transaction method</td>
+                <td></td>
+                    <td>
                     
-                <td> <button type="button" onclick="discount()"  class="calbtn" > calculate </button> </td> 
-        </tr>
+                        <select id="transType" name="transType" class="dropdown" required> 
+                            <option value="select">Select</option>
+                            <option value="credit">Credit card</option>
+                            <option value="debit">Debit card</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </td>
+            </tr>
 
-        <tr> 
-            <td> Total </td> 
-
-            <form action="" method="POST" >
-            <td id="total" name="total"> $ </td> 
-        </tr>
-
-
-        <tr><td> Transaction method</td>
-            <td></td>
+            <tr>
+                <td></td>
                 <td>
-                
-                    <select id="transType" name="transType" class="dropdown"> 
-                        <option value="select">Select</option>
-                        <option value="credit">Credit card</option>
-                        <option value="debit">Debit card</option>
-                        <option value="paypal">PayPal</option>
-                    </select>
+                        <input type="submit" name="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn paynow">
                 </td>
             </tr>
-        <tr>
-            <td></td>
-            <td>
-            <input type="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn paynow">
-            </td>
-            </form>
+        </form>
     </table>
     </center>   
 
