@@ -67,7 +67,7 @@ function getInputValue(){
             xhr.send(JSON.stringify({
                 finalscore: lscore
             }));
-            window.location.replace("TryAgain.html");
+            window.location.replace("../Html/TryAgain.html");
 
         }
         

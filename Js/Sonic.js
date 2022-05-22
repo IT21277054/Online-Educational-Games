@@ -1,4 +1,4 @@
-timeLeft = 60;
+timeLeft = 120;
 
 function countdown() {
     timeLeft--;
@@ -14,8 +14,8 @@ function countdown() {
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             finalscore: lscore
-}));
-        window.location.replace("../Html/TryAgain.html");
+        }));
+        window.location.replace("../Html/TryAgain.html");;
     }
 };
 
