@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +46,7 @@
     <?php
 
     if(isset($_SESSION['email'])){
+      
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
@@ -87,10 +96,10 @@
         <?php
             include '../Php/dbConnection.php';
 
-            session_start();
+            
 
             // $_SESSION['gameID']=1000;
-            $gameID = $_SESSION['gameID'];
+            // $gameID = $_SESSION['gameID'];
 
             // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];

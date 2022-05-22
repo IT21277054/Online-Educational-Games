@@ -101,7 +101,7 @@
       <div class="buttons">
         <label id="btnlabel"><h3>Links</h3></label>
         <button class="btnReview" onclick="window.location.href='MyReviewHistory.php';" >My review</button>
-        <button class="btnGame">My Game</button>
+        <button class="btnGame" onclick="window.location.href='MyGames.php';">My Game</button>
         <button class="btnFriends" onclick="window.location.href='MyFriends.php';">My Friends</button>
         <button class="btnLeaderboard" >Leaderboard</button>
       </div>
