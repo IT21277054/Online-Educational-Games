@@ -50,7 +50,7 @@ if(isset($_POST['Remove'])){
    
 
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;" -->
+   <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>MyFriends</title>
 </head>
 

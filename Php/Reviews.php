@@ -70,7 +70,7 @@ else
       rel="stylesheet"
     />
 
-   
+   <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Reviews</title>
 </head>
 

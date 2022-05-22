@@ -56,6 +56,7 @@ if(isset($_POST['addSubmit'])){
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="favicon" href="../Images/favicon.png" />
         <title>Add Friend</title>
         <link rel="stylesheet" href="../Styles/AddFriend.css">
         <link rel="stylesheet" href="../Styles/Styles.css">
