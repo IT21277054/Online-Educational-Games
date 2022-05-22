@@ -36,7 +36,7 @@ body
 
 }
 
-.button
+/* .button
 {
     position :absolute;
     background-color: rgb(223, 213, 230);
@@ -51,15 +51,15 @@ body
     transition-duration: 0.4s;
     /* width: 10%; */
     /* height: 20%; */ 
-    padding: 1%;
+    /* padding: 1%;
     border:shadow 3px;
     border-color: #331a8b;
-}
+} */
 .button:hover
 {
     background-color: #62358a;
     color:rgb(184, 174, 174);
-}
+} */
 .SFbtn
 {
     position: absolute;
@@ -81,3 +81,30 @@ body
     object-fit: cover;
 
 } 
+.Vbtn
+{
+    position :absolute;
+    background-color: rgb(223, 213, 230);
+    color: black;
+    border: 2px solid #702794;
+    margin-left: 35%;
+    margin-top: 1%;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    width: 10%;
+    /* height: 20%; */ 
+    padding: 1%;
+    border:shadow 3px;
+    border-color: #331a8b;
+}
+.Vbtn:hover
+{
+    background-color: #62358a;
+    color:rgb(184, 174, 174);
+}
+.Button
+{
+  height: 20%;
+ 
+
+}

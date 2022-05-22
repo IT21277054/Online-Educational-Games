@@ -152,6 +152,7 @@ form.example button {
     border-radius: 10px;
     color: white;
     padding: 5px;
+    transition-duration: 0.4s;
     /* box-shadow: 2.5px 3px white; */
     background-color:rgba(89, 44, 250, 0.637);
     text-align: center;
@@ -168,6 +169,11 @@ form.example button {
     margin-bottom: 5%;
     float: right;
 
+}
+.toLeaderboard:hover
+{
+    background-color: #62358a;
+    color:rgb(184, 174, 174);
 }
 
 .Remove{
