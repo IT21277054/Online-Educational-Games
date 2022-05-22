@@ -49,22 +49,22 @@ session_start();
         <img src='../images/Logo/final.png' id='logo' />
         <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
         <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
-        <a href='../Php/Contact.php' class='Nav-button'><li>Contact</li></a>
-            <a href='../Html/Friends.html' class='Nav-button'><li>Friends</li></a>
-            <a href='../Php/AboutUs.php' class='Nav-button'><li>About</li></a>
-            <a href='Games.php' class='Nav-button'><li>Games</li></a>
-            <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
+        <a href='AddFriend.php' class='Nav-button'><li>Add Friends</li></a>
+        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
+        <a href='Games.php' class='Nav-button'><li>Games</li></a>
+        <a href='index.php' class='Nav-button'><li>Home</li></a>
         <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
       </ul>
     </header>";
-    
+
   } else { 
     echo"<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
         <img src='../images/Logo/final.png' id='logo' />
-        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
-        <a href='../Php/Contact.php' class='Nav-button'><li>Contact</li></a>
-        <a href='../Php/AboutUs.php' class='Nav-button'><li>About</li></a>
+        <a href='SignUp.php' class='Nav-button'><li>Login</li></a>
+        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
+        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
         <a href='Games.php' class='Nav-button'><li>Games</li></a>
         <a href='index.php' class='Nav-button'><li>Home</li></a>
       </ul>
@@ -81,7 +81,7 @@ session_start();
             <div class="Gamecontent"><div class="ptitle">Game One</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
             <img src="../images/sonic-png-14.png" class = "titlecard2">
             <a href="SonicLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
-            <a href="./Reviews.php?gID=1000"><button type="button1" class="trynow">Review</button></a>
+            <a href="./AddReview.php?gID=1001"><button type="button1" class="trynow">Add Review</button></a>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br>
@@ -89,7 +89,7 @@ session_start();
             <div class="Gamecontent"><div class="ptitle">Game Two</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
             <img src="../images/Mario.png" class = "titlecard2">
             <a href="MarioLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
-            <a href="./Reviews.php?gID=1001"><button type="button1" class="trynow">Review</button></a>
+            <a href="./AddReview.php?gID=1001"><button type="button1" class="trynow">Add Review</button></a>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br><br>
