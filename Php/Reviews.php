@@ -63,11 +63,13 @@ else
 <header>
     <ul id="Nav-bar-id" class="Nav-bar">
         <img src="..\images\Logo\final.png" id="logo">
-        <a href="Contact.html" class="RNav-button"><li>Contact</li></a>
-        <a href="Genre.html" class="RNav-button"><li>Genre</li></a>
-        <a href="About.html" class="RNav-button"><li>About</li></a>
-        <a href="Games.html" class="RNav-button"><li>Games</li></a>
-        <a href="Index.html" class="RNav-button"><li>Home</li></a>
+        <a href="Logout.php" class="RNav-button"><li>Logout</li></a>
+        <a href="MyAccount.php" class="RNav-button"><li>My Account</li></a>
+        <a href="../Html/Contact.html" class="RNav-button"><li>Contact</li></a>
+        <a href="../Html/Friends.html" class="RNav-button"><li>Friends</li></a>
+        <a href="../Html/About.html" class="RNav-button"><li>About</li></a>
+        <a href="Games.php" class="RNav-button"><li>Games</li></a>
+        <a href="index.php" class="RNav-button"><li>Home</li></a>
         <hr id="line">
         </ul>
 </header>
