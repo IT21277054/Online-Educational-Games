@@ -192,8 +192,8 @@ else
                         
                         <input type='radio' name='stars".$rID."' id='star-e".$rID."' value='1' ".$s1."/>
                         <label for='star-e".$rID."'></label>
-                        </div>
-                </div>
+                    </div>
+            </div>
         
         <!-- Comments------------------ -->
         <div class='client-comment'>

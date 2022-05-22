@@ -108,6 +108,7 @@ while($row = mysqli_fetch_array($result) ){
     $content = $row['Content'];
     $cID = $row['ClientID'];
     $star = $row['stars'];
+    $rID = $row['ReviewID'];
 
     $sql2 = "SELECT * FROM Client where ClientID = '$cID'";
     $result2 = mysqli_query($conn , $sql2);
@@ -120,6 +121,23 @@ while($row = mysqli_fetch_array($result) ){
     $row3 = mysqli_fetch_assoc($result3);
 
     $gName = $row3['GameName'];
+
+    $s1 = "";
+    $s2 = "";
+    $s3 = "";
+    $s4 = "";
+    $s5 = "";
+    if($star == '1' ){
+        $s1 = "checked";
+        }else if($star == '2' ){
+        $s2 = "checked";
+        }else if($star == '3' ){
+        $s3 = "checked";
+        }else if($star == '4' ){
+        $s4 = "checked";
+        }else if($star == '5'){
+        $s5 = "checked";
+        }
 
     // echo "<script>alert($cn)</script>";
    echo "
@@ -147,22 +165,22 @@ while($row = mysqli_fetch_array($result) ){
             </div>
 
             <!-- reviews -->
-            <div class='star-rating'>
-                <input type='radio' name='stars' id='star-a' value='5'/>
-                <label for='star-a'></label>
-                
-                <input type='radio' name='stars' id='star-b' value='4'/>
-                <label for='star-b'></label>
-                
-                <input type='radio' name='stars' id='star-c' value='3'/>
-                <label for='star-c'></label>
-                
-                <input type='radio' name='stars' id='star-d' value='2'/>
-                <label for='star-d'></label>
-                
-                <input type='radio' name='stars' id='star-e' value='1'/>
-                <label for='star-e'></label>
-                </div>
+            <div class='star-rating' style='pointer-events: none'>
+                <input type='radio' name='stars".$rID."' id='star-a".$rID."' value='5' ".$s5." />
+                <label for='star-a".$rID."'></label>
+                        
+                <input type='radio' name='stars".$rID."' id='star-b".$rID."' value='4' ".$s4."/>
+                <label for='star-b".$rID."'></label>
+                        
+                <input type='radio' name='stars".$rID."' id='star-c".$rID."' value='3' ".$s3."/>
+                <label for='star-c".$rID."'></label>
+                        
+                <input type='radio' name='stars".$rID."' id='star-d".$rID."' value='2' ".$s2."/>
+                <label for='star-d".$rID."'></label>
+                        
+                <input type='radio' name='stars".$rID."' id='star-e".$rID."' value='1' ".$s1."/>
+                <label for='star-e".$rID."'></label>
+            </div>
         </div>
 
 <!-- Comments------------------ -->
@@ -183,16 +201,16 @@ while($row = mysqli_fetch_array($result) ){
 </div> -->
 
 
-</fieldset>
 
-</div>
+
 
 </form>";
-    
+
 }
-
-
 ?>
+</fieldset>
+</div>
+
   
 
 
