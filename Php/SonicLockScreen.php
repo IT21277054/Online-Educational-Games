@@ -29,13 +29,12 @@
 
 
       <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
+ 
       
 
     <div class="gamecontent">
     <p class ="gamet">Sonic Runner</p>
-        <p class ="gamed">After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.</p>
+        <p class ="gamed">Calculate the right amount before the time runs out</p>
         <div class="pbutton1">
         <form action="SonicLS.php" >
             <input class="cbtn" type="submit" value="Play Now" >

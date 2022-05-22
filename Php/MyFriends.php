@@ -68,20 +68,37 @@ if(isset($_POST['Remove'])){
 
     <!--Navigation bar-->
 
-<header>
-    <ul id="Nav-bar-id" class="Nav-bar">
-        <img src="..\images\Logo\final.png" id="logo">
-        <a href="Logout.php" class="VNav-button"><li>Logout</li></a>
-        <a href="MyAccount.php" class="VNav-button"><li>My Account</li></a>
-        <a href="../Html/Contact.html" class="VNav-button"><li>Contact</li></a>
-        <a href="../Html/Friends.html" class="VNav-button"><li>Friends</li></a>
-        <a href="../Html/About.html" class="VNav-button"><li>About</li></a>
-        <a href="Games.php" class="VNav-button"><li>Games</li></a>
-        <a href="index.php" class="VNav-button"><li>Home</li></a>
+    <?php
 
-        </ul>
-</header>
+    if(isset($_SESSION['email'])){
+      echo "<header>
+      <ul id='Nav-bar-id' class='Nav-bar'>
+        <img src='../images/Logo/final.png' id='logo' />
+        <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
+        <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
+        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
+        <a href='AddFriend.php' class='Nav-button'><li>Add Friends</li></a>
+        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
+        <a href='Games.php' class='Nav-button'><li>Games</li></a>
+        <a href='index.php' class='Nav-button'><li>Home</li></a>
+        <!-- <a href='' class='Nav-button'><li>Contact</li></a> -->
+      </ul>
+    </header>";
 
+  } else { 
+    echo"<header>
+      <ul id='Nav-bar-id' class='Nav-bar'>
+        <img src='../images/Logo/final.png' id='logo' />
+        <a href='../Html/SignUp.html' class='Nav-button'><li>Login</li></a>
+        <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
+        <a href='AboutUs.php' class='Nav-button'><li>About</li></a>
+        <a href='Games.php' class='Nav-button'><li>Games</li></a>
+        <a href='index.php' class='Nav-button'><li>Home</li></a>
+      </ul>
+    </header>";
+  }
+
+    ?>
 <!-- Title -->
 
 <img src="../images/friends.gif" class = "Vfpage">
@@ -97,7 +114,7 @@ if(isset($_POST['Remove'])){
   <fieldset class ='Vfield'>
  <div class ='OneLine'>
  
-    <button type='submit' name='toLeaderboard' class='toLeaderboard' readonly >Search Friends in Leaderboard</button>
+    <button type='submit' name='toLeaderboard' class='toLeaderboard' readonly ><a href="Friends Learder board.php">Search Friends in Leaderboard</a></button>
 
     <div class = 'Button'>
          
