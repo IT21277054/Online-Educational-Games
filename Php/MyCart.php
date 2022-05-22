@@ -20,19 +20,41 @@
 
 //submit form
         $_SESSION['email']= 'vihangi@gmail.com';
-        $email = $_SESSION['email'];
 
-        $sql2 = " SELECT ClientID as cID 
+        if(isset($_POST['submit']))
+        {    
+            $email = $_SESSION['email'];
+            
+            $sql2 = " SELECT ClientID as cID 
                     FROM client WHERE Email='$email';";
 
-       $result2 = mysqli_query($conn , $sql2);
+            $result2 = mysqli_query($conn , $sql2);
 
-    
-        
+            if($result){
+                $row = mysqli_fetch_array($result2);
+                
+                $cID = $row['ClientID'];
+                $gID = $_SESSION['gameID'];
 
-       // $cID = $result2;
-       // $
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $mobile = $_POST['mobile'];
+                $sql3 = "INSERT INTO users (name,email,mobile)
+                VALUES ('$name','$email','$mobile')";
 
+                if (mysqli_query($conn, $sql3)) {
+                    echo "New record has been added successfully !";
+                } else {
+                    echo "Error: " . $sql . ":-" . mysqli_error($conn);
+                }
+
+                mysqli_close($conn);
+            }
+    }
+
+    else{
+        echo "<script>alert('error!')</script>";
+    }
 ?>
 
 
