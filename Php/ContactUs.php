@@ -48,216 +48,87 @@
 
 <!-- Title -->
 
-<div class="Star">
-
-
 </div>
 
 <img src="../images/ContactUs2.gif" class = "Vfpage">
 
 <div class="Vtitle">Contact Us</div>
 
-
-
 <!-- Content -->
 <div class="Vcontent">
-
   <fieldset class ="Vfield">
+  <div class="OneLine">
+  <form id = 'testimonials'>
+<div class='testimonial-box-container'>
 
+    <!-- Box-2 -->
+    <div class='testimonial-box'>
 
-
-
-
-
-                <input
-                type="text"
-                name="fName"
-                placeholder="Enter first name"
-                required
-              />
-              <input type="text" name="lName" placeholder="Enter last name" />
-              <br />
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter Email address"
-                required
-              />
-              <br />
-              <input
-                type="text"
-                name="Number"
-                placeholder="Number"
-                required
-              />
-              <br />
-
-              <input
-              type="text"
-              name="Number"
-              placeholder="Enter Your Messeage"
-              required
-            />
-            <br />
-     
-              <button type = "submit" class="SubmitDetails">Submit Details</button>
-
-
-
-
-
-
-  </fieldset>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="OneLine">
-
-
-
-<!-- Box 1  -->
-
-    <form id = 'testimonials'>
-
-      <div class='testimonial-box-container'>
-      
-          <!-- Box-1 -->
-          <div class='testimonial-box'>
-
-              <!-- img---- -->
-              <div class='profile-img1'>
-                <img src='..\images\msg4.png'/>
-            </div>
-              <!-- top-------------->
-              <div class ='box-top'>
-                  <!-- profile -->
-                  <div class='profile'>
-                      <!-- img---- -->
-                     
-      
-                      <!-- name-andUsername -->
-                      <div class='name-user'>
-                          <strong>Talk with us</strong>
-
-                          <div class='client-comment'>
-                            <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
-
-                            <span>+94 76 5643133</span>
-                        </div>
-                      </div>
-
-                      
-                  </div>
-      
-          
-      
-      <!-- Comments------------------ -->
-             
-      
-          </div>
-      
+        <!-- img---- -->
+        <div class='profile-img1'>
+          <img src='..\images\call8.png'/>
       </div>
-      
-          <!-- <div class ='OneLine'> -->
-      
-      
-          <!-- <div class='likes'>
-          <i onclick ='myFunction(this)' class ='fa fa-thumbs-up'></i>
-      </div> -->
-      
+        <!-- top-------------->
+        <div class ='box-top'>
+            <!-- profile -->
+            <div class='profile'>
+                <!-- name-andUsername -->
+                <div class='name-user'>
+                    <strong>Talk with us</strong>
+
+                    <div class='client-comment'>
+                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
+
+                      <span>+94 76 5643133</span>
+                  </div>
+                </div>   
+            </div>
+    </div>
+</div>
+</div>
+    
+
+
+
+
 
 <!-- Box 2 -->
 
+<form id = 'testimonials'>
 
-      
-      </fieldset>
-      
+<div class='testimonial-box-container'>
+
+    <!-- Box-1 -->
+    <div class='testimonial-box'>
+
+        <!-- img---- -->
+        <div class='profile-img1'>
+          <img src='..\images\msg4.png'/>
       </div>
-      
-      </form>"
+        <!-- top-------------->
+        <div class ='box-top'>
+            <!-- profile -->
+            <div class='profile'>
+                <!-- img---- -->
+               
 
+                <!-- name-andUsername -->
+                <div class='name-user'>
+                    <strong>Talk with us</strong>
 
-      
-<!-- Box 2  -->
+                    <div class='client-comment'>
+                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
 
-    <form id = 'testimonials'>
-
-      <div class='testimonial-box-container'>
-      
-          <!-- Box-1 -->
-          <div class='testimonial-box'>
-             <!-- img---- -->
-             <div class='profile-img2'>
-              <img src='..\images\call8.png'/>
-          </div>
-
-              <!-- top-------------->
-              <div class ='box-top'>
-
-                
-                  <!-- profile -->
-                  <div class='profile'>
-                     
-                      <!-- name-andUsername -->
-                      <div class='name-user'>
-                          <strong>Contact customer Support</strong>
-                         
-
-                          <div class='client-comment'>
-                            <p>Prashnayak thiye nam Sugheerath waga kiyanna one. Habai katha karata wedak na answer karaida kiyanna ba. E nisa eyalage gedara number eka daannam</p>
-
-                            <span>+94 27 2 050510</span>
-                        </div>
-                      </div>
+                      <span>+94 76 5643133</span>
                   </div>
-      
-          
-      
-      <!-- Comments------------------ -->
-             
-      
-          </div>
-      
-      </div>
-      
-          <!-- <div class ='OneLine'> -->
-      
-      
-          <!-- <div class='likes'>
-          <i onclick ='myFunction(this)' class ='fa fa-thumbs-up'></i>
-      </div> -->
-    
-      
-      </fieldset>
-      
-      </div>
-      
-      </form>"
-
-
-
-
-
-
-
+                </div>
+            </div>
+    </div>
 </div>
-
-
-
-
-
+</fieldset>  
+</div> 
+</form>
+</div>
 
 
 

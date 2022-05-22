@@ -136,7 +136,7 @@ else
           <img src="../images/S1.jpg" alt="" />
           <div id="txt" class="txt-container1">
             <h2 id="topic">Sonic Fast Math</h2>
-            <p id="content">Hena 1k gahanda one</p>
+            <p id="content">Help Sonic Defeat the Enemies by Solving the Puzzles</p>
           </div>
         </div>
         <div class="slide">
@@ -144,7 +144,7 @@ else
           <img src="../images/S2.jpg" alt="" />
           <div id="txt" class="txt-container2">
             <h2 id="topic">Mario Spell Cature</h2>
-            <p id="content">Hena 2k gahanda one</p>
+            <p id="content">Math is'nt Mario's Strong Suit, Are you ready to help him?</p>
           </div>
         </div>
         <div class="slide">
@@ -189,6 +189,17 @@ else
 
           <fieldset class="field">
                   <legend>Who are with</legend>
+                  <img src="../images/Sega.png" class = "Sega">
+                
+
+                <fieldset class="field2">
+                <h1>SEGA</h1>
+                <p>fsjgyyyyyyyyyyyyyyyyyyhddddhjdsghdghdhhdd
+                  fsdddddddffffffffffffffffffffffffffffffffffff
+                  ghhhhhhhhhhhhhhhhhhhhhkkkkkkkkkkkkkkkkkkkkkkk
+                  hffffffffffffffffffffffffffffffffffffffffffhf
+                </p>
+</fieldset>
           </fieldset>        
 
 </div>

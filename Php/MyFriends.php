@@ -103,7 +103,7 @@ if(isset($_POST['Remove'])){
          
     </div>
     </div>
-    <div class ='OneLine2'>
+    <div >
    <?php
  while($row = mysqli_fetch_array($result)){
     $friendGamerTag = $row['GamerTag'];

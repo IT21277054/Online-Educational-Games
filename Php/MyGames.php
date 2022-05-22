@@ -107,37 +107,14 @@
             <input type='submit' value= 'Unsubscribe' name='deletebtn' > </form> </td></tr>";
             }
 
-
-
-            echo "</table>";
             } else { echo "The table is empty"; }
             $conn->close();
             ?>
             </tbody>
         </table>
-
         
         <center>
-            <hr>
-        
-        <!-- <table>
-            <tr class="text"> 
-                <h6 .line> Want to Unsubscribe a game? </h6>
-                <form method="post">
-                    <td> Select a game</td>
-                    <td> 
-
-                        
-                        <input type="radio" name="usgame" ><label>HTML</label><br> 
-                    </td>
-                </tr>
-                <tr>
-                    <td> <input type="button" class="usbtn" value="Unsubscribe" > </button> </td>
-                </tr>
-
-                </form>
             
-        </table> -->
             
 
     </div>
