@@ -188,14 +188,12 @@ else
 
           <fieldset class="field">
                   <legend>Who are with</legend>
-                  <img src="../images/Sega.png" class = "Sega">
+
                 
 
                 <fieldset class="field2">
-                <h1>SEGA</h1>
-                <p>fsjgyyyyyyyyyyyyyyyyyyhddfsdddddddffffffffffffffffffffffffffffffffffff
-                hhhhhhhhhkkkkkkkkkkkkkkkkkkkhffffffffffffffffffffffffffffffffffffffffffhf
-                </p>
+                <h1>PIXXEL</h1>
+                <p>We The PIXXEL Team Collaborate with Major Companies and Make Games That Kids and Adults alike Can Have Fun and Learn While THeir at it.</p>
 </fieldset>
           </fieldset>        
 

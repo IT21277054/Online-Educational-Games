@@ -97,7 +97,7 @@
                     <strong>Talk with us</strong>
 
                     <div class='client-comment'>
-                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
+                      <p>Call us any time if you want to know how we work and if you want to give us your feedback</p>
 
                       <span>+94 76 5643133</span>
                   </div>
@@ -134,10 +134,10 @@
 
                 <!-- name-andUsername -->
                 <div class='name-user'>
-                    <strong>Talk with us</strong>
+                    <strong>Drop a Message</strong>
 
                     <div class='client-comment'>
-                      <p>Awlak thiye nam eka Shamryge awlak. Shamryta katha karala prashne wisndaganna. Mathak karala Ude 6ta katha karala ahanna karapu weredda mokadda kiyala</p>
+                      <p>Drop a message any time and we will get back to you as soon as possible.</p>
 
                       <span>+94 76 5643133</span>
                   </div>
