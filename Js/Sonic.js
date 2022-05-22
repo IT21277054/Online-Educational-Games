@@ -1,4 +1,4 @@
-timeLeft = 10;
+timeLeft = 60;
 
 function countdown() {
     timeLeft--;
@@ -7,31 +7,33 @@ function countdown() {
         setTimeout(countdown, 1000);
     }
     else{
+        let lscore = score;
+        console.log(lscore);
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", 'http://localhost/Online-Educational-Games/Php/Sonice%20Fast%20Math.php', true);
+        xhr.open("GET", '/Online-Educational-Games/Php/Sonicscore.php?score=' + lscore , true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
-            finalscore: score
+            finalscore: lscore
 }));
-        // window.location.replace("TryAgain.html");
+        window.location.replace("../Html/TryAgain.html");
     }
 };
 
-setTimeout(countdown, 1000);
+    setTimeout(countdown, 1000);
 
-let a = Math.floor(Math.random() * (100 - 1)) + 1;
-let b = Math.floor(Math.random() * (100 - 1)) + 1
-let c = a + b;
-document.getElementById("fvalue").innerHTML = a;
-document.getElementById("svalue").innerHTML = b;
-
-
-let d;
-let score = 0;
-document.getElementById("score").innerHTML = score;
+    let a = Math.floor(Math.random() * (100 - 1)) + 1;
+    let b = Math.floor(Math.random() * (100 - 1)) + 1
+    let c = a + b;
+    document.getElementById("fvalue").innerHTML = a;
+    document.getElementById("svalue").innerHTML = b;
 
 
-function getInputValue(){
+    let d;
+    let score = 0;
+    document.getElementById("score").innerHTML = score;
+
+
+    function getInputValue(){
 
     // Selecting the input element and get its value 
 

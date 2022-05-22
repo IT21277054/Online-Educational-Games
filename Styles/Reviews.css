@@ -4,7 +4,7 @@
   font-size: 1000%;
   margin-top:-25%;
   margin-left:5%;
-  color: rgb(75, 46, 8);
+  color: rgb(9, 8, 75);
 }
 
 .RNav-button
@@ -13,12 +13,12 @@
     float: right;
     text-decoration: none;
     font-family: 'Comforataa' , cursive;
-    color: rgb(75, 46, 8);
+    color: rgb(9, 8, 75);
 }
 
 
 .RNav-button:hover{
-  background-color:rgb(237, 152, 40);
+  background-color:rgb(76, 73, 238);
   border-radius: 10px;
 }
 
@@ -31,7 +31,7 @@
     font-size: 30px;
     font-weight: bold;
     font-family: cursive;
-    background-image: linear-gradient(rgb(250, 211, 81), rgb(61, 2, 29));
+    background-image: linear-gradient(rgb(0, 212, 250) , rgb(63, 52, 112), rgb(9, 8, 75));
     margin-top: -5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -50,8 +50,9 @@
 
 .field
 {
-  border:2px solid white;
+  border:2px solid rgb(9, 8, 75);
   border-radius: 10px;
+  color: rgb(9, 8, 75);
 }
 
 
@@ -101,7 +102,7 @@
 
 .testimonial-box{
   width: 100%;
-  box-shadow: 2px 2px 30px rgba(0, 0 , 0 , 0.1);
+  box-shadow: 2px 2px 30px white;
   background-color:white;
   padding: 8px;
   margin:15px;
@@ -164,55 +165,9 @@ align-items:center;
   font-size:16px;
   color:black;
 
+
 }
 
-
-#reviewbox
-{
-    border:2px solid white;;
-    border-radius: 4px;
-    color :black;
-    height:100px;
-    padding-top: -20px;
-    padding-bottom: 20px;
-    width:1000px;
-    margin-top:5%;
-    margin-bottom: 8px;
-    /* margin-left: auto; */
-    margin-right: auto;
-    display:block;
-    background-color: transparent;
-    font-size:16px;
-    font-family:cursive;
-    transition: width 0.5s ease-in;
-}
-
-/* #reviewbox:focus
-{
-    width:100%;
-    border: none;
-} */
-
-/* 
-#reviewSubject
-{
-    border:2px solid black;
-    border-radius: 4px;
-    color : black;
-    height:30px;
-    width:500px;
-    margin-top:5%;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    margin-bottom: 8px;
-    background-color: transparent;
-    font-size:18px;
-    font-family:cursive;
-    font-weight:bold;
-    float: left;
-
-} */
 
 
 
