@@ -189,6 +189,17 @@ else
 
           <fieldset class="field">
                   <legend>Who are with</legend>
+                  <img src="../images/Sega.png" class = "Sega">
+                
+
+                <fieldset class="field2">
+                <h1>SEGA</h1>
+                <p>fsjgyyyyyyyyyyyyyyyyyyhddddhjdsghdghdhhdd
+                  fsdddddddffffffffffffffffffffffffffffffffffff
+                  ghhhhhhhhhhhhhhhhhhhhhkkkkkkkkkkkkkkkkkkkkkkk
+                  hffffffffffffffffffffffffffffffffffffffffffhf
+                </p>
+</fieldset>
           </fieldset>        
 
 </div>

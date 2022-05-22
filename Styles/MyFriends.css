@@ -141,10 +141,10 @@ form.searchbar button {
   margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  /* display: block; */
   cursor: pointer;
   margin-bottom: 5%;
-  float: right;
+  /* float: right; */
 }
 .toLeaderboard:hover {
   background-color: #62358a;
@@ -173,9 +173,9 @@ form.searchbar button {
 }
 
 .OneLine2 {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .flogo {

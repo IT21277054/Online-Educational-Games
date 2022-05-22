@@ -46,6 +46,7 @@
         <a href="MyAccount.php" class="Nav-button"><li>My Account</li></a>
         <a href="../Html/Contact.html" class="Nav-button"><li>Contact</li></a>
         <a href="../Php/AddFriend.php" class="Nav-button"><li>Add Friends</li></a>
+        <a href="../Php/AddFriend.php" class="Nav-button"><li>Review</li></a>
         <a href="../Html/About.html" class="Nav-button"><li>About</li></a>
         <a href="Games.php" class="Nav-button"><li>Games</li></a>
         <a href="index.php" class="Nav-button"><li>Home</li></a>

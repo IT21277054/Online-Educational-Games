@@ -31,7 +31,7 @@
   font-size: 1000%;
   margin-top:-40%;
   margin-left:5%;
-  color: rgb(94, 5, 5);
+  color: rgb(83, 5, 94);
 }
 
 
@@ -42,6 +42,15 @@
   color: rgb(255, 255, 255);
   font-size: 35px;
   margin-bottom: 8%;
+}
+
+.field2
+{
+  border:2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  margin-bottom: 2%;
 }
 
 
@@ -216,4 +225,13 @@
   /* align-items: center; */
   justify-content: space-between;
 
+}
+
+
+
+
+.Sega{
+  width: 20%;
+  float: right;
+  margin-right:50%;
 }
