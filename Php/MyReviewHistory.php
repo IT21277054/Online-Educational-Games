@@ -240,7 +240,7 @@ else
 </footer>
 
 
-<script src="../js/MyReviewHistory.js"></script>
+<script src="../Js/MyReviewHistory.js"></script>
 
 </body>
 </html>
