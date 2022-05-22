@@ -25,12 +25,11 @@
 
         $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
 
-        $result = mysqli_query($conn , $sql); // execute the query
 
-
-        if($result){
+        if(mysqli_query($conn , $sql)){
             echo "<script>alert('Success!')</script>";
-            header("Location: ./Review.php?gID=".$gid);
+            header("Location: ./Reviews.php?gID=".$gid);
+            
         }
         else
         {
@@ -44,7 +43,10 @@
         }
         
     }
-
+ if(isset($_POST['allReview'])){
+     $gid = $_GET['gID'];
+     header("Location: ./Reviews.php?gID=".$gid);
+ }
 
 ?>
 
@@ -173,7 +175,7 @@
     </div>
 
     <div class = "Button">
-        <button type = "submit" name="submit" class="AddReviewButton">All Reviews</button>
+        <button type = "submit" name="allReview" class="AddReviewButton">All Reviews</button>
     </div>
 
     </div>
