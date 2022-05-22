@@ -10,20 +10,19 @@
 table {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-collapse: collapse;
-    width: 70%;
+    width: 80%;
     color:white;
-    margin-left: auto;
-    margin-right: auto;
-    font-size:50px;
+    font-size:20px;
   }
   
-td, th {
+td{
     /* border: 1px solid #5bd4ddb0; */
-    text-align: left;
+    text-align: center;
     padding: 20px;
 }
 
 .line{
+    text-align: center;
     border-bottom: 1px dashed white;
     font-size:25px;
 }

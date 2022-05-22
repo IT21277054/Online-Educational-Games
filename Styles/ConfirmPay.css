@@ -20,7 +20,7 @@
 .conContent{
     border-radius: 25px;
     position: absolute;
-    height:70%;
+    height:100%;
     Width:80%;
     border: 1px solid white;
     opacity:100%;
@@ -44,8 +44,16 @@ h1{
 .text{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    font-size:50px;
-    padding-left: 10%;
+    font-size:30px;
+    position:relative;
+}
+
+table{
+    padding:5%;
+}
+
+td{
+    padding:7px;
 }
 
 .vl {
@@ -60,12 +68,12 @@ h1{
 
 .submitbut{
     margin-left: 5%;
-    width: 28%;
+    width: 15%;
 }
 
 .inputbox1{
-    margin-left: 10%;
-    width:40%;
+    margin-left: 15%;
+    width:20%;
     padding-left: 5%;
     padding-right: 5%;
 
@@ -81,27 +89,8 @@ h1{
     color: white;
 }
 
-.split{
-    width:50%;
-    position: absolute;
-}
-
-.left{
-    top: 0;   
-    left: 0;  
-    right: 50%; 
-    bottom: 0;
-    /* background-color: aqua; */
-    border-right: 6px solid black ;
-    z-index: 1;
-}
-
-.right{
-    top: 0;   
-    left: 50%; 
-    right: 0;   
-    bottom: 0;
-    /* background-color: aliceblue; */
+hr{
+    border: 2px dashed white;
 }
 
 .btn
@@ -126,7 +115,7 @@ h1{
 
 .dropdown{
     /* margin-left: 10%; */
-    width:20%;
+    width:60%;
 
     Position:relative;
     padding-bottom: 10px;
@@ -138,6 +127,18 @@ h1{
     font-size: 25px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 5px;
+}
+
+table{
+    width:80%;
+}
+
+.paynow{
+    position:absolute;
+    margin: -15% 10% 3% 20%;
+}
+
+.line{
+    padding:10px
 }

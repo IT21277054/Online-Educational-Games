@@ -59,9 +59,8 @@
         <thead> 
             <tr> 
                 <td class="line" > Game name</td>     
-                <td class="line" > Order date </td>                   
-                <td class="line" > Order status</td>  
-                <td class="line" > Price </td>
+                <td class="line" > Subscription </td>                   
+                <td class="line" > Expire date</td> 
             </tr>
         <thead>
 
@@ -70,14 +69,31 @@
         <?php
             include '../Php/dbConnection.php';
 
-            $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price FROM orderitem o , game g WHERE o.GameID=g.GameID ORDER BY o.ODate DESC;";
+            $sql = "    SELECT g.GameName , w.Subscription 
+                        FROM orderitem o , game g , own w 
+                        WHERE o.GameID=g.GameID AND o.GameID=w.GameID 
+                            AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE());";
+
+            $expdate = " SELECT DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) AS expdate 
+                        FROM orderitem o , own w WHERE o.GameID=w.GameID 
+                        AND DATE_ADD( o.ODate , INTERVAL w.Subscription MONTH) > (SELECT CURDATE()); ";
+
             $result = $conn->query($sql);
+
+            $result2 = $conn->query($expdate);
+
             if ($result->num_rows > 0) {
             // output data of each row
-            while($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["ODate"] . "</td><td>"
-            . $row["OStatus"]. "</td> <td>". '$'. $row["Price"]. "</td></tr>";
+            while($row = $result->fetch_assoc() AND $row2 = $result2->fetch_assoc()) {
+            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td><td>" . $row2["expdate"]. "</td></tr>";
             }
+
+            
+
+            // while($row = $result2->fetch_assoc()) {
+            //     echo "<td>" . $row["expdate"]. "</td></tr>";
+            //     }
+
             echo "</table>";
             } else { echo "The table is empty"; }
             $conn->close();
