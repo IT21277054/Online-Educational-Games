@@ -24,15 +24,13 @@
       <img src="../Images/Logo/Nintendo-Logo.png" class="logo4">
 
       <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-    
+ 
 
       <div class="gamecontent">
         <p class ="gamet">Mario's Advanture</p>
-            <p class ="gamed">Super Mario is a 2D and 3D platform game series created by Nintendo based on and starring the fictional plumber Mario. Alternatively called the Super Mario Bros. series or simply the Mario series, it is the central series of the greater Mario franchise.</p>
+            <p class ="gamed">Find The Right Words and Place them in order</p>
             <div class="pbutton1">
-            <form action="SonicLS.php">
+            <form action="MarioLS.php">
                 <input class="cbtn" type="submit" value="Play Now">
             </form> 
             </div>
