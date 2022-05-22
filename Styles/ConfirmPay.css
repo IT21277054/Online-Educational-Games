@@ -45,11 +45,12 @@ h1{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     font-size:30px;
-    position:relative;
+    position:absolute;
 }
 
 table{
     padding:5%;
+    margin-top: 5%;
 }
 
 td{

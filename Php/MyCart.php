@@ -1,3 +1,17 @@
+<?php
+
+// include db connection
+include '../Php/dbConnection.php';
+
+// start session
+session_start();
+
+$email = $_SESSION['email'];
+$gameId = $_SESSION['GameID']
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,30 +64,49 @@
     <!-- <img src="../Images/Logo/final.png"  class = "pic"> -->
     <div class="heading">My cart</div> <br>
     <marquee><img src="../Images/spongebob.gif" class="gif"></marquee>
-    <div class="cartcontent">
-        <table boarder =1 >
-            <tr> <th> Item </th>    <th> Each month </th>   <th> Months </th>       <th> Total </th>  </tr>
-            <tr> <td> Ball</td>     <td> $10 </td>          <td> 1 </td>            <td> $10 </td>  </tr>
-            <tr> <td> Doll</td>     <td> $15 </td>          <td> 4 </td>            <td> $60 </td>  </tr>
-            <tr> <td> </td>         <td>  </td>             <td> </td>              <td class="line"> .... </td>  </tr>
-        </table>
-        
+    <div class="cartcontent text">
 
-        <button type="button" onclick="location.href = 'PayHistory.html'; "  class="btn hisbtn" > Payment history</button>
-        <button type="button" onclick="location.href = 'ConfirmPay.html'; "  class="btn conbtn"> Confirm payment</button>
+    <center>
+    <button type="button" onclick="location.href = 'PayHistory.php'; "  class="btn hisbtn" > Payment history</button> </center>
+
+
+    <center>
+    <table boarder =1 >
+        <tr> <th> Item </th>    <th> Each month </th>   <th> Months </th>       <th> Total </th>  </tr>
+        <tr> <td> Ball</td>     <td> $10 </td>          <td> 1 </td>            <td> $10 </td>  </tr>
+        <tr> <td> Doll</td>     <td> $15 </td>          <td> 4 </td>            <td> $60 </td>  </tr>
+        <tr> <td> </td>         <td>  </td>             <td> </td>              <td class="line"> .... </td>  </tr>
+        <tr><td> Transaction method</td>
+            <td>
+            <form action="" method="" >
+                <select id="transType" name="transType" class="dropdown"> 
+                    <option value="select">Select</option>
+                    <option value="credit">Credit card</option>
+                    <option value="debit">Debit card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <input type="submit" value=" Pay now" onclick="alert('Confirm your paymet')"  class="btn paynow">
+            </td>
+            </form>
+    </table>
+    </center>   
+
+        
+    
     
     </div>
 
 
-
-
-
-
-    <footer>
+    <!-- <footer>
         <img  src="../Images/Logo/Facebook.png" class="flogo">
         <img  src="../Images/Logo/Instergram.png" class="flogo">
         <img  src="../Images/Logo/Twitter.png" class="flogo">
-    </footer>
+    </footer> -->
 
     <script src="../Js/Main.js"></script>
 
