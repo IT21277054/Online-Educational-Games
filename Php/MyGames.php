@@ -104,7 +104,7 @@
             while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td>
             <td> <form method='post'><input name='gID' value=' ". $row[ "gameID" ] . "' style='display:none' > 
-            <input type='submit' value= 'Unsubscribe' name='deletebtn' > </form> </td></tr>";
+            <input type='submit' value= 'Unsubscribe' name='deletebtn' class='btn' > </form> </td></tr>";
             }
 
             } else { echo "The table is empty"; }
