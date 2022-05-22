@@ -131,6 +131,23 @@ else
         header("Location: ./DeleteReview.php?rID=".$rID);
     }
 
+    $s1 = "";
+    $s2 = "";
+    $s3 = "";
+    $s4 = "";
+    $s5 = "";
+    if($star == '1' ){
+        $s1 = "checked";
+        }else if($star == '2' ){
+        $s2 = "checked";
+        }else if($star == '3' ){
+        $s3 = "checked";
+        }else if($star == '4' ){
+        $s4 = "checked";
+        }else if($star == '5'){
+        $s5 = "checked";
+        }
+
     echo "
 
     <form id = 'testimonials' action='' method='post'>
@@ -155,22 +172,25 @@ else
                         </div>
                     </div>
         
+            
+                    
+                
                     <!-- reviews -->
-                    <div class='star-rating'>
-                        <input type='radio' name='stars' id='star-a' value='5'  />
-                        <label for='star-a'></label>
+                    <div class='star-rating' style='pointer-events: none'>
+                        <input type='radio' name='stars".$rID."' id='star-a".$rID."' value='5' ".$s5." />
+                        <label for='star-a".$rID."'></label>
                         
-                        <input type='radio' name='stars' id='star-b' value='4'/>
-                        <label for='star-b'></label>
+                        <input type='radio' name='stars".$rID."' id='star-b".$rID."' value='4' ".$s4."/>
+                        <label for='star-b".$rID."'></label>
                         
-                        <input type='radio' name='stars' id='star-c' value='3'/>
-                        <label for='star-c'></label>
+                        <input type='radio' name='stars".$rID."' id='star-c".$rID."' value='3' ".$s3."/>
+                        <label for='star-c".$rID."'></label>
                         
-                        <input type='radio' name='stars' id='star-d' value='2'/>
-                        <label for='star-d'></label>
+                        <input type='radio' name='stars".$rID."' id='star-d".$rID."' value='2' ".$s2."/>
+                        <label for='star-d".$rID."'></label>
                         
-                        <input type='radio' name='stars' id='star-e' value='1'/>
-                        <label for='star-e'></label>
+                        <input type='radio' name='stars".$rID."' id='star-e".$rID."' value='1' ".$s1."/>
+                        <label for='star-e".$rID."'></label>
                         </div>
                 </div>
         
@@ -198,17 +218,7 @@ else
         
         
         </form> ";  
-        if($star == '1' ){
-        echo "<script>document.getElementById('star-e').checked= true;</script>";
-        }else if($star == '2' ){
-        echo "<script>document.getElementById('star-d').checked= true;</script>";
-        }else if($star == '3' ){
-        echo "<script>document.getElementById('star-c').checked= true;</script>";
-        }else if($star == '4' ){
-        echo "<script>document.getElementById('star-b').checked= true;</script>";
-        }else if($star == '5'){
-        echo "<script>document.getElementById('star-a').checked= true;</script>";
-        }
+        
         
 }
         ?>

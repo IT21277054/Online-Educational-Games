@@ -44,6 +44,12 @@
           class="Forget-Password-form"
           id="ForgetPassword"
         >
+        <input
+            type="email"
+            name="code"
+            placeholder="Email"
+            required
+          />
           <input
             type="text"
             name="code"
