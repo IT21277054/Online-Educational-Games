@@ -59,23 +59,17 @@
 
 <div class="Vtitle">My Friends</div>
 
-<form>
+<form class="example" action="" method="post">
 <!-- Content -->
+
 <div class="Vcontent">
-
-
-
-
-
-
-
 
   <fieldset class ="Vfield">
  <div class ='OneLine'>
-    <form class="example" action="action_page.php">
+    
         <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <button type="submit" name="search" ><i class="fa fa-search"></i></button>
+
 
 
         <div class = "Button">
@@ -86,10 +80,9 @@
    
     <div class ='OneLine2'>
     <input type="text" id = "FriendName" name = "FriendName" Value ="Moda Sudheera">
-   <button type="button" name="Remove" class="Remove">Remove</button>
+   <button type="submit" name="Remove" class="Remove">Remove</button>
     
     </div><br><br>
-
 
     <button type = "button" name="toLeaderboard" class="toLeaderboard">Search Friends in Leaderboard</button>
     
