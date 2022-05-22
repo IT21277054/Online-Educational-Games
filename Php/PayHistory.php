@@ -1,3 +1,9 @@
+<?php 
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,17 +97,10 @@
         <?php
             include '../Php/dbConnection.php';
 
-            session_start();
-            //$_SESSION['email']= 'vihangi@gmail.com';
-            $email = $_SESSION['email'];
             
-            $sql2 = " SELECT ClientID as cID 
-                    FROM client WHERE Email='$email';";
+            $email = $_SESSION['email'];
 
-            $result2 = mysqli_query($conn , $sql2);
-            $row = mysqli_fetch_array($result2);
-
-            $cID = $row['cID']; 
+            $cID = $_SESSION['clientID'];
 
             $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price 
                     FROM orderitem o , game g 
