@@ -116,3 +116,11 @@ tr{
     border-color: rgb(255, 255, 255);
 
 }
+
+.table{
+    position: absolute;
+    margin-top:20%;
+    margin-left:37%;
+    font-size:250%;
+
+}
