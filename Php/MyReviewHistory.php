@@ -78,7 +78,7 @@ else
     />
 
 
-
+<link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>My review History</title>
 </head>
 

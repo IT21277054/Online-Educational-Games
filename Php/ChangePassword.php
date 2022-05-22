@@ -51,7 +51,7 @@ $conn -> close();
     />
 
     <link rel="icon" type="favicon" href="../Images/favicon.png" />
-
+<link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Change Password</title>
   </head>
   <body>

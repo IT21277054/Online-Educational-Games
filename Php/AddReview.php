@@ -25,12 +25,11 @@
 
         $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
 
-        $result = mysqli_query($conn , $sql); // execute the query
 
-
-        if($result){
+        if(mysqli_query($conn , $sql)){
             echo "<script>alert('Success!')</script>";
-            header("Location: ./Review.php?gID=".$gid);
+            header("Location: ./Reviews.php?gID=".$gid);
+            
         }
         else
         {
@@ -44,7 +43,10 @@
         }
         
     }
-
+ if(isset($_POST['allReview'])){
+     $gid = $_GET['gID'];
+     header("Location: ./Reviews.php?gID=".$gid);
+ }
 
 ?>
 
@@ -98,6 +100,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>Add review</title>
 </head>
 
@@ -166,9 +169,15 @@
         
     <!-- Review button -->
 
-    <div class = "Button">
+    <div class ='OneLine'>
 
+    <div class = "Button">
         <button type = "submit" name="submit" class="AddReviewButton">Add Review</button>
+    </div>
+
+    <div class = "Button">
+        <button type = "submit" name="allReview" class="AddReviewButton">All Reviews</button>
+    </div>
 
     </div>
 

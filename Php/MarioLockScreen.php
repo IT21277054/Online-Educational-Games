@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../Styles/SonicLockScreen.css">
     <link rel="stylesheet" href="../Styles/Game.css">
     
-    <title>Pixxel</title>
     <link rel="icon" type="favicon" href="../Images/favicon.png" />
+    <title>Mario</title>
 </head>
 <body>
     <div class="circle2"></div>

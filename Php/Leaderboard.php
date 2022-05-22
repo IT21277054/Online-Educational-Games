@@ -2,6 +2,7 @@
     <head>
     <link rel="stylesheet" href="../Styles/leaderboard.css">
     <link rel="stylesheet" href="../Styles/Styles.css">
+    <link rel="icon" type="favicon" href="../Images/favicon.png" />
         <title>Last 10 Results</title>
     </head>
     <body>

@@ -78,6 +78,7 @@ if(isset($_POST['submit'])){
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="icon" type="favicon" href="../Images/favicon.png" />
     <title>My review</title>
 </head>
 

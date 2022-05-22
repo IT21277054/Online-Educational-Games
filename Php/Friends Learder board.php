@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="favicon" href="../Images/favicon.png" />
         <title>Friend leader border</title>
         <link rel="stylesheet" href="../Styles/Friends Learder board.css">
         <link rel="stylesheet" href="../Styles/Styles.css">
