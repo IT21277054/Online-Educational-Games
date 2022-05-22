@@ -6,6 +6,9 @@ $clientID = $_SESSION['clientID'];
 
 $gTag = "";
 $Name = "";
+$friendID = "";
+$bool ="";
+$value = "Add Friend";
 
 if(isset($_POST['search'])){
 
@@ -17,7 +20,33 @@ if(isset($_POST['search'])){
         $result = mysqli_query($conn , $sql);
         $row = mysqli_fetch_array($result);
         $Name = $row['FirstName'].' '.$row['LastName'];
+        $friendID = $row['ClientID'];
+
+        
+
+        $sql3 = "SELECT * FROM friend where clientID = '$clientID' AND friendID = '$friendID'";
+        $result3 = mysqli_query($conn , $sql3);
+        if($result3 -> num_rows > 0){
+            $value = "Already added";
+            $bool = "disabled";
+            echo"<script>alert('already added')</script>";
+        }else{ 
+            $value = "Add Friend";
+            $bool ="";
+        }
+          
         // $gTag = $row['GamerTag'];
+    }
+}
+
+if(isset($_POST['addSubmit'])){
+
+    $friendID = $_POST['fID'];
+
+    $sql2 = "INSERT INTO friend(friendID,ClientID) VALUES ($friendID,$clientID)";
+    if( mysqli_query($conn , $sql2)){
+        echo "<script>alert('You have successfully added ".$gTag."')</script>";
+        header("Location: ./MyFriends.php");
     }
 }
 
@@ -81,7 +110,7 @@ if(isset($_POST['search'])){
         <div class='friendDetails'>
         <div class='topic'><h5>".$Name."</h5> 
         <h5>".$gTag."</h5></div>
-           
+         <input type='hidden' name='fID' value='".$friendID."' style='display:none'>  
 
     </div>"; ?>
         </div>
@@ -94,7 +123,7 @@ if(isset($_POST['search'])){
 
         <div class = 'Button'>
             
-            <button type = 'submit' name='addSubmit' class='AddFriendButton'>Add Friend</button>
+            <button type = 'submit' name='addSubmit' class='AddFriendButton' ".$bool."  >".$value."</button>
             
         </div>
     ";}?>
