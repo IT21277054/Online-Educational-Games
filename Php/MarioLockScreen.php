@@ -22,17 +22,18 @@
       <img src="../Images/Logo/WX logo.png" class="logo2">
       <img src="../Images/Logo/Nintendo-Logo.png" class="logo4">
 
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
+      <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
       <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Leaderboard.php"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
-      <a href="Games.html"><button type="button" class="backbtn"><img src="../Images/Logo/HowtoPlay.png" class="bbtn"></button></a>
+    
 
       <div class="gamecontent">
         <p class ="gamet">Mario's Advanture</p>
             <p class ="gamed">Super Mario is a 2D and 3D platform game series created by Nintendo based on and starring the fictional plumber Mario. Alternatively called the Super Mario Bros. series or simply the Mario series, it is the central series of the greater Mario franchise.</p>
             <div class="pbutton1">
-            <button type="button1" class="playnow">Play Now</button>
-            <button type="button11" class="trynow">Try Now</button>
+            <form action="MarioLS.php">
+                <input type="submit" value="Play Now">
+            </form> 
+            <input type="submit" value="Try Now">
             $29.99
             </div>
         </div>

@@ -1,4 +1,4 @@
-timeLeft = 60000;
+timeLeft = 10;
 
 function countdown() {
     timeLeft--;
@@ -7,8 +7,8 @@ function countdown() {
         setTimeout(countdown, 1000);
     }
     else{
-        
-        window.location.replace("TryAgain.html");
+        finalscore = score;
+        // window.location.replace("TryAgain.html");
     }
 };
 

@@ -10,7 +10,7 @@
 <body>
     <div class="content">
     <div id="contdown">
-        <span id="seconds">600000</span>
+        <span id="seconds">30</span>
     </div>
     <p id="fvalue"></p>
     <p id="svalue"></p>
