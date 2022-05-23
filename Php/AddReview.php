@@ -203,7 +203,7 @@ echo"<header>
     else {
         echo "
 
-        <h5  >Content Please Login to add review or click all review to check review</h5>
+        <h5>You're not Logged In!<br>Please Login to add review or click all review to check review</h5>
         ";
     }
     ?>
