@@ -78,7 +78,8 @@
 
                         echo $newenddate1;
 
-                        $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                        // $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                        $sql = "UPDATE own SET Subscription='2022-08-23' WHERE ClientID = $cID AND GameID = $gameID ;";
                     }
                     
                     else{ 
@@ -87,7 +88,8 @@
 
                         echo $newenddate1;
 
-                        $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                        // $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
+                        $sql = "UPDATE own SET Subscription='2022-08-23' WHERE ClientID = $cID AND GameID = $gameID ;";
                     }
 
                     
@@ -97,7 +99,8 @@
                     $newenddate =strtotime("+" .$month. " months" , $today1);  
                     $newenddate1 = date('Y-m-d',$newenddate);
 
-                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $newenddate1 );";
+                    // $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $newenddate1 );";
+                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , '2022-08-23' );";
                 }
                 
                 mysqli_query($conn , $sql);
