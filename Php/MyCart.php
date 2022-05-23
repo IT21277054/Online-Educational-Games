@@ -64,8 +64,8 @@
                 $enddate = $row['Subscription'];
                 $enddate1= strtotime($enddate);
 
-                $today = date('Y-m-d');
-                $today1 = strtotime($today);
+                $today1 = date('Y-m-d');
+                // $today1 = strtotime($today);
 
                 $month = $_POST['submonths'];
 
