@@ -46,7 +46,7 @@
                 if ($result3) {
                         echo "<script>alert('Success!')</script>";
 
-                        // header("Location: ./MyGames.php ?gID=".$gid);
+                        echo "<script>location.replace('../Html/StartGameSonic.html')</script>";
                     }
                     else
                     {
@@ -54,7 +54,7 @@
                     }
                 
 
-    //Update subsription table
+    //Update own table
                 
                 $sql3 = "SELECT GameID , Subscription FROM own WHERE ClientID = $cID AND GameID = $gameID;";
 
