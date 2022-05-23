@@ -121,6 +121,8 @@
      <?php
 
 if(isset($_SESSION['email'])){
+
+    $check = "true";
   echo "<header>
   <ul id='Nav-bar-id' class='Nav-bar'>
     <img src='../images/Logo/final.png' id='logo' />
@@ -136,6 +138,7 @@ if(isset($_SESSION['email'])){
 </header>";
 
 } else { 
+    $check = "";
 echo"<header>
   <ul id='Nav-bar-id' class='Nav-bar'>
     <img src='../images/Logo/final.png' id='logo' />
@@ -162,39 +165,46 @@ echo"<header>
         <legend>Add Review</legend>
 
     <form action="" method="POST">
-        <input type="text" id = "reviewSubject" name = "Topic" placeholder ="Subject"><br>
+    <?php
+    if(!empty($check)){
+    echo "
+        <input type='text' id = 'reviewSubject' name = 'Topic' placeholder ='Subject'><br>
 
 
 
-        <textarea type="text" id = "reviewbox" name = "Content" placeholder ="Add your valuable review..."></textarea><br>
+        <textarea type='text' id = 'reviewbox' name = 'Content' placeholder ='Add your valuable review...'></textarea><br>
 
 
     <!-- Add stars -->
-    <div class="star-rating"  >
-        <input type="radio" name="stars" id="star-a" value="5"/>
-        <label for="star-a"></label>
+    <div class='star-rating'  >
+        <input type='radio' name='stars' id='star-a' value='5'/>
+        <label for='star-a'></label>
         
-        <input type="radio" name="stars" id="star-b" value="4"/>
-        <label for="star-b"></label>
+        <input type='radio' name='stars' id='star-b' value='4'/>
+        <label for='star-b'></label>
         
-        <input type="radio" name="stars" id="star-c" value="3"/>
-        <label for="star-c"></label>
+        <input type='radio' name='stars' id='star-c' value='3'/>
+        <label for='star-c'></label>
         
-        <input type="radio" name="stars" id="star-d" value="2"/>
-        <label for="star-d"></label>
+        <input type='radio' name='stars' id='star-d' value='2'/>
+        <label for='star-d'></label>
         
-        <input type="radio" name="stars" id="star-e" value="1"/>
-        <label for="star-e"></label>
+        <input type='radio' name='stars' id='star-e' value='1'/>
+        <label for='star-e'></label>
         </div>
         
     <!-- Review button -->
 
     <div class ='OneLine'>
 
-    <div class = "Button">
-        <button type = "submit" name="submit" class="AddReviewButton">Add Review</button>
-    </div>
-
+    <div class = 'Button'>
+        <button type = 'submit' name='submit' class='AddReviewButton'>Add Review</button>
+    </div>";}
+    else {
+        echo "
+        <textarea type='text' id = 'reviewbox' name = 'Content' readonly >Please Login to add review or click all review to check review</textarea><br> ";
+    }
+    ?>
     <div class = "Button">
         <button type = "submit" name="allReview" class="AddReviewButton">All Reviews</button>
     </div>
