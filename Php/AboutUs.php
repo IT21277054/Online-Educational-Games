@@ -66,12 +66,12 @@
     <div class="title"></div>
     <div class="content">
 
-    <div class="container">
+    <!-- <div class="container">
       <img src="../Images/Uma.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Hello World</div>
       </div>
-    </div>
+    </div> -->
 
         <img src="../Images/Uma.jpeg">
         <img src="../Images/Shamry.jpeg">
