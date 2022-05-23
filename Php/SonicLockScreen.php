@@ -39,6 +39,9 @@
         <form action="SonicLS.php" >
             <input class="cbtn" type="submit" value="Play Now" >
         </form> 
+        <form action="SonicLSbuy.php" >
+            <input class="cbtn" type="submit" value="Buy/Upgrade Now" >
+        </form> 
         <!-- <input class="tcbtn" type="submit" value="Try Now"> -->
         </div>
     </div>
