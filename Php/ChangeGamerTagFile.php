@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +80,7 @@
         include './dbConnection.php';
 
         // start session
-        session_start();
+        
         $email = $_SESSION['email'];
 
 
