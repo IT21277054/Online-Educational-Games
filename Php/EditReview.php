@@ -52,6 +52,7 @@ if(isset($_POST['submit'])){
     $sql = "UPDATE review SET Topic='$Topic',Content='$Content',stars='$stars'where ReviewID='$rID'";
     if(mysqli_query($conn, $sql)){
         echo "<script>alert('Success')</script>";
+        header("Location: ./MyReviewHistory.php");
     }
 
 

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   if(mysqli_query($conn ,$sql)){
     echo "<script>alert('Account Deleted')</script>";
     session_destroy();
-    header("Location: ../Html/index.php");
+    header("Location: ../Php/index.php");
   }
   else {
     echo "<script>alert('Error Try again')</script>";
