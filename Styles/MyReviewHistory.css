@@ -27,7 +27,7 @@
   font-size: 30px;
   font-weight: bold;
   font-family: cursive;
-  background-image: linear-gradient(rgb(34, 4, 167),rgb(80, 0, 36) , rgb(22, 6, 95));
+  background-image: linear-gradient(rgb(34, 4, 167), rgb(80, 0, 36), rgb(22, 6, 95));
   margin-top: -5%;
   margin-left: 5%;
   margin-right: 5%;
@@ -105,7 +105,7 @@
 }
 
 /* set properties of all labels */
-.star-rating > label {
+.star-rating>label {
   width: 30px;
   height: 30px;
   font-family: Arial;
@@ -113,10 +113,12 @@
   transition: 0.2s ease;
   color: darkorange;
 }
+
 give label a hover state .star-rating label:hover {
   color: rgba(99, 54, 119, 0.822);
   transition: 0.2s ease;
 }
+
 .star-rating label:active::before {
   transform: scale(1.1);
 }
@@ -128,13 +130,14 @@ give label a hover state .star-rating label:hover {
   top: 0px;
   line-height: 26px;
 }
+
 /* set full star shape for checked label and those that come after it */
-.star-rating input:checked ~ label:before {
+.star-rating input:checked~label:before {
   content: "\2605";
 }
 
 @-moz-document url-prefix() {
-  .star-rating input:checked ~ label:before {
+  .star-rating input:checked~label:before {
     font-size: 36px;
     line-height: 21px;
   }
@@ -213,6 +216,15 @@ give label a hover state .star-rating label:hover {
   margin-bottom: 5%;
 }
 
+.EditReviewButton:hover {
+  opacity: 0.8;
+}
+
+
+.DeleteReviewButton:hover {
+  opacity: 0.8;
+}
+
 #testimonials {
   display: flex;
   justify-content: center;
@@ -221,23 +233,6 @@ give label a hover state .star-rating label:hover {
   width: 100%;
 }
 
-/* .testimonial-heading{
-  letter-spacing: 1px;
-  margin: 30px 0px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-} */
-
-/* .testimonial-heading h1{
-  font-size:2.2rem;
-  font-weight: 500;
-  background-color:aqua;
-  color:white;
-  padding: 10px;
-} */
 
 .testimonial-box-container {
   display: flex;
