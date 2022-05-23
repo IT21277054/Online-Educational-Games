@@ -66,18 +66,37 @@
     <div class="title"></div>
     <div class="content">
 
-    <!-- <div class="container">
-      <img src="../Images/Uma.jpeg" alt="Avatar" class="image">
+    <div class="container">
+      <img src="../Images/Shamry.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Hello World</div>
       </div>
-    </div> -->
-
+    </div>
+    <div class="container">
+      <img src="../Images/Vih.jpeg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="../Images/Sudheera.jpeg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="../Images/Vishwa.jpeg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+    <!-- <center>
         <img src="../Images/Uma.jpeg">
         <img src="../Images/Shamry.jpeg">
         <img src="../Images/Vih.jpeg">
         <img src="../Images/Sudheera.jpeg">
         <img src="../Images/Vishwa.jpeg">
+  </center> -->
     </div>
 
     <footer>
