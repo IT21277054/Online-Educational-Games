@@ -81,7 +81,7 @@ session_start();
             <div class="Gamecontent"><div class="ptitle">Sonic Math Runner</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
             <img src="../images/sonic-png-14.png" class = "titlecard2">
             <a href="SonicLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
-            <a href="./AddReview.php?gID=1001"><button type="button1" class="trynow">Reviews</button></a>
+            <a href="./AddReview.php?gID=1000"><button type="button1" class="trynow">Reviews</button></a>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br>
