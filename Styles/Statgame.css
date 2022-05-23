@@ -44,7 +44,29 @@
 }
 
 .backbtn{
-    
+    width: 4%;
+    height:10%;
+    background-image: linear-gradient(rgb(82, 100, 255), #ff4be1);
+    color:white;
+    box-shadow:  0 5px 10px rgba(255, 0, 119, 0.4);
+    transition: 0.2s;
+    border-radius: 100px;
+    border:0px;
+    padding:1%;
+    margin:1%;
+    position: absolute;
+}
+
+.backbtn:hover{
+    background-color: rgb(73, 7, 255);
+    color:white;
+    box-shadow:  0 5px 10px rgba(0, 183, 255, 0.4);
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.thisbtn{
+    position: absolute;
 }
 
 
