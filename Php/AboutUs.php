@@ -61,29 +61,40 @@
     ?>
         
     
-</header>
+  </header>
+  <center>
     <img src="../Images/Logo/final.png" class = "fpage">
     <div class="title"></div>
     <div class="content">
-
+    <br><br>
+    <div class="container">
+      <img src="../Images/Uma.jpeg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Umayangana Wijayasiri</div>
+      </div>
+    </div>
+    <br><br>
     <div class="container">
       <img src="../Images/Shamry.jpeg" alt="Avatar" class="image">
       <div class="overlay">
-        <div class="text">Hello World</div>
+        <div class="text">Vishwa Gurusinghe</div>
       </div>
     </div>
+    <br><br>
     <div class="container">
       <img src="../Images/Vih.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Hello World</div>
       </div>
     </div>
+    <br><br>
     <div class="container">
       <img src="../Images/Sudheera.jpeg" alt="Avatar" class="image">
       <div class="overlay">
         <div class="text">Hello World</div>
       </div>
     </div>
+    <br><br>
     <div class="container">
       <img src="../Images/Vishwa.jpeg" alt="Avatar" class="image">
       <div class="overlay">
@@ -98,6 +109,7 @@
         <img src="../Images/Vishwa.jpeg">
   </center> -->
     </div>
+</center>
 
     <footer>
         <img  src="../Images/Logo/Facebook.png" class="flogo">
