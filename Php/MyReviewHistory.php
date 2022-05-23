@@ -29,7 +29,7 @@ else
     $result = mysqli_query($conn , $sql); // execute the query
 
     if(!$result -> num_rows > 0){
-        echo "<script>alert('error!')</script>";
+        // echo "<script>alert('error!')</script>";
     }
         
 }
