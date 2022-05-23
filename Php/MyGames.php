@@ -96,21 +96,17 @@ session_start();
         <?php
             include '../Php/dbConnection.php';
 
-            
-
-            // $_SESSION['gameID']=1000;
-            $gameID = $_SESSION['gameID'];
-
-            // $_SESSION['email']= 'vihangi@gmail.com';
             $email = $_SESSION['email'];
             
             $sql2 = " SELECT ClientID as cID 
                      FROM client WHERE Email='$email';";
 
             $result2 = mysqli_query($conn , $sql2);
-             $row = mysqli_fetch_array($result2);
+            $row = mysqli_fetch_array($result2);
+                
+            $cID = $row['cID']; 
 
-            $cID = $_SESSION['clientID'];
+            // $cID = $_SESSION['clientID'];
 
             if(isset($_POST['gID']))
             {
@@ -122,7 +118,7 @@ session_start();
             }
 
 
-            $sql = "SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=10000 AND `Subscription` >= DATE(NOW());";
+            $sql = "SELECT game.GameName , own.Subscription , game.gameID FROM `own` LEFT JOIN game ON game.GameID = own.GameID WHERE `ClientID`=$cID AND `Subscription` >= DATE(NOW());";
 
             $result = $conn->query($sql);
 

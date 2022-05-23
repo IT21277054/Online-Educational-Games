@@ -46,7 +46,7 @@
                 if ($result3) {
                         echo "<script>alert('Success!')</script>";
 
-                        // header("Location: ./MyGames.php ?gID=".$gid);
+                        echo "<script>location.replace('../Php/Games.php')</script>";
                     }
                     else
                     {
@@ -54,7 +54,7 @@
                     }
                 
 
-    //Update subsription table
+    //Update own table
                 
                 $sql3 = "SELECT GameID , Subscription FROM own WHERE ClientID = $cID AND GameID = $gameID;";
 
@@ -64,8 +64,8 @@
                 $enddate = $row['Subscription'];
                 $enddate1= strtotime($enddate);
 
-                $today = date('Y-m-d');
-                $today1 = strtotime($today);
+                $today1 = date('Y-m-d');
+                // $today1 = strtotime($today);
 
                 $month = $_POST['submonths'];
 
