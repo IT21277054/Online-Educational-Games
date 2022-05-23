@@ -200,6 +200,8 @@ echo"<header>
     <div class = 'Button'>
         <button type = 'submit' name='submit' class='AddReviewButton'>Add Review</button>
     </div>";}
+
+
     else {
         echo "
 
@@ -207,6 +209,8 @@ echo"<header>
         ";
     }
     ?>
+
+    
     <div class = "Button">
         <button type = "submit" name="allReview" class="AddReviewButton">All Reviews</button>
     </div>

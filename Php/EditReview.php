@@ -41,8 +41,10 @@ else{
         }
 }
 
-if(isset($_POST['submit'])){
+//After user edit and submit his review, take that data and update review table
 
+if(isset($_POST['submit'])){
+    
     $Topic = $_POST['Topic'];
     $Content = $_POST['Content'];
     $stars = $_POST['stars'];
@@ -51,8 +53,13 @@ if(isset($_POST['submit'])){
     if(mysqli_query($conn, $sql)){
         echo "<script>alert('Success')</script>";
     }
-    header("Location: ./MyReviewHistory.php");
 
+
+    else{
+
+    echo "<script>alert('Error!')</script>";    
+    header("Location: ./MyReviewHistory.php");
+    }
     
 
 }
