@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../Styles/Styles.css">
+    <link rel="stylesheet" href="../Styles/AboutUs.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
     if(isset($_SESSION['email'])){
       echo "<header>
       <ul id='Nav-bar-id' class='Nav-bar'>
-        <img src='../images/Logo/final.png' id='logo' />
+        
         <a href='Logout.php' class='Nav-button'><li>Logout</li></a>
         <a href='MyAccount.php' class='Nav-button'><li>My Account</li></a>
         <a href='ContactUs.php' class='Nav-button'><li>Contact</li></a>
@@ -64,6 +65,14 @@
     <img src="../Images/Logo/final.png" class = "fpage">
     <div class="title"></div>
     <div class="content">
+
+    <div class="container">
+      <img src="../Images/Uma.jpeg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+
         <img src="../Images/Uma.jpeg">
         <img src="../Images/Shamry.jpeg">
         <img src="../Images/Vih.jpeg">

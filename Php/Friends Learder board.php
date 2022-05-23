@@ -58,7 +58,7 @@ echo"<header>
             <button class="btn2">Check Public Leaderboard</button>
             </div>
    
-            <div class="Topic3"> Game One</div>
+            <!-- <div class="Topic3"> Game One</div> -->
         <div>
             
 
@@ -67,7 +67,7 @@ echo"<header>
                 <tr>
                     <td>Gamer Tag</td>
                     <td>HighScore</td>
-                    <td>GameID</td>
+                    <td>Game</td>
                 </tr>
             </thead>
             <tbody>
