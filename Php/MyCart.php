@@ -100,7 +100,7 @@
                     $newenddate1 = date('Y-m-d',$newenddate);
 
                     // $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $newenddate1 );";
-                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , '2022-08-23' );";
+                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , '2022-06-23' );";
                 }
                 
                 mysqli_query($conn , $sql);
