@@ -130,7 +130,7 @@ session_start();
             <input type='submit' value= 'Unsubscribe' name='deletebtn' class='btn' > </form> </td></tr>";
             }
 
-            } else { echo "The table is empty"; }
+            } else { echo ""; }
             $conn->close();
             ?>
             </tbody>

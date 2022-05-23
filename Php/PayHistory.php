@@ -121,7 +121,7 @@ session_start();
             . $row["OStatus"]. "</td> <td>". '$'. $row["Price"]. "</td></tr>";
             }
             echo "</table>";
-            } else { echo "The table is empty"; }
+            } else { echo ""; }
             $conn->close();
             ?>
 

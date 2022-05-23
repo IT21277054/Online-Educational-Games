@@ -64,7 +64,7 @@
                 $enddate = $row['Subscription'];
                 $enddate1= strtotime($enddate);
 
-                $today1 = date('Y-m-d');
+                $today = date('Y-m-d');
                 $today1 = strtotime($today);
 
                 $month = $_POST['submonths'];
@@ -76,12 +76,16 @@
                         $newenddate =strtotime("+" .$month. " months" , $enddate1);  
                         $newenddate1 = date('Y-m-d',$newenddate);
 
+                        echo $newenddate1;
+
                         $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
                     }
                     
                     else{ 
                         $newenddate =strtotime("+" .$month. " months" , $today1);  
                         $newenddate1 = date('Y-m-d',$newenddate);
+
+                        echo $newenddate1;
 
                         $sql = "UPDATE own SET Subscription= $newenddate1 WHERE ClientID = $cID AND GameID = $gameID ;";
                     }
@@ -90,7 +94,10 @@
                 }
 
                 else{
-                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , now() );";
+                    $newenddate =strtotime("+" .$month. " months" , $today1);  
+                    $newenddate1 = date('Y-m-d',$newenddate);
+
+                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $newenddate1 );";
                 }
                 
                 mysqli_query($conn , $sql);
