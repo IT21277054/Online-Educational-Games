@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 01:30 AM
+-- Generation Time: May 23, 2022 at 07:16 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -26,7 +26,7 @@ CREATE TABLE `client` (
   `ClientType` varchar(15) DEFAULT 'Client',
   `GamerTag` varchar(20) DEFAULT NULL,
   `ClientPassword` varchar(100) NOT NULL,
-  `Email` varchar(25) NOT NULL,
+  `Email` varchar(50) NOT NULL,
   `FirstName` varchar(15) NOT NULL,
   `LastName` varchar(15) DEFAULT NULL,
   `UserImage` varchar(250) DEFAULT 'default.png'
@@ -67,6 +67,14 @@ CREATE TABLE `game` (
   `GameName` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `game`
+--
+
+INSERT INTO `game` (`GameID`, `GameName`) VALUES
+(1000, 'Sonic Fast Math'),
+(1001, 'Mario Spell Catcher');
+
 -- --------------------------------------------------------
 
 --
@@ -91,7 +99,8 @@ CREATE TABLE `orderitem` (
 
 CREATE TABLE `own` (
   `ClientID` int(11) NOT NULL,
-  `GameID` int(11) NOT NULL
+  `GameID` int(11) NOT NULL,
+  `Subscription` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -132,7 +141,7 @@ CREATE TABLE `score` (
 ALTER TABLE `client`
   ADD PRIMARY KEY (`ClientID`),
   ADD UNIQUE KEY `Email` (`Email`),
-  ADD UNIQUE KEY `GamerTag` (`GamerTag`);
+  ADD KEY `GamerTag` (`GamerTag`) USING BTREE;
 
 --
 -- Indexes for table `feedback`
@@ -145,7 +154,8 @@ ALTER TABLE `feedback`
 -- Indexes for table `friend`
 --
 ALTER TABLE `friend`
-  ADD PRIMARY KEY (`ClientID`,`FriendID`);
+  ADD PRIMARY KEY (`ClientID`,`FriendID`),
+  ADD KEY `FK_FriendID` (`FriendID`);
 
 --
 -- Indexes for table `game`
@@ -173,8 +183,8 @@ ALTER TABLE `own`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`ReviewID`),
-  ADD UNIQUE KEY `FK_Review_Client` (`ClientID`),
-  ADD KEY `FK_Review_Game` (`GameID`) USING BTREE;
+  ADD KEY `FK_Review_Game` (`GameID`) USING BTREE,
+  ADD KEY `FK_Review_Client` (`ClientID`) USING BTREE;
 
 --
 -- Indexes for table `score`
@@ -204,7 +214,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
-  MODIFY `GameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1000;
+  MODIFY `GameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
 
 --
 -- AUTO_INCREMENT for table `orderitem`
@@ -238,6 +248,7 @@ ALTER TABLE `feedback`
 -- Constraints for table `friend`
 --
 ALTER TABLE `friend`
+  ADD CONSTRAINT `FK_FriendID` FOREIGN KEY (`FriendID`) REFERENCES `client` (`ClientID`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_Friend_Client` FOREIGN KEY (`ClientID`) REFERENCES `client` (`ClientID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -251,7 +262,7 @@ ALTER TABLE `orderitem`
 -- Constraints for table `own`
 --
 ALTER TABLE `own`
-  ADD CONSTRAINT ` FK_Own_Client` FOREIGN KEY (`ClientID`) REFERENCES `client` (`ClientID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT ` FK_Own_Client` FOREIGN KEY (`ClientID`) REFERENCES `client` (`ClientID`) ON DELETE CASCADE,
   ADD CONSTRAINT ` FK_Own_Game` FOREIGN KEY (`GameID`) REFERENCES `game` (`GameID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
