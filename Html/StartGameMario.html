@@ -11,6 +11,8 @@ session_start();
 <head>
     <link rel="stylesheet" href="../Styles/Styles.css">
     <link rel="stylesheet" href="../Styles/Statgame.css">
+    <link rel="stylesheet" href="../Styles/Game.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,26 +37,30 @@ session_start();
     <link rel="icon" type="favicon" href="../Images/favicon.png" />
 </head>
 <body>
-    
+
     <video autoplay muted loop class="bgvideo">
         <source src="../Videos/Bg vid.mp4" type=video/ogg>
     </video>
 
 
     <img src="../images/Mario-Wallpaper-7.jpg" class = "fpage">
-    <div class="title">Mario</div>
+    <div class="title">Mario Spell Catcher</div>
     <div class="content">
         <center>
-        <a href="../Php/Games.Php"><button type="button" class="backbtn"><img src="../Images/Logo/arrow.png" class="bbtn"></button></a>
+    
         <a href="Mario Spell Catcher.html"><button class="button1">Start Game</button></a><br><br>
         <a href="../Php/Leaderboard.php"><button class="button2">LeaderBoard</button></a>
         <a href="../Php/ChangeGamerTagFile.php"><button class="button3">Change GamerTag</button></a><br>
+        <a href="../Php/MarioLockScreen.php"><button class="button4">Back to Manu</button></a>
         <!-- <a href="../Php/Leaderboard.php"></a><button class="button4">Reset</button></a> -->
         <form class="rstbtn" action="../Php/Resetbtn.php" method="post">
             <input type="submit" value="Reset" class="button4">
         </form>
+
+
         </center>
     </div>
+
 
     <footer>
         <img src="../images/Logo/Facebook.png" class="flogo">

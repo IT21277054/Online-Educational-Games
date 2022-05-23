@@ -15,11 +15,13 @@
 
     if($result -> num_rows == 0){
         echo "<script>alert('You don't have a position')</script>";
+        echo "<script>location.replace('../Php/Leaderboard.php')</script>";
     }
     else{
         $sql ="DELETE FROM score WHERE ClientID = $clientID AND GameID = $gameID";
         $result = mysqli_query($conn,$sql);
-        echo "<script>alert('You don't have a position')</script>";
+        echo "<script>location.replace('../Php/Leaderboard.php')</script>";
+
     }
 
 
