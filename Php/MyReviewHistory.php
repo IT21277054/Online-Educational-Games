@@ -7,7 +7,7 @@ include './dbConnection.php';
 session_start();
 $email = $_SESSION['email'];
 
-echo "<script>alert($email)</script>";
+//echo "<script>alert($email)</script>";
 
 $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
@@ -28,10 +28,9 @@ else
 
     $result = mysqli_query($conn , $sql); // execute the query
 
-    if(!$result){
+    if(!$result -> num_rows > 0){
         echo "<script>alert('error!')</script>";
     }
-
         
 }
 

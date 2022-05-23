@@ -18,7 +18,7 @@ if($result -> num_rows > 0){
 
 else
 {
-    // echo "<script>alert('Failed!')</script>";
+    echo "<script>alert('Failed!')</script>";
     // $sql = "SELECT * FROM review where GameID = '$gID'";
 }
 ?>
