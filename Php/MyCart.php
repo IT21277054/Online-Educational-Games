@@ -46,7 +46,7 @@
                 if ($result3) {
                         echo "<script>alert('Success!')</script>";
 
-                        echo "<script>location.replace('../Html/StartGameSonic.html')</script>";
+                        echo "<script>location.replace('../Php/Games.php')</script>";
                     }
                     else
                     {
