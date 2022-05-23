@@ -90,7 +90,7 @@
                 }
 
                 else{
-                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , $today1 );";
+                    $sql = "INSERT INTO own ( ClientID , GameID , Subscription ) VALUES ( $cID , $gID , now() );";
                 }
                 
                 mysqli_query($conn , $sql);
