@@ -202,7 +202,9 @@ echo"<header>
     </div>";}
     else {
         echo "
-        <textarea type='text' id = 'reviewbox' name = 'Content' readonly >Please Login to add review or click all review to check review</textarea><br> ";
+
+        <h5  >Content Please Login to add review or click all review to check review</h5>
+        ";
     }
     ?>
     <div class = "Button">
