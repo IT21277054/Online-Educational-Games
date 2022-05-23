@@ -5,16 +5,17 @@
 
 // start session
     session_start();
+        $gid = $_GET['gID'];
 
     if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
-        $gid = $_GET['gID'];
+        
 
         $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
         $result = mysqli_query($conn , $sql); // execute the query 
 
-        if($result){
+        if($result->num_rows > 0){
         $row = mysqli_fetch_array($result);
 
         $cID = $row['ClientID'];
