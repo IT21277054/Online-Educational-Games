@@ -213,6 +213,10 @@ give label a hover state .star-rating label:hover {
   margin-bottom: 5%;
 }
 
+.DeleteReviewButton:hover{
+  box-shadow: 5px 5px 10px 2px black;
+}
+
 #testimonials {
   display: flex;
   justify-content: center;
