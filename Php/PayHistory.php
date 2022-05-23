@@ -100,11 +100,17 @@ session_start();
             
             $email = $_SESSION['email'];
 
-            $cID = $_SESSION['clientID'];
+            $sql2 = " SELECT ClientID as cID 
+                     FROM client WHERE Email='$email';";
+
+            $result2 = mysqli_query($conn , $sql2);
+            $row = mysqli_fetch_array($result2);
+                
+            $cID = $row['cID']; 
 
             $sql = "SELECT g.GameName , o.ODate , o.OStatus , o.Price 
                     FROM orderitem o , game g 
-                    WHERE o.GameID=g.GameID AND Where ClientID=$cID
+                    WHERE o.GameID=g.GameID AND ClientID=$cID
                     ORDER BY o.ODate DESC;";
                     
             $result = $conn->query($sql);
@@ -115,7 +121,7 @@ session_start();
             . $row["OStatus"]. "</td> <td>". '$'. $row["Price"]. "</td></tr>";
             }
             echo "</table>";
-            } else { echo "The table is empty"; }
+            } else { echo ""; }
             $conn->close();
             ?>
 

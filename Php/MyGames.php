@@ -125,12 +125,12 @@ session_start();
             if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . ' months' . "</td>
+            echo "<tr><td>" . $row["GameName"]. "</td><td>" . $row["Subscription"] . "</td>
             <td> <form method='post'><input name='gID' value=' ". $row[ "gameID" ] . "' style='display:none' > 
             <input type='submit' value= 'Unsubscribe' name='deletebtn' class='btn' > </form> </td></tr>";
             }
 
-            } else { echo "The table is empty"; }
+            } else { echo ""; }
             $conn->close();
             ?>
             </tbody>
