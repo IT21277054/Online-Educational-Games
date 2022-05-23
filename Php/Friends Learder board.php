@@ -67,7 +67,7 @@ echo"<header>
                 <tr>
                     <td>Gamer Tag</td>
                     <td>HighScore</td>
-                    <td>GameID</td>
+                    <td>Game</td>
                 </tr>
             </thead>
             <tbody>
