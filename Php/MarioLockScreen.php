@@ -27,11 +27,14 @@
  
 
       <div class="gamecontent">
-        <p class ="gamet">Mario's Advanture</p>
+        <p class ="gamet">Mario Math Runner</p>
             <p class ="gamed">Find The Right Words and Place them in order</p>
             <div class="pbutton1">
             <form action="MarioLS.php">
                 <input class="cbtn" type="submit" value="Play Now">
+            </form> 
+            <form action="SonicLSbuy.php" >
+                <input class="cbtn" type="submit" value="Buy/Upgrade Now" >
             </form> 
             </div>
         </div>

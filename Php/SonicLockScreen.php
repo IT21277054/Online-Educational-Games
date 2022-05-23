@@ -33,7 +33,7 @@
       
 
     <div class="gamecontent">
-    <p class ="gamet">Sonic Runner</p>
+    <p class ="gamet">Sonic Maths Runner</p>
         <p class ="gamed">Calculate the right amount before the time runs out</p>
         <div class="pbutton1">
         <form action="SonicLS.php" >

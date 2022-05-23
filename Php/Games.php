@@ -78,7 +78,7 @@ session_start();
     <div class="content">
         
         <div class="gamebox">
-            <div class="Gamecontent"><div class="ptitle">Game One</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
+            <div class="Gamecontent"><div class="ptitle">Sonic Math Runner</div><br>Help Sonic Defeat The Enemies by Solving the Puzzles </div>
             <img src="../images/sonic-png-14.png" class = "titlecard2">
             <a href="SonicLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
             <a href="./AddReview.php?gID=1001"><button type="button1" class="trynow">Reviews</button></a>
@@ -86,7 +86,7 @@ session_start();
         </div>
         <br><br><br><br><br><br>
         <div class="gamebox2">
-            <div class="Gamecontent"><div class="ptitle">Game Two</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
+            <div class="Gamecontent"><div class="ptitle">Mario Spell Catcher</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
             <img src="../images/Mario.png" class = "titlecard2">
             <a href="MarioLockScreen.php"><button type="button" class="playnow">Play Now</button></a>
             <a href="./AddReview.php?gID=1001"><button type="button1" class="trynow">Reviews</button></a>
@@ -94,23 +94,23 @@ session_start();
         </div>
         <br><br><br><br><br><br><br>
         <div class="gamebox3">
-            <div class="Gamecontent"><div class="ptitle">Game Three</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
+            <div class="Gamecontent"><div class="ptitle">Pokemon : Coming Soon</div><br>Pre Order Will Be Available Soon Stay Tuned</div>
             <img src="../images/Charizard.png" class = "titlecard2">
-            <a href="Game2.html"><button type="button" class="playnow">Pre Order</button></a>
+            <button type="button" class="playnow">Pre Order</button>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br><br>
         <div class="gamebox4">
-            <div class="Gamecontent"><div class="ptitle">Game Four</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
+            <div class="Gamecontent"><div class="ptitle">Street Fighter : Coming Soon</div><br>Pre Order Will Be Available Soon Stay Tuned</div>
             <img src="../images/StreetFighter.png" class = "titlecard2">
-            <a href="Game2.html"><button type="button" class="playnow">Pre Order</button></a>
+            <button type="button" class="playnow">Pre Order</button>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         <br><br><br><br><br><br><br>
         <div class="gamebox5">
-            <div class="Gamecontent"><div class="ptitle">Game Five</div><br>Math is'nt Mario's Strong Suit, Are you Ready to Help Him</div>
+            <div class="Gamecontent"><div class="ptitle">Kirby : Coming Soon</div><br>Pre Order Will Be Available Soon Stay Tuned</div>
             <img src="../images/Kirby.png" class = "titlecard2">
-            <a href="Game2.html"><button type="button" class="playnow">Pre Order</button></a>
+            <button type="button" class="playnow">Pre Order</button>
             <img src="../images/blank welcome.png" class = "titlecard" >
         </div>
         
