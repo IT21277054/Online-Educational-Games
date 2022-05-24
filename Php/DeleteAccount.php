@@ -8,14 +8,25 @@ if(isset($_POST['submit'])){
 
   $email = $_SESSION['email'];
   $password = md5($_POST['password']);
-  $sql = "DELETE FROM client where Email= '$email' AND ClientPassword= '$password'";
-  if(mysqli_query($conn ,$sql)){
-    echo "<script>alert('Account Deleted')</script>";
-    session_destroy();
-    header("Location: ../Php/index.php");
+
+  $sql = "SELECT * FROM client where email='$email' and ClientPassword='$password'";
+
+  $result = mysqli_query($conn ,$sql);
+
+  if($result -> num_rows > 0 ){
+    
+    $sql = "DELETE FROM client where Email= '$email' AND ClientPassword= '$password'";
+    if(mysqli_query($conn ,$sql)){
+      echo "<script>alert('Account Deleted')</script>";
+      session_destroy();
+      header("Location: ../Php/index.php");
+    }
+    else {
+      echo "<script>alert('Error Try again')</script>";
+    }
   }
   else {
-    echo "<script>alert('Error Try again')</script>";
+    echo "<script>alert('Wrong Password')</script>";
   }
 }
 $conn -> close();
