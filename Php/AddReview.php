@@ -1,30 +1,30 @@
 <?php
 
 // include db connection
-    include '../Php/dbConnection.php';
+  include '../Php/dbConnection.php';
 
 // start session
-    session_start();
-        $gid = $_GET['gID'];
+  session_start();
+  $gid = $_GET['gID'];
 
-    if(isset($_POST['submit'])){
-        $email = $_SESSION['email'];
+  if(isset($_POST['submit'])){
+    $email = $_SESSION['email'];
         
 
-        $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
+    $sql = "SELECT * FROM client where Email = '$email'"; // sql query to check if email exist in db
 
-        $result = mysqli_query($conn , $sql); // execute the query 
+    $result = mysqli_query($conn , $sql); // execute the query 
 
-        if($result->num_rows > 0){
-        $row = mysqli_fetch_array($result);
+    if($result->num_rows > 0){
+    $row = mysqli_fetch_array($result);
 
-        $cID = $row['ClientID'];
-        $Topic = $_POST['Topic'];
-        $Content = $_POST['Content'];
-        $stars = $_POST['stars'];
+    $cID = $row['ClientID'];
+    $Topic = $_POST['Topic'];
+    $Content = $_POST['Content'];
+    $stars = $_POST['stars'];
         
 
-        $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
+    $sql = "INSERT INTO review(Topic , Content ,stars, ClientID, GameID) values ('$Topic' , '$Content' ,'$stars' , '$cID','$gid')";
 
 
         if(mysqli_query($conn , $sql)){

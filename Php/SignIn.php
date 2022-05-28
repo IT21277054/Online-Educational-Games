@@ -1,16 +1,12 @@
 <?php 
-
 // include db connection
 include './dbConnection.php';
-
 // start session
 session_start();
-
 // check already session started
 if(isset($_SESSION['email'])){
     header("Location: ../Php/index.php");
 }
-
 // check if the submit button clicked 
 if(isset($_POST['submit'])){
     $email = $_POST['email']; // store the user given mail

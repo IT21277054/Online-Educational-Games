@@ -1,6 +1,8 @@
 <?php 
 include "./dbConnection.php";
 
+$code = $_GET['vID'];
+
 if(isset($_POST['submit'])){
   
   $email = $_POST['email'];
@@ -8,7 +10,9 @@ if(isset($_POST['submit'])){
   $pw = md5($_POST['password']);
   $conPw = md5($_POST['cPassword']);
 
-  if($vCode == 12345 ){
+
+  if($vCode == $code ){
+    echo "shjjjjj";
     if($pw == $conPw){
       $sql = "SELECT * FROM client where Email='$email' ;";
         $result = mysqli_query($conn , $sql); // execute query
@@ -29,9 +33,7 @@ if(isset($_POST['submit'])){
     echo "<script>alert('Invalid verification code')</script>";
   }
 
-
 }
-
 ?>
 
 <!DOCTYPE html>

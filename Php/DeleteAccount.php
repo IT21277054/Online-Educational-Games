@@ -21,6 +21,7 @@ if(isset($_POST['submit'])){
       session_destroy();
       header("Location: ../Php/index.php");
     }
+    
     else {
       echo "<script>alert('Error Try again')</script>";
     }
